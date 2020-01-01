@@ -1,0 +1,129 @@
+logoText = "杨河老李"
+description = "laoli's personal site."
+custom_css = []
+custom_js = []
+
+# header
+homeHeaderType = "text" # text, img, slide
+
+# body
+enableBreadcrumb = true
+enablePhotoSwipe = true
+enableSearch = true
+enableGoToTop = true
+enableWhoami = false
+summaryShape = "classic" # card, classic, compact
+archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+archivePaginate = 13
+paginateWindow = 1
+
+# whoami
+myname = "杨河老李"
+email = ""
+whoami = ""
+useGravatar = false
+location = ""
+organization = ""
+link = ""
+
+# sidebar
+enableBio = false
+enableSidebar = true
+enableSidebarTags = true
+enableSidebarSeries = true
+enableSidebarCategories = true
+enableToc = true
+enableTocSwitch = true
+itemsPerCategory = 5
+
+# footer
+showPoweredBy = true
+showFeedLinks = true
+showSocialLinks = true
+enableLangChange = false
+enableThemeChange = true
+themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
+
+# service
+baiduAnalytics = ""
+enableBusuanzi = false
+busuanziSiteUV = true
+busuanziSitePV = true
+busuanziPagePV = true
+
+# comment
+enableComment = true
+disqus_shortname = ""
+commento = false
+
+[gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+  owner = ""              # Your GitHub ID
+  repo = ""               # The repo to store comments
+  clientId = ""           # Your client ID
+  clientSecret = ""       # Your client secret
+
+[utterances]       # https://utteranc.es/
+  owner = ""              # Your GitHub ID
+  repo = ""               # The repo to store comments
+
+[gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+  owner = ""              # Your GitHub ID
+  repo = ""               # The repo to store comments
+  clientId = ""           # Your client ID
+  clientSecret = ""       # Your client secret
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[valine]
+  enable = false
+  appId = '你的appId'
+  appKey = '你的appKey'
+  notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+  verify = false # Verification code
+  avatar = 'mm' 
+  placeholder = '说点什么吧...'
+  visitor = false
+
+[changyan]
+  changyanAppid = ""        # Changyan app id             # 畅言
+  changyanAppkey = ""       # Changyan app key
+
+[livere]
+  livereUID = ""            # LiveRe UID                  # 来必力
+
+# Isso: https://posativ.org/isso/
+[isso]
+  enable = false
+  scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+  dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
+
+[socialOptions]
+  email = "mailto:kviccn@outlook.com"
+  facebook = ""
+  twitter = ""
+  github = "https://github.com/kviccn"
+  stack-overflow = ""
+  instagram = ""
+  google-plus = ""
+  youtube = ""
+  medium = ""
+  tumblr = ""
+  linkedin = ""
+  pinterest = ""
+  stack-exchange = ""
+  telegram = ""
+  steam = ""
+  weibo = ""
+  douban = ""
+  csdn = ""
+  zhihu = ""
+  gitlab = ""
+  mastodon = ""
+
+[donationOptions]
+  enable = false
+  alipay = "" 
+  wechat = ""
+  paypal = ""
+  patreon = ""
