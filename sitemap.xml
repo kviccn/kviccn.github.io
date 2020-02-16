@@ -3,23 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kviccn.github.io/posts/hello-2020/</loc>
-    <lastmod>2020-01-01T00:00:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kviccn.github.io/posts/</loc>
-    <lastmod>2020-01-01T00:00:01+08:00</lastmod>
+    <loc>https://kviccn.github.io/posts/2020/01/hello-2020/</loc>
+    <lastmod>2020-01-01T14:15:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kviccn.github.io/</loc>
-    <lastmod>2020-01-01T00:00:01+08:00</lastmod>
+    <lastmod>2020-01-01T14:15:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kviccn.github.io/archive/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <lastmod>2020-02-17T00:14:35+08:00</lastmod>
   </url>
   
   <url>
@@ -32,6 +27,11 @@
   
   <url>
     <loc>https://kviccn.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kviccn.github.io/posts/</loc>
+    <lastmod>2020-02-17T00:14:35+08:00</lastmod>
   </url>
   
 </urlset>

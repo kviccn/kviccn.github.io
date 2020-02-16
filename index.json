@@ -1,21 +1,12 @@
 [
 {
-	"uri": "https://kviccn.github.io/posts/hello-2020/",
+	"uri": "https://kviccn.github.io/posts/2020/01/hello-2020/",
 	"title": "Hello 2020",
 	"tags": [],
 	"categories": [],
 	"series": [],
 	"description": "Hello 2020.",
 	"content": "Hello 2020 "
-},
-{
-	"uri": "https://kviccn.github.io/posts/",
-	"title": "文章",
-	"tags": ["index"],
-	"categories": [],
-	"series": [],
-	"description": "Post page",
-	"content": ""
 },
 {
 	"uri": "https://kviccn.github.io/",
@@ -32,7 +23,7 @@
 	"tags": [],
 	"categories": [],
 	"series": [],
-	"description": "Archive Page",
+	"description": "归档页",
 	"content": ""
 },
 {
@@ -60,5 +51,14 @@
 	"categories": [],
 	"series": [],
 	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://kviccn.github.io/posts/",
+	"title": "文章",
+	"tags": ["index"],
+	"categories": [],
+	"series": [],
+	"description": "文章页",
 	"content": ""
 }]
