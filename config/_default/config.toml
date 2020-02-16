@@ -14,8 +14,11 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-enableGitInfo = false
+enableGitInfo = true
 googleAnalytics = ""
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
 
 [markup]
   [markup.goldmark]

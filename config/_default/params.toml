@@ -37,7 +37,7 @@ enableTocSwitch = true
 itemsPerCategory = 5
 
 # footer
-showPoweredBy = true
+showPoweredBy = false
 showFeedLinks = true
 showSocialLinks = true
 enableLangChange = false

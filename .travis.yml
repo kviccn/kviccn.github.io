@@ -3,6 +3,8 @@ language: go
 go:
   - 1.13.5
 
+os: linux
+
 branches:
   only:
     - blog
@@ -15,10 +17,10 @@ script:
 
 deploy:
   provider: pages
-  skip-cleanup: true
-  local-dir: public
-  target-branch: master
-  github-token: $GITHUB_TOKEN
-  keep-history: true
+  skip_cleanup: true
+  keep_history: true
+  local_dir: public
+  target_branch: master
+  token: $GITHUB_TOKEN
   on:
     branch: blog
