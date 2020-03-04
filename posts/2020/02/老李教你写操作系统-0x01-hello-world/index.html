@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>老李教你写操作系统 (0x01) - Hello World – 杨河老李</title>
+    <title>老李教你写操作系统 0x01 - Hello World – 杨河老李</title>
     
 
 
@@ -284,11 +284,11 @@
 
 
 <meta property="og:site_name" content="杨河老李">
-<meta property="og:title" content="老李教你写操作系统 (0x01) - Hello World">
+<meta property="og:title" content="老李教你写操作系统 0x01 - Hello World">
 <meta property="og:url" content="https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.65.0-DEV" />
+<meta name="generator" content="Hugo 0.67.0-DEV" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/">
@@ -303,12 +303,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "老李教你写操作系统 (0x01) - Hello World",
+    "headline": "老李教你写操作系统 0x01 - Hello World",
     "datePublished": "2020-02-15T17:55:36+08:00",
     "dateModified": "2020-02-15T17:55:36+08:00",
     "url" : "https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/",
-    "description": "前言 这一切还得从一只蝙蝠说起。 讲道理这篇文章的题目很不合理。作为一个计算机人，第一篇文章起码应该是0x00吧？这是对计算机最起码的尊重。原本",
-    "keywords": ["操作系统","qemu","grub","multiboot"],
+    "description": "前言 这还得从一只蝙蝠说起。 讲道理这篇文章的题目很不合理。作为一个计算机人，第一篇文章起码应该是0x00吧？这是对计算机最起码的尊重。原本打算",
+    "keywords": ["操作系统","QEMU","GRUB","multiboot"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://kviccn.github.io"
@@ -487,7 +487,7 @@
   
   <li  class="is-active" >    
     
-      <a href="https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/">老李教你写操作系统 (0x01) - Hello World</a>
+      <a href="https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/">老李教你写操作系统 0x01 - Hello World</a>
         
   </li>
   
@@ -496,7 +496,7 @@
 </nav>
   
   <div class="single">
-    <h2 class="single__title">老李教你写操作系统 (0x01) - Hello World</h2>
+    <h2 class="single__title">老李教你写操作系统 0x01 - Hello World</h2>
     <div class="single__meta">
       <div class="single__infos">
   <span class="single__info" title="创建日期">🕓2020年02月15日 </span>  &middot; <span class="single__info" title="阅读时长"> ☕6 分钟 </span>
@@ -520,8 +520,8 @@
   
   
   <li>
-    <a href="/tags/qemu" class="single__tag" title="qemu">
-      #qemu
+    <a href="/tags/qemu" class="single__tag" title="QEMU">
+      #QEMU
     </a>
   </li>
     
@@ -529,8 +529,8 @@
   
   
   <li>
-    <a href="/tags/grub" class="single__tag" title="grub">
-      #grub
+    <a href="/tags/grub" class="single__tag" title="GRUB">
+      #GRUB
     </a>
   </li>
     
@@ -548,7 +548,7 @@
     </div>    
     <article class="single__contents">
       <h1 id="前言">前言</h1>
-<p><del>这一切还得从一只蝙蝠说起。</del></p>
+<p><del>这还得从一只蝙蝠说起。</del></p>
 <p>讲道理这篇文章的题目很不合理。作为一个计算机人，第一篇文章起码应该是<code>0x00</code>吧？这是对计算机最起码的尊重。原本打算在这篇文章之前写一篇关于汇编和硬件基础知识的介绍（以后补上）。虽然汇编和硬件很简单，但是一上来就讲这些简单的知识难免会让人觉得枯燥，因而影响学习的积极性是得不偿失的。索性先写个操作系统找找感觉，以此建立学习的兴趣，未尝不是一件好事。</p>
 <p>搞计算机这一行，万事离不了个<code>Hello World</code>。现在开始就带领大家实现一个操作系统版的<code>Hello World</code>。</p>
 <h1 id="环境">环境</h1>
@@ -584,21 +584,21 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="k">asm</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">.long 0x1badb002, 0, (-(0x1badb002 + 0))</span><span class="s">&#34;</span><span class="p">)</span><span class="p">;</span>
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="k">asm</span><span class="p">(</span><span class="s">&#34;.long 0x1badb002, 0, (-(0x1badb002 + 0))&#34;</span><span class="p">);</span>
 
 <span class="kt">unsigned</span> <span class="kt">short</span> <span class="o">*</span><span class="n">video_buffer</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="o">*</span><span class="p">)</span><span class="mh">0xb8000</span><span class="p">;</span>
-<span class="kt">char</span> <span class="o">*</span><span class="n">message</span> <span class="o">=</span> <span class="sa"></span><span class="s">&#34;</span><span class="s">Hello, world!</span><span class="s">&#34;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="n">message</span> <span class="o">=</span> <span class="s">&#34;Hello, world!&#34;</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">kernel_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">80</span> <span class="o">*</span> <span class="mi">25</span><span class="p">;</span> <span class="n">i</span><span class="o">+</span><span class="o">+</span><span class="p">)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">80</span> <span class="o">*</span> <span class="mi">25</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
   <span class="p">{</span>
-    <span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xff00</span><span class="p">)</span> <span class="o">|</span> <span class="sa"></span><span class="sc">&#39;</span><span class="sc"> </span><span class="sc">&#39;</span><span class="p">;</span>
+    <span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xff00</span><span class="p">)</span> <span class="o">|</span> <span class="sc">&#39; &#39;</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!</span><span class="o">=</span> <span class="sa"></span><span class="sc">&#39;</span><span class="sc">\0</span><span class="sc">&#39;</span><span class="p">;</span> <span class="n">i</span><span class="o">+</span><span class="o">+</span><span class="p">)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
   <span class="p">{</span>
-    <span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xff00</span><span class="p">)</span> <span class="o">|</span> <span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="p">;</span>
+    <span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">video_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xff00</span><span class="p">)</span> <span class="o">|</span> <span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
   <span class="p">}</span>
 
   <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -612,7 +612,7 @@
 <li>运行 <code>qemu-system-i386 -kernel kernel.elf</code></li>
 </ul>
 <p>一切顺利的话运行结果如下：</p>
-<p><img src="/posts/images/VirtualBox_xubuntu_15_02_2020_21_23_43.png" alt="运行结果" /></p>
+<p><img src="/posts/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/images/0x01/VirtualBox_xubuntu_15_02_2020_21_23_43.png" alt="运行结果" /></p>
 <h1 id="解释">解释</h1>
 <h2 id="代码解释">代码解释</h2>
 <p>第<code>1</code>行是内联汇编语句，用于定义三个32位的数据，共12字节。对于操作系统来说这不是必须的，但这是<code>multiboot</code>规范定义的<code>header</code>。符合这个规范的内核可以被<code>qemu</code>或<code>grub</code>所引导。</p>
@@ -856,6 +856,13 @@ ELF 头：
     </a>
   
   <div class="grow"></div>
+  
+    <a href="https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/" class="pagination-single__right">      
+      <div class="pagination-single__right-title">汇编语言一发入魂 0x00 - 计算机是如何启动的?</div>
+      <div class="pagination-single__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+      </div>
+    </a>
   
 </nav>
     
