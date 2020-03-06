@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>汇编语言一发入魂 0x00 - 计算机是如何启动的? – 杨河老李</title>
+    <title>汇编语言一发入魂 0x01 - Hello World – 杨河老李</title>
     
 
 
@@ -279,19 +279,19 @@
 
     <meta name="description" content="" />
 <meta name="keywords" content="">
-<meta name="created" content="2020-02-18T15:42:56&#43;0800">
-<meta name="modified" content="2020-02-18T15:42:56&#43;0800">
+<meta name="created" content="2020-03-05T16:44:50&#43;0800">
+<meta name="modified" content="2020-03-05T16:44:50&#43;0800">
 
 
 <meta property="og:site_name" content="杨河老李">
-<meta property="og:title" content="汇编语言一发入魂 0x00 - 计算机是如何启动的?">
-<meta property="og:url" content="https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/">
+<meta property="og:title" content="汇编语言一发入魂 0x01 - Hello World">
+<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.67.0-DEV" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/">
+<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -303,12 +303,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "汇编语言一发入魂 0x00 - 计算机是如何启动的?",
-    "datePublished": "2020-02-18T15:42:56+08:00",
-    "dateModified": "2020-02-18T15:42:56+08:00",
-    "url" : "https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/",
-    "description": "这个系列的首篇老李打算为大家介绍一下计算机是如何启动的。我的设想是把我们写出来的程序直接放在CPU上去跑，因为汇编语言就是和硬件打交道的语言",
-    "keywords": ["汇编语言","QEMU","主引导记录","MBR"],
+    "headline": "汇编语言一发入魂 0x01 - Hello World",
+    "datePublished": "2020-03-05T16:44:50+08:00",
+    "dateModified": "2020-03-05T16:44:50+08:00",
+    "url" : "https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/",
+    "description": "目标：在屏幕上打印出我愿称之为经典的Hello World。 要在屏幕上打印字符就需要对显存进行操作。那么如何操作显存呢？对于汇编语言来说，这个",
+    "keywords": ["汇编语言","显卡","显存"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://kviccn.github.io"
@@ -487,7 +487,7 @@
   
   <li  class="is-active" >    
     
-      <a href="https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/">汇编语言一发入魂 0x00 - 计算机是如何启动的?</a>
+      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/">汇编语言一发入魂 0x01 - Hello World</a>
         
   </li>
   
@@ -496,10 +496,10 @@
 </nav>
   
   <div class="single">
-    <h2 class="single__title">汇编语言一发入魂 0x00 - 计算机是如何启动的?</h2>
+    <h2 class="single__title">汇编语言一发入魂 0x01 - Hello World</h2>
     <div class="single__meta">
       <div class="single__infos">
-  <span class="single__info" title="创建日期">🕓2020年02月18日 </span>  &middot; <span class="single__info" title="阅读时长"> ☕6 分钟 </span>
+  <span class="single__info" title="创建日期">🕓2020年03月05日 </span>  &middot; <span class="single__info" title="阅读时长"> ☕10 分钟 </span>
   <span class="single__info">
     
   </span>
@@ -520,8 +520,8 @@
   
   
   <li>
-    <a href="/tags/qemu" class="single__tag" title="QEMU">
-      #QEMU
+    <a href="/tags/%E6%98%BE%E5%8D%A1" class="single__tag" title="显卡">
+      #显卡
     </a>
   </li>
     
@@ -529,17 +529,8 @@
   
   
   <li>
-    <a href="/tags/%E4%B8%BB%E5%BC%95%E5%AF%BC%E8%AE%B0%E5%BD%95" class="single__tag" title="主引导记录">
-      #主引导记录
-    </a>
-  </li>
-    
-
-  
-  
-  <li>
-    <a href="/tags/mbr" class="single__tag" title="MBR">
-      #MBR
+    <a href="/tags/%E6%98%BE%E5%AD%98" class="single__tag" title="显存">
+      #显存
     </a>
   </li>
     
@@ -547,116 +538,121 @@
 </div>
     </div>    
     <article class="single__contents">
-      <p>这个系列的首篇老李打算为大家介绍一下计算机是如何启动的。我的设想是把我们写出来的程序直接放在<code>CPU</code>上去跑，因为汇编语言就是和硬件打交道的语言，如果在我们的程序和硬件之间隔一层操作系统的话，总感觉没那么舒服。结合这篇文章的知识，我们就可以让硬件直接加载我们自己的程序并执行。</p>
-<p>通常计算机的启动方式分为两种：传统的<code>BIOS-MBR</code>启动模式和新的<code>UEFI-GPT</code>启动模式。在这里我们介绍传统的<code>BIOS-MBR</code>启动模式。</p>
-<p>先来看一下按下计算机的电源或者复位键之后<code>CPU</code>中寄存器的初始值。</p>
-<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/%E7%A1%AC%E4%BB%B6%E5%8A%A0%E7%94%B5%E5%90%8E%E5%AF%84%E5%AD%98%E5%99%A8%E5%88%9D%E5%A7%8B%E5%80%BC.png" alt="硬件加电后寄存器初始值" /></p>
-<p>我们重点关注一下<code>cs</code>寄存器和<code>eip</code>寄存器，这两个寄存器决定了<code>CPU</code>执行哪里的代码，地址计算的方式为：<code>EA = Base + EIP</code>。</p>
-<p>由上图的寄存器状态可知<code>CPU</code>在加电后首先会去<code>0xFFFF0000 + 0x0000FFF0</code>处即<code>0xFFFFFFF0</code>处执行第一条指令。下面我们看一看计算机加电后的内存状态是怎样的。</p>
-<p>当计算机上电初始化时，物理内存被设置成从地址<code>0</code>开始的连续区域。除了地址从<code>0xA0000</code>到<code>0xFFFFF</code>(<code>640K</code>到<code>1M</code>共<code>384K</code>)和<code>0xFFFE0000</code>到<code>0xFFFFFFFF</code>(<code>4G</code>处的最后<code>64K</code>)范围以外的所有内存都可用作系统内存。这两个特定范围被用于<code>I/O</code>设备和<code>BIOS</code>程序。<code>640K</code>&ndash;<code>1M</code>之间的<code>384K</code>用作下图中指明的用途。其中地址<code>0xA0000</code>开始的<code>128K</code>用作显存缓冲区，随后部分用于其他控制卡的<code>ROM BIOS</code>或其映射区域，而<code>0xF0000</code>到<code>1M</code>范围用于高端系统<code>ROM BIOS</code>的映射区。</p>
-<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9F%9F%E5%9B%BE.png" alt="内存使用区域图" /></p>
-<p><code>ROM-BIOS</code>是一段固化在主板上的程序，这段程序在计算机加电后会自动被加载到内存中，主要用于计算机的自检和初始化。根据上面的分析可知<code>0xFFFFFFF0</code>正好处于这段程序中，位于<code>4G</code>空间最后一个<code>64K</code>的最后<code>16</code>字节处。这里会被安排一条<code>jmp</code>指令，用于跳转到<code>BIOS</code>代码中<code>64KB</code>范围内的某一条指令开始执行。注意，此时<code>CPU</code>是处于<code>32</code>位模式下的，可以访问<code>4G</code>的地址空间。<code>BIOS</code>在执行了一系列硬件检测和初始化操作之后，会把与原来<code>PC</code>机兼容的<code>64KB BIOS</code>代码和数据复制到内存低端<code>1M</code>末端的<code>64K</code>处，然后跳转到这个地方并让<code>CPU</code>运行在实地址模式下。过程如下图所示。</p>
-<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/Flash-ROM-BIOS%E4%BD%8D%E7%BD%AE%E5%92%8C%E5%A4%8D%E5%88%B6%E6%98%A0%E5%B0%84%E5%8C%BA%E5%9F%9F.png" alt="Flash-ROM-BIOS位置和复制映射区域" /></p>
-<p>最后，如果硬盘或软盘是首选的启动设备的话，<code>BIOS</code>会读取其中的<code>0</code>柱面<code>0</code>磁道<code>1</code>扇区，并检测是否为可引导设备，如果是的话，这个扇区将被加载到内存<code>0x7c00</code>处并被执行。可引导的标志是扇区的最后两个字节为<code>0x55</code>和<code>0xAA</code>。</p>
-<p>在这篇文章中我们先不写程序，但我们可以做一个小实验验证一下上面学到的这些知识。</p>
-<p>实验环境如下：</p>
-<ul>
-<li>系统：<code>Ubuntu 18.04.4 LTS</code></li>
-<li>虚拟机：<code>QEMU emulator version 2.11.1(Debian 1:2.11+dfsg-1ubuntu7.21)</code></li>
-<li>二进制编辑器：<code>hexedit</code></li>
-</ul>
-<p>我们将用虚拟机代替物理机，用磁盘映像文件代替真实的硬盘。因为实验中我们需要操作主引导记录，主引导记录对于操作系统是非常重要的，如果操作不慎将会导操作系统无法启动。</p>
-<p>首先我们创建一个空的磁盘映像文件，使用<code>dd</code>命令。</p>
+      <p>目标：在屏幕上打印出<del>我愿称之为经典的</del><code>Hello World</code>。</p>
+<p>要在屏幕上打印字符就需要对显存进行操作。那么如何操作显存呢？对于汇编语言来说，这个问题的答案是很简单的。如上一篇文章所讲，在计算机启动时，显卡被初始化为文本模式，对应的显存也已经映射到了<code>0xb8000</code>到<code>0xbffff</code>这段物理地址空间。所以直接向这段内存写入数据，屏幕上就能够打印出对应的字符了。那么如何向内存写入数据呢？</p>
+<p>向内存写入数据，首先需要知道内存对应的地址。对于<code>8086</code>处理器来说，内存地址是以<code>段基址</code>:<code>段内偏移</code>的形式给出的。物理内存被划分为逻辑上的段，每个段最长为<code>64KB</code>。这是有历史原因的，<code>8086</code>具有<code>20</code>位的地址线，寻址范围是<code>1MB</code>，但是<code>8086</code>的内部寄存器都是<code>16</code>位的，最多只能访问<code>64KB</code>的内存空间，无法完全利用这巨大的内存，真是太可惜了。天无绝人之路，<code>Intel</code>的那帮巨佬们就想出了一个巧（鸡）妙（贼）的办法。<code>16</code>位的寄存器左移<code>4</code>位不就是<code>20</code>位了吗？理想很丰满，但是这里有一个问题。因为采用了左移<code>4</code>位的方法，所以无论地址是多少，最终计算得到的地址都是<code>16</code>字节对齐的。举个栗子，<code>0x1234</code>这个地址，左移<code>4</code>位之后就变成了<code>0x12340</code>，同理，<code>0x1235</code>对应<code>0x12350</code>，<code>0x12340</code>到<code>0x12350</code>之间的<code>16</code>个字节是没法访问到的。这个就很好解决了，把<code>0x1234</code>看作一个段，这样的话再加一个偏移量就可以访问到刚才无法访问到的空间了。栗如要访问<code>0x1234f</code>这个位置，那么给个<code>0xf</code>的偏移量就可以了。说干就干，于是他们马上设计了一个计算物理地址的电路，做的运算就是从段寄存器里取出来段地址，左移<code>4</code>位，然后在加上一个<code>16</code>位的偏移地址，形成<code>20</code>位的物理地址。这个电路俗称地址加法器。</p>
+<p>上面我们提到计算机启动时，显卡被初始化为文本模式。这个文本模式默认是<code>80</code>行、<code>25</code>列，可以显示<code>2000</code>个字符。在该模式下，每个字符的显示占据两个字节的空间，低字节保存字符的<code>ASCII</code>码，高字节保存字符的显示属性。下面给出<code>ASCII</code>码表。</p>
+<pre><code>Oct   Dec   Hex   Char                        Oct   Dec   Hex   Char
+────────────────────────────────────────────────────────────────────────
+000   0     00    NUL '\0' (null character)   100   64    40    @
+001   1     01    SOH (start of heading)      101   65    41    A
+002   2     02    STX (start of text)         102   66    42    B
+003   3     03    ETX (end of text)           103   67    43    C
+004   4     04    EOT (end of transmission)   104   68    44    D
+005   5     05    ENQ (enquiry)               105   69    45    E
+006   6     06    ACK (acknowledge)           106   70    46    F
+007   7     07    BEL '\a' (bell)             107   71    47    G
+010   8     08    BS  '\b' (backspace)        110   72    48    H
+011   9     09    HT  '\t' (horizontal tab)   111   73    49    I
+012   10    0A    LF  '\n' (new line)         112   74    4A    J
+013   11    0B    VT  '\v' (vertical tab)     113   75    4B    K
+014   12    0C    FF  '\f' (form feed)        114   76    4C    L
+015   13    0D    CR  '\r' (carriage ret)     115   77    4D    M
+016   14    0E    SO  (shift out)             116   78    4E    N
+017   15    0F    SI  (shift in)              117   79    4F    O
+020   16    10    DLE (data link escape)      120   80    50    P
+021   17    11    DC1 (device control 1)      121   81    51    Q
+022   18    12    DC2 (device control 2)      122   82    52    R
+023   19    13    DC3 (device control 3)      123   83    53    S
+024   20    14    DC4 (device control 4)      124   84    54    T
+025   21    15    NAK (negative ack.)         125   85    55    U
+026   22    16    SYN (synchronous idle)      126   86    56    V
+027   23    17    ETB (end of trans. blk)     127   87    57    W
+030   24    18    CAN (cancel)                130   88    58    X
+031   25    19    EM  (end of medium)         131   89    59    Y
+032   26    1A    SUB (substitute)            132   90    5A    Z
+033   27    1B    ESC (escape)                133   91    5B    [
+034   28    1C    FS  (file separator)        134   92    5C    \  '\\'
+035   29    1D    GS  (group separator)       135   93    5D    ]
+036   30    1E    RS  (record separator)      136   94    5E    ^
+037   31    1F    US  (unit separator)        137   95    5F    _
+040   32    20    SPACE                       140   96    60    `
+041   33    21    !                           141   97    61    a
+042   34    22    &quot;                           142   98    62    b
+043   35    23    #                           143   99    63    c
+044   36    24    $                           144   100   64    d
+045   37    25    %                           145   101   65    e
+046   38    26    &amp;                           146   102   66    f
+047   39    27    '                           147   103   67    g
+050   40    28    (                           150   104   68    h
+051   41    29    )                           151   105   69    i
+052   42    2A    *                           152   106   6A    j
+053   43    2B    +                           153   107   6B    k
+054   44    2C    ,                           154   108   6C    l
+055   45    2D    -                           155   109   6D    m
+056   46    2E    .                           156   110   6E    n
+
+057   47    2F    /                           157   111   6F    o
+060   48    30    0                           160   112   70    p
+061   49    31    1                           161   113   71    q
+062   50    32    2                           162   114   72    r
+063   51    33    3                           163   115   73    s
+064   52    34    4                           164   116   74    t
+065   53    35    5                           165   117   75    u
+066   54    36    6                           166   118   76    v
+067   55    37    7                           167   119   77    w
+070   56    38    8                           170   120   78    x
+071   57    39    9                           171   121   79    y
+072   58    3A    :                           172   122   7A    z
+073   59    3B    ;                           173   123   7B    {
+074   60    3C    &lt;                           174   124   7C    |
+075   61    3D    =                           175   125   7D    }
+076   62    3E    &gt;                           176   126   7E    ~
+077   63    3F    ?                           177   127   7F    DEL
+</code></pre><p>字符可以使用一个字节的数字来表示，那字符的显示属性又是如何表示的呢？</p>
+<p>用于控制字符显示属性的字节中的每一位含义如下，其中<code>RGB</code>代表红绿蓝，<code>K</code>代表是否闪烁、<code>I</code>代表是否高亮。</p>
+<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x01/char_attribute.png" alt="字符属性" /></p>
+<p>例如：<code>0x0a</code>二进制为<code>00001010</code>，我们翻译翻译，就是黑色背景，不闪烁，绿色前景，高亮显示，高亮的效果是最终显示的是浅绿色。</p>
+<p>有了上面的这些基础知识，那在屏幕上打印字符就是手到擒来。具体来说，就是把字符的<code>ASCII</code>码和字符的属性依次送入显存对应的内存即可。</p>
+<p>下面给出我们的第一个汇编程序：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>disk.img <span class="nv">bs</span><span class="o">=</span><span class="m">1024</span> <span class="nv">count</span><span class="o">=</span><span class="m">100</span>
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
+
+<span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
+<span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
+
+<span class="nf">movb</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">H</span><span class="err">&#39;</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span>
+<span class="nf">movb</span> <span class="no">$0xa</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">1</span>
+
+<span class="nf">jmp</span> <span class="p">.</span>
+
+<span class="na">.org</span> <span class="mi">510</span>
+<span class="na">.word</span> <span class="mi">0xAA55</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>上面我们创建了一个<code>100KB</code>大的硬盘映像，好像有点小，但是对于我们的实验来说足够了。</p>
-<p>查看一下硬盘映像中的内容。因为我们在创建时输入使用的是产生<code>0</code>的设备文件，所以现在的这块&quot;硬盘&quot;中的内容全部为零，为了加深印象我们还是查看一下。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ xxd -a disk.img 
-00000000: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
-*
-00018ff0: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
-</code></pre></td></tr></table>
-</div>
-</div><p>可以看到<code>disk.img</code>中的内容全为零。</p>
-<p>下面我们试试看如果直接用虚拟机去启动这块硬盘的话会发生什么。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 disk.img
-</code></pre></td></tr></table>
-</div>
-</div><p>虚拟机启动后结果如下，<code>Boot failed: not a bootable disk</code>。提示磁盘不可引导。</p>
-<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/boot-disk-0x00.png" alt="引导不可引导的硬盘" /></p>
-<p>现在我们将<code>disk.img</code>文件的第<code>510</code>、<code>511</code>字节改为<code>0x55</code>、<code>0xAA</code>，然后重新启动看看结果。</p>
-<p>关于如何直接修改这两个字节，如果有二进制文件编辑器的话会简单很多。当然如果没有的话我们可以自己写一个工具来完成这个目标。</p>
-<p>先使用工具来直接对这两个字节进行编辑，我们用到的工具是<code>hexedit</code>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ hexedit disk.img
-</code></pre></td></tr></table>
-</div>
-</div><p>通过键盘方向键定位到位置<code>0x1FE</code>即十进制<code>510</code>这个位置，将连续的两个字节分别修改为<code>0x55</code>、<code>0xAA</code>，<code>Ctrl + X</code>保存退出。</p>
-<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/edit-boot-disk.jpg" alt="编辑硬盘映像文件" /></p>
-<p>再次查看，可以看出已经有了我们需要的可引导标记。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ xxd -a disk.img 
-00000000: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
-*
-000001f0: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> 55aa  ..............U.
-00000200: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
-*
-00018ff0: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
-</code></pre></td></tr></table>
-</div>
-</div><p>我们再次尝试启动虚拟机，看看这次的结果。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 disk.img
-</code></pre></td></tr></table>
-</div>
-</div><p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/boot-disk-0x01.jpg" alt="可引导的硬盘" /></p>
-<p>如我们所愿，虚拟机这次告诉我们已经从硬盘开始引导了。但是我们的硬盘里一行指令也没有，所以现在虚拟机就傻傻的在哪里等着。</p>
-<p>至此我们已经知道了计算机是如何启动的，剩下的内容作为老李赠送给大家的一点小礼物。老李会教大家写一个小工具，用于将主引导记录，也就是磁盘的<code>0</code>柱面<code>0</code>磁道<code>1</code>扇区，对应磁盘映像文件的前<code>512</code>个字节设置为可引导的。</p>
-<p>我们的程序功能很简单：</p>
-<ol>
-<li>读入一个不大于<code>510</code>字节的文件</li>
-<li>将它补齐到<code>510</code>字节</li>
-<li>将第<code>510</code>、<code>511</code>字节(从<code>0</code>开始计数)设置为<code>0x55</code>、<code>0xAA</code></li>
-<li>写入原文件</li>
-</ol>
-<p>程序代码如下：</p>
+</div><p>依次解释一下每一行的含义。</p>
+<p>第<code>1</code>行告诉编译器以<code>16</code>位模式编译，因为<code>BIOS</code>在加载并运行我们的代码时是处于<code>16</code>位实地址模式的。</p>
+<p>第<code>3、4</code>行将附加数据段寄存器<code>es</code>的内容设置为<code>0xb800</code>。<code>mov</code>是数据转移指令，<code>mov</code>后面的<code>w</code>表示操作数的宽度为一个<code>word</code>，即<code>16</code>位的数据。<code>movw $0xb800, %ax</code>表示把立即数<code>0xb800</code>转移到寄存器<code>ax</code>中。其中<code>0xb800</code>是源操作数，<code>ax</code>是目的操作数。根据<code>at&amp;t</code>的规范，立即数前需要加<code>$</code>符，用来和内存地址区分。寄存器前需要加<code>%</code>。这条指令执行完成之后<code>ax</code>寄存器的内容为<code>0xb800</code>，下一条指令又把<code>ax</code>寄存器中的数据转移到<code>es</code>中，完成段寄存器的设置。乍一看这不是多了块鱼吗？为啥不直接把<code>0xb800</code>放到<code>es</code>里？答案是段寄存器在程序运行中的职责比较重要，所以<code>Intel</code>没有提供直接把立即数转移到段寄存器的指令。通过强制多加一个步骤，可以使操作者明白自己到底在做什么，是否真的需要修改段寄存器的值。</p>
+<p>第<code>6</code>行我们先来分析一下目的操作数<code>%es:0</code>，根据之前的内容我们知道这是以<code>段基址</code>:<code>段内偏移</code>的形式来给出内存地址。此时<code>es</code>的内容为<code>0xb800</code>，左移<code>4</code>位再加上偏移地址<code>0</code>，得到的物理地址为<code>0xb8000</code>。再来康康源操作数<code>'H'</code>，为啥这样写呢？得益于<code>GNU as</code>编译器的支持，我们能够以这种方式表示一个<code>ASCII</code>字符，编译器会帮我们把<code>'H'</code>转换为<code>0x48</code>。接下来康康<code>mov</code>后面的<code>b</code>，<code>b</code>表示<code>byte</code>，因为这次我们只操作一个字节的数据。</p>
+<p>第<code>7</code>行和第<code>6</code>行基本一致，只不过偏移地址为<code>1</code>，最终的物理地址为<code>0xb8001</code>，<code>0x0a</code>表示浅绿色。</p>
+<p>第<code>9</code>行是一条跳转指令，<code>.</code>单独使用时是一个特殊的符号，作为位置计数器，表示当前所在行的位置。那么这条指令就表示跳转到当前位置，实现的效果就是<strong>死循环</strong>。</p>
+<p>第<code>11、12</code>行用了两条伪指令，伪指令是给编译器看的，并不是处理器最终会执行的指令。<code>.org</code>伪指令指示编译器把位置计数器移动到操作数所指定的位置，这里是将位置计数器移动到<code>510</code>处。<code>.word</code>伪指令指示编译器在当前位置写入一个字大小的数据，当然，操作数也可以用逗号隔开，表示写入一组一个字大小的数据。这里要写入的数据是<code>0xAA55</code>，何以是<code>0xAA55</code>？上次不是才说过第一个扇区的最后两个字节要是<code>0x55</code>、<code>0xAA</code>才能被引导吗？怎么反过来了？这是因为<code>Intel</code>处理器使用的是小端序，即数据的低字节存放在内存的低地址处，高字节存放在内存的高地址处。所以<code>0xAA55</code>在内存中仍然是按照<code>0x55</code>，<code>0xAA</code>的顺序存放的。</p>
+<p>接下来我们编译然后反编译，康康上面这段代码对应的二进制的指令究竟是什么。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -676,131 +672,66 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;fcntl.h&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;stdarg.h&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span> <span class="p">...)</span>
-<span class="p">{</span>
-  <span class="n">va_list</span> <span class="n">args</span><span class="p">;</span>
-  <span class="n">va_start</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
-  <span class="n">vfprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
-  <span class="n">va_end</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
-  <span class="n">fputc</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">,</span> <span class="n">stderr</span><span class="p">);</span>
-  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">}</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boot.s -o boot.o
+$ objdump -D -Mi8086,suffix boot.o 
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="kt">int</span> <span class="n">fd</span><span class="p">;</span>
-  <span class="n">ssize_t</span> <span class="n">size</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">512</span><span class="p">];</span>
+boot.o：     文件格式 elf32-i386
 
-  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">die</span><span class="p">(</span><span class="s">&#34;usage: ./sign bin_file&#34;</span><span class="p">);</span>
-  <span class="p">}</span>
 
-  <span class="k">if</span> <span class="p">((</span><span class="n">fd</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">O_RDWR</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">die</span><span class="p">(</span><span class="s">&#34;open %s error&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-  <span class="p">}</span>
+Disassembly of section .text:
 
-  <span class="k">if</span> <span class="p">((</span><span class="n">size</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="mi">1024</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">die</span><span class="p">(</span><span class="s">&#34;read %s error&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-  <span class="p">}</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">510</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">die</span><span class="p">(</span><span class="s">&#34;boot block too large: %d bytes (max 510)&#34;</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="k">while</span> <span class="p">((</span><span class="mi">510</span> <span class="o">-</span> <span class="n">size</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">buf</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="n">buf</span><span class="p">[</span><span class="mi">510</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x55</span><span class="p">;</span>
-  <span class="n">buf</span><span class="p">[</span><span class="mi">511</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xAA</span><span class="p">;</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="n">lseek</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">die</span><span class="p">(</span><span class="s">&#34;lseek error&#34;</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="k">if</span> <span class="p">((</span><span class="n">size</span> <span class="o">=</span> <span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="mi">512</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">512</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">die</span><span class="p">(</span><span class="s">&#34;write %s error&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="m">00000000</span> &lt;.text&gt;:
+   0:   b8 <span class="m">00</span> b8                movw   <span class="nv">$0</span>xb800,%ax
+   3:   8e c0                   movw   %ax,%es
+   5:   <span class="m">26</span> c6 <span class="m">06</span> <span class="m">00</span> <span class="m">00</span> <span class="m">48</span>       movb   <span class="nv">$0</span>x48,%es:0x0
+   b:   <span class="m">26</span> c6 <span class="m">06</span> <span class="m">01</span> <span class="m">00</span> 0a       movb   <span class="nv">$0</span>xa,%es:0x1
+  11:   eb fe                   jmp    0x11
+        ...
+ 1fb:   <span class="m">00</span> <span class="m">00</span>                   addb   %al,<span class="o">(</span>%bx,%si<span class="o">)</span>
+ 1fd:   <span class="m">00</span> <span class="m">55</span> aa                addb   %dl,-0x56<span class="o">(</span>%di<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>程序的结构很简单，不多解释了。主逻辑之外封装了一个用于打印错误信息并退出的函数<code>die</code>，这个函数来自<code>linux</code>的源码，功能上没有什么深奥的地方，重点在于它接收可变参数。以后有时间了跟大家介绍一下<code>C</code>语言中可变参数怎么用，下面我们看一下这个工具怎么使用。</p>
-<p>将文件保存为<code>sign.c</code>，编译链接：</p>
+</div><p>第<code>1</code>行使用<code>as</code>编译生成目标文件。</p>
+<p>第<code>2</code>行使用<code>objdump</code>反编译目标文件。<code>-D</code>参数说明我们要反编译所有的<code>section</code>。根据反编译的结果可以看出来，其实整个程序都被编译到<code>.text</code>段中了。因为我们的源文件中并没有明确的指定代码或者数据所在的段，默认情况下<code>as</code>会把这些代码、数据都放在<code>.text</code>段里。<code>-M</code>参数中指定了以<code>16</code>位模式<code>(i8086)</code>反汇编，同时指定在<code>at&amp;t</code>语法中显示指令后缀<code>(suffix)</code>，这些选项以逗号分隔开。</p>
+<p>第<code>10</code>行第一个<code>b8</code>是将<code>16</code>位立即数转移到<code>ax</code>寄存器的指令的二进制码，后面的<code>00 b8</code>因为是小端序，所以它表示的数据实际上是<code>b800</code>，很熟悉，对不对？</p>
+<p>第<code>12、13</code>行，仔细观察可以发现这两条指令前三个字节是相同的，对，它们就是将<code>8</code>位立即数转移到以<code>es</code>为段地址的内存中的指令的二进制码。还是因为是小端序，所以第<code>12</code>行的<code>00 00</code>实际是<code>00 00</code><del>跟没说一样</del>，第<code>13</code>行的<code>01 00</code>实际是<code>00 01</code>，也就是我们在代码里指定的偏移地址。第<code>12</code>行最后一个字节<code>48</code>，就是<code>'H'</code>的<code>ASCII</code>码对应的<code>16</code>进制表示，<code>as</code>已经帮我们翻译过了，所以我们也就不需要花时间去记每一个字符的<code>ASCII</code>码是多少了。</p>
+<p>第<code>14</code>行，我们在代码中写的明明是<code>.</code>，到这里却变成了<code>0x11</code>。还记得我们说过<code>.</code>是位置计数器吗？代表了当前行所在的位置，看冒号前面的<code>11</code>，它告诉了我们当前这条指令的位置，<code>jmp 0x11</code>就是反复跳到自己这里执行喽。</p>
+<p>中间<del>的代码</del>压根没有代码，因为我们是用<code>.org</code>直接跳到<code>510</code>这个位置的，所以从<code>jmp</code>之后到<code>510</code>都是<code>0</code>，<code>objdump</code>很贴心的没有给我们显示。<code>0x1fb</code>处的这个<code>00 00</code>不用管他，毕竟我们把所有东西都放在了代码<code>(.text)</code>段里，<code>objdump</code>也没那么聪明，这不，把我们可引导的标记<code>0x55 0xaa</code>也翻译成了指令。</p>
+<p>好了，代码也写好了，也编译成二进制的文件了。那么，放在虚拟机里启动康康效果吧。</p>
+<p>且慢，让我们先康康<code>boot.o</code>的大小，康康它是不是符合我们<code>512</code>字节的要求。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ make sign
-cc     sign.c   -o sign
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ ls -l boot.o 
+-rw-rw-r-- <span class="m">1</span> laoli laoli <span class="m">956</span> 3月   <span class="m">6</span> 21:19 boot.o
 </code></pre></td></tr></table>
 </div>
-</div><p>我们使用<code>make</code>来进行编译链接，可以少敲几个字母。真正执行的命令也在控制台打印出来了。</p>
-<p>创建一个空文件，并查看：</p>
+</div><p><code>956</code>字节，显然胖了。出现这种结果的原因是<code>as</code>生成的目标文件默认是<code>elf</code>格式的，<code>elf</code>格式的文件中除了二进制代码，还会附加一些头信息、段信息、链接信息、调试信息等等。对与我们这个程序来说，是用不到这些信息的，甚至连链接都不需要，直接把目标文件中的二进制代码复制出来就行了。这个操作我们使用<code>objcopy</code>这个工具来完成。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ objcopy -O binary -j .text boot.o boot.bin
+</code></pre></td></tr></table>
+</div>
+</div><p><code>-O binary</code>指定输出文件的格式为纯二进制格式，<code>-j .text</code>指定只复制<code>.text</code>段，输出的文件名为<code>boot.bin</code>。我们再来看看<code>boot.bin</code>文件的大小。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ ls -l boot.bin 
+-rw-rw-r-- <span class="m">1</span> laoli laoli <span class="m">512</span> 3月   <span class="m">6</span> 21:19 boot.bin
+</code></pre></td></tr></table>
+</div>
+</div><p>刚刚好，<code>512</code>字节。再来看看其中的内容。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -811,63 +742,40 @@ cc     sign.c   -o sign
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ touch boot
-$ ls -l
-总用量 <span class="m">20</span>
--rw-rw-r-- <span class="m">1</span> laoli laoli     <span class="m">0</span> 3月   <span class="m">4</span> 14:15 boot
--rwxrwxr-x <span class="m">1</span> laoli laoli <span class="m">12776</span> 3月   <span class="m">4</span> 14:14 sign
--rw-rw-r-- <span class="m">1</span> laoli laoli   <span class="m">928</span> 3月   <span class="m">4</span> 14:14 sign.c
-</code></pre></td></tr></table>
-</div>
-</div><p>可以看到<code>boot</code>文件长度为<code>0</code>，内容为空。接下来用我们的工具处理一下这个文件：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ./sign boot
-$ ls -l
-总用量 <span class="m">24</span>
--rw-rw-r-- <span class="m">1</span> laoli laoli   <span class="m">512</span> 3月   <span class="m">4</span> 14:16 boot
--rwxrwxr-x <span class="m">1</span> laoli laoli <span class="m">12776</span> 3月   <span class="m">4</span> 14:14 sign
--rw-rw-r-- <span class="m">1</span> laoli laoli   <span class="m">928</span> 3月   <span class="m">4</span> 14:14 sign.c
-</code></pre></td></tr></table>
-</div>
-</div><p>此时<code>boot</code>文件的长度已经是<code>512</code>字节了。查看其内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ xxd -a boot
-00000000: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ xxd -a boot.bin 
+00000000: b800 b88e c026 c606 <span class="m">0000</span> <span class="m">4826</span> c606 <span class="m">0100</span>  .....<span class="p">&amp;</span>....H<span class="p">&amp;</span>....
+00000010: 0aeb fe00 <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
+00000020: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
 *
 000001f0: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> 55aa  ..............U.
 </code></pre></td></tr></table>
 </div>
-</div><p>用虚拟机从这个磁盘映像文件启动：</p>
+</div><p>有兴趣的小朋友可以和上面反编译的结果对比一下，分毫不差。</p>
+<p>好了，现在可以开机、启动了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boot
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boot.bin
 </code></pre></td></tr></table>
 </div>
-</div><p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x00/boot-disk-0x01.jpg" alt="可引导的硬盘" /></p>
-<p>结果和之前使用<code>hexedit</code>手动编辑是一样的，引导成功。</p>
-<p>之所以要教大家自己写一个创建可引导磁盘映像的工具是因为以后我们写的汇编代码需要用到。这篇文章中我们并没有涉及到汇编语言，所以虚拟机启动起来之后我们无法观察到太多的信息。下一篇文章中，老李将正式开始教大家学习汇编语言。加油，奥里给！</p>
-<blockquote>
-<p>文章中部分内容和图片摘录自《Linux 内核完全注释（修正版v5.0）- 赵炯 编著》</p>
-</blockquote>
+</div><p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x01/qemu_H.jpg" alt="启动 H" /></p>
+<p>这就完事儿了？不是说打印<code>Hello World</code>吗？怎么打了个<code>H</code>就完事儿了？</p>
+<p>其实对于一个初学者来说，这章的内容还是蛮多的，需要消化消化。另外，<code>H</code>都打印出来了，<code>ello World</code>还是事儿吗？这个可以留个课后作业，小伙伴们自己试一试。在下一篇文章中老李会教大家一些其它的指令来完成<code>Hello World</code>的打印。</p>
+<p>最后我们来对学到的知识点做一个总结：</p>
+<ul>
+<li><code>8086</code> 处理器采用分段的模型来操作内存，由 <code>段基址</code>:<code>段内偏移</code> 组合给出物理地址，计算方式为 <code>段基址</code> 左移 <code>4</code> 位，与 <code>段内偏移</code> 相加形成 <code>20</code> 位的物理地址。</li>
+<li>计算机启动后，显卡默认初始化为 <code>80 x 25</code> 的文本模式，显存映射到内存的 <code>0xb8000</code> 到 <code>0xbffff</code> 这段物理地址空间。</li>
+<li>文本模式下每个字符的显示由两个字节控制，低字节为该字符的 <code>ASCII</code> 码，高字节控制字符显示的颜色。</li>
+<li><code>.code16</code> 告诉编译器将代码编译成符合 <code>16</code> 位处理器的格式。</li>
+<li><code>mov</code> 指令用于转移数据。</li>
+<li><code>jmp</code> 指令用于程序的跳转。</li>
+<li><code>.</code> 位置计数器，表示当前位置，当然也可以通过给它赋值来改变当前位置。</li>
+<li><code>.org</code> 伪指令，告诉编译器移动到操作数所指定的位置。</li>
+<li><code>.word</code> 伪指令，用于写入一个字的数据，也可以写入多个一个字长的数据，用逗号分隔。</li>
+<li>剩下的就是我们用到的那些工具<code>as</code>、<code>objdump</code>、<code>objcopy</code>，回过头去结合工具执行后的结果，理解理解每一个参数的含义就<code>ok</code>了。</li>
+</ul>
 
     </article>
     
@@ -885,7 +793,7 @@ $ ls -l
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/" class="related__link">老李教你写操作系统 0x01 - Hello World</a>
+          <a href="/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/" class="related__link">汇编语言一发入魂 0x00 - 计算机是如何启动的?</a>
         </li>
         
     </ul>
@@ -894,21 +802,14 @@ $ ls -l
     <div class="grow"></div>
 <nav class="pagination-single">
   
-    <a href="https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/" class="pagination-single__left">
+    <a href="https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/" class="pagination-single__left">
       <div class="pagination-single__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
       </div>
-      <div class="pagination-single__left-title">老李教你写操作系统 0x01 - Hello World</div>      
+      <div class="pagination-single__left-title">汇编语言一发入魂 0x00 - 计算机是如何启动的?</div>      
     </a>
   
   <div class="grow"></div>
-  
-    <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/" class="pagination-single__right">      
-      <div class="pagination-single__right-title">汇编语言一发入魂 0x01 - Hello World</div>
-      <div class="pagination-single__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-      </div>
-    </a>
   
 </nav>
     
@@ -1556,7 +1457,7 @@ $ ls -l
             
     
     
-  <a href="https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84//index.xml" type="application/rss+xml" title="rss" aria-label="RSS Feed Link">
+  <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world//index.xml" type="application/rss+xml" title="rss" aria-label="RSS Feed Link">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
   </a>
 
