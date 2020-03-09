@@ -8,7 +8,7 @@ hasCJKLanguage = true
 
 summaryLength = 70
 
-copyright = "&copy;{year}, All Rights Reserved"
+copyright = "&copy;{year}, 杨河老李"
 timeout = 10000
 enableEmoji = true
 paginate = 13

@@ -1,0 +1,32 @@
+<footer class="footer">
+    {{ partial "footer/select-lang" . }}
+    {{ partial "footer/links-social.html" . }}
+    {{ partial "footer/go-to-top" . }}
+    <hr />
+
+    <div class="basicflex">
+        {{ range $.Param "footerLinks" }}
+            <a href="{{ .link }}" class="footer__link" target="_blank" rel="noreferrer">{{ .name }}</a>
+        {{ end }}
+    </div>
+
+    <div class="footer__poweredby">
+        {{ partial "footer/site-counter" . }}
+        {{ if $.Site.Copyright }}        
+            <p class="caption">
+                {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}
+            </p>
+        {{ end }}
+
+        {{ if $.Site.Params.copyrightOptions.enableCopyrightLink }}
+            <p class="caption">
+                <a rel="license" target="_blank" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}">{{ $.Site.Params.copyrightOptions.copyrightLinkText }}</a>
+            </p>
+        {{ end }}
+
+        {{ if $.Param "showPoweredBy" }}
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
+        {{ end }}
+        
+    </div> 
+</footer>
