@@ -1596,7 +1596,7 @@
 077   63    3F    ?                           177   127   7F    DEL
 </code></pre><p>字符可以使用一个字节的数字来表示，那字符的显示属性又是如何表示的呢？</p>
 <p>用于控制字符显示属性的字节中的每一位含义如下，其中<code>RGB</code>代表红绿蓝，<code>K</code>代表是否闪烁、<code>I</code>代表是否高亮。</p>
-<p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x01/char_attribute.png" alt="字符属性" /></p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x01/char_attribute.png" alt="字符属性" /></p>
 <p>例如：<code>0x0a</code>二进制为<code>00001010</code>，我们翻译翻译，就是黑色背景，不闪烁，绿色前景，高亮显示，高亮的效果是最终显示的是浅绿色。</p>
 <p>有了上面的这些基础知识，那在屏幕上打印字符就是手到擒来。具体来说，就是把字符的<code>ASCII</code>码和字符的属性依次送入显存对应的内存即可。</p>
 <p>下面给出我们的第一个汇编程序：</p>
@@ -1745,7 +1745,7 @@ Disassembly of section .text:
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boot.bin
 </code></pre></td></tr></table>
 </div>
-</div><p><img src="/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x01/qemu_H.jpg" alt="启动 H" /></p>
+</div><p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x01/qemu_H.jpg" alt="启动 H" /></p>
 <p>这就完事儿了？不是说打印<code>Hello World</code>吗？怎么打了个<code>H</code>就完事儿了？</p>
 <p>其实对于一个初学者来说，这章的内容还是蛮多的，需要消化消化。另外，<code>H</code>都打印出来了，<code>ello World</code>还是事儿吗？这个可以留个课后作业，小伙伴们自己试一试。在下一篇文章中老李会教大家一些其它的指令来完成<code>Hello World</code>的打印。</p>
 <p>最后我们来对学到的知识点做一个总结：</p>

@@ -1597,7 +1597,7 @@
 <li>运行 <code>qemu-system-i386 -kernel kernel.elf</code></li>
 </ul>
 <p>一切顺利的话运行结果如下：</p>
-<p><img src="/posts/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/images/0x01/boot.png" alt="运行结果" /></p>
+<p><img src="/posts/series/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/images/0x01/boot.png" alt="运行结果" /></p>
 <h2 id="解释">解释</h2>
 <h3 id="代码解释">代码解释</h3>
 <p>第<code>1</code>行是内联汇编语句，用于定义三个32位的数据，共12字节。对于操作系统来说这不是必须的，但这是<code>multiboot</code>规范定义的<code>header</code>。符合这个规范的内核可以被<code>qemu</code>或<code>grub</code>所引导。</p>
