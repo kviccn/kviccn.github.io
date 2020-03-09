@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>MBR on 杨河老李</title>
     <link>https://kviccn.github.io/tags/mbr/</link>
@@ -13,16 +18,57 @@
     
     
     
+
       
       <item>
         <title>汇编语言一发入魂 0x00 - 计算机是如何启动的?</title>
         <link>https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/</link>
         <pubDate>Tue, 18 Feb 2020 15:42:56 +0800</pubDate>
         
+        <atom:modified>Tue, 18 Feb 2020 15:42:56 +0800</atom:modified>
         <guid>https://kviccn.github.io/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/</guid>
         <description>这个系列的首篇老李打算为大家介绍一下计算机是如何启动的。我的设想是把我们写出来的程序直接放在CPU上去跑，因为汇编语言就是和硬件打交道的语言</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+            
+              <category>QEMU</category>
+            
+          
+            
+              <category>主引导记录</category>
+            
+          
+            
+              <category>MBR</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言一发入魂</category>
+            
+          
+        
       </item>
       
+
     
   </channel>
 </rss>

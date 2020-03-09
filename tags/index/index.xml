@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>index on 杨河老李</title>
     <link>https://kviccn.github.io/tags/index/</link>
@@ -12,16 +17,33 @@
     
     
     
+
       
       <item>
         <title>文章</title>
         <link>https://kviccn.github.io/posts/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
+        <atom:modified>Mon, 17 Feb 2020 00:50:35 +0800</atom:modified>
         <guid>https://kviccn.github.io/posts/</guid>
         <description></description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>index</category>
+            
+          
+        
+        
+        
       </item>
       
+
     
   </channel>
 </rss>
