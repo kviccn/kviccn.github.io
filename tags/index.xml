@@ -12,13 +12,103 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, 杨河老李</copyright>
-    <lastBuildDate>Sat, 07 Mar 2020 15:12:50 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 14:44:57 +0800</lastBuildDate>
     
         <atom:link href="https://kviccn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Boot Sectors</title>
+        <link>https://kviccn.github.io/tags/boot-sectors/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        
+        <guid>https://kviccn.github.io/tags/boot-sectors/</guid>
+        <description></description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Debug</title>
+        <link>https://kviccn.github.io/tags/debug/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        
+        <guid>https://kviccn.github.io/tags/debug/</guid>
+        <description></description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>GDB</title>
+        <link>https://kviccn.github.io/tags/gdb/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        
+        <guid>https://kviccn.github.io/tags/gdb/</guid>
+        <description></description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>引导扇区</title>
+        <link>https://kviccn.github.io/tags/%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        
+        <guid>https://kviccn.github.io/tags/%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/</guid>
+        <description></description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>调试</title>
+        <link>https://kviccn.github.io/tags/%E8%B0%83%E8%AF%95/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        
+        <guid>https://kviccn.github.io/tags/%E8%B0%83%E8%AF%95/</guid>
+        <description></description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>寻址方式</title>

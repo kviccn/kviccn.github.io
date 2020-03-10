@@ -6,15 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>操作系统 on 杨河老李</title>
-    <link>https://kviccn.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-    <description>Recent content in 操作系统 on 杨河老李</description>
+    <title>Boot Sectors on 杨河老李</title>
+    <link>https://kviccn.github.io/tags/boot-sectors/</link>
+    <description>Recent content in Boot Sectors on 杨河老李</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, 杨河老李</copyright>
     <lastBuildDate>Tue, 10 Mar 2020 14:44:57 +0800</lastBuildDate>
     
-        <atom:link href="https://kviccn.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://kviccn.github.io/tags/boot-sectors/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -67,54 +67,6 @@
             
           
         
-        
-      </item>
-      
-      <item>
-        <title>老李教你写操作系统 0x01 - Hello World</title>
-        <link>https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/</link>
-        <pubDate>Sat, 15 Feb 2020 17:55:36 +0800</pubDate>
-        
-        <atom:modified>Sat, 15 Feb 2020 17:55:36 +0800</atom:modified>
-        <guid>https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/</guid>
-        <description>前言 这还得从一只蝙蝠说起。 讲道理这篇文章的题目很不合理。作为一个计算机人，第一篇文章起码应该是0x00吧？这是对计算机最起码的尊重。原本打算</description>
-        
-        <dc:creator>杨河老李</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>操作系统</category>
-            
-          
-            
-              <category>QEMU</category>
-            
-          
-            
-              <category>GRUB</category>
-            
-          
-            
-              <category>multiboot</category>
-            
-          
-        
-        
-          
-            
-              <category>操作系统</category>
-            
-          
-        
-        
-          
-            
-              <category>老李教你写操作系统</category>
-            
-          
         
       </item>
       

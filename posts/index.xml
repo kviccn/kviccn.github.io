@@ -20,6 +20,56 @@
 
       
       <item>
+        <title>调试引导扇区</title>
+        <link>https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        <atom:modified>Tue, 10 Mar 2020 14:44:57 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/</guid>
+        <description>调试是软件开发过程中重要的一个环节。通常我们开发的软件是运行在操作系统之上的，调试器也运行在操作系统之上，加之大多数集成开发环境对调试器的集</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>引导扇区</category>
+            
+          
+            
+              <category>调试</category>
+            
+          
+            
+              <category>Boot Sectors</category>
+            
+          
+            
+              <category>Debug</category>
+            
+          
+            
+              <category>GDB</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+            
+              <category>操作系统</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>汇编语言一发入魂 0x02 - 指令的寻址方式</title>
         <link>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x02-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F/</link>
         <pubDate>Sat, 07 Mar 2020 15:12:50 +0800</pubDate>

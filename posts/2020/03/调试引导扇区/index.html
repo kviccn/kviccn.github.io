@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>汇编语言一发入魂 0x02 - 指令的寻址方式 – 杨河老李</title>
+    <title>调试引导扇区 – 杨河老李</title>
     
 
 
@@ -543,7 +543,7 @@
 
   
     
-    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x02-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F/\"");
+    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1198,18 +1198,18 @@
 <meta name="description" content="The Zzo theme for Hugo example site." />
 
 
-<meta name="keywords" content="汇编语言,寻址方式">
+<meta name="keywords" content="引导扇区,调试,Boot Sectors,Debug,GDB">
 
-<meta name="created" content="2020-03-07T15:12:50&#43;0800">
-<meta name="modified" content="2020-03-07T15:12:50&#43;0800">
-<meta property="article:published_time" content="2020-03-07T15:12:50&#43;0800">
+<meta name="created" content="2020-03-10T14:44:57&#43;0800">
+<meta name="modified" content="2020-03-10T14:44:57&#43;0800">
+<meta property="article:published_time" content="2020-03-10T14:44:57&#43;0800">
 
 <meta name="author" content="杨河老李">
 
 
 <meta property="og:site_name" content="杨河老李">
-<meta property="og:title" content="汇编语言一发入魂 0x02 - 指令的寻址方式">
-<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x02-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F/">
+<meta property="og:title" content="调试引导扇区">
+<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The Zzo theme for Hugo example site.">
 
@@ -1222,7 +1222,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x02-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F/">
+<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1236,12 +1236,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "汇编语言一发入魂 0x02 - 指令的寻址方式",
-    "datePublished": "2020-03-07T15:12:50+08:00",
-    "dateModified": "2020-03-07T15:12:50+08:00",
-    "url" : "https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x02-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F/",
-    "description": "上篇文章中老李给大家教了怎么在屏幕上打印一个字符，还留了个课后作业，打印完整的Hello World。最简单的方法是按照打印H的方式依次打印其",
-    "keywords": ["汇编语言","寻址方式"],
+    "headline": "调试引导扇区",
+    "datePublished": "2020-03-10T14:44:57+08:00",
+    "dateModified": "2020-03-10T14:44:57+08:00",
+    "url" : "https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/",
+    "description": "调试是软件开发过程中重要的一个环节。通常我们开发的软件是运行在操作系统之上的，调试器也运行在操作系统之上，加之大多数集成开发环境对调试器的集",
+    "keywords": ["引导扇区","调试","Boot Sectors","Debug","GDB"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://kviccn.github.io"
@@ -1484,7 +1484,7 @@
   
   <li  class="is-active" >
     
-      <span>汇编语言一发入魂 0x02 - 指令的寻址方式</span>
+      <span>调试引导扇区</span>
     
   </li>
   
@@ -1496,11 +1496,11 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">汇编语言一发入魂 0x02 - 指令的寻址方式</h2>
+    <h2 class="single__title" data-ani="true">调试引导扇区</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="创建日期">📅&nbsp;2020年03月07日 </time>  &middot; <span class="single__info" title="阅读时长"> ☕ 11 分钟 </span>
+  <time class="single__info" title="创建日期">📅&nbsp;2020年03月10日 </time>  &middot; <span class="single__info" title="阅读时长"> ☕ 4 分钟 </span>
   <span class="single__info">
     
   </span>
@@ -1516,297 +1516,418 @@
   
   
 
+  
+  
+    <li><a href="https://kviccn.github.io/tags/boot-sectors/" class="single__tag" title="Boot Sectors">#Boot Sectors</a></li>
+  
+
+  
+  
+    <li><a href="https://kviccn.github.io/tags/debug/" class="single__tag" title="Debug">#Debug</a></li>
+  
+
+  
+  
+    <li><a href="https://kviccn.github.io/tags/gdb/" class="single__tag" title="GDB">#GDB</a></li>
+  
+
 </div>
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>上篇文章中老李给大家教了怎么在屏幕上打印一个字符，还留了个课后作业，打印完整的<code>Hello World</code>。最简单的方法是按照打印<code>H</code>的方式依次打印其它字符就好了。当然，这种重复的工作还是交给计算机去做吧，毕竟我们的时间是很宝贵的。</p>
-<p>这篇文章中我们用循环的方式让计算机自己把所有的字符都打印出来。并结合代码给大家讲解一下指令的寻址方式。下面给出代码：</p>
-<h2 id="代码">代码</h2>
+      <p>调试是软件开发过程中重要的一个环节。通常我们开发的软件是运行在操作系统之上的，调试器也运行在操作系统之上，加之大多数集成开发环境对调试器的集成非常完美，所以我们调试软件的时候非常轻松。但是如果是开发操作系统呢？操作系统该如何调试？今天老李结合代码教大家操作系统启动过程中的第一个步骤 &ndash; 引导扇区的调试。</p>
+<p>开发环境如下：</p>
+<ul>
+<li>系统：<code>Ubuntu 18.04.4 LTS</code></li>
+<li>汇编器：<code>GNU as (GNU Binutils for Ubuntu) 2.30</code></li>
+<li>调试器：<code>GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git</code></li>
+<li>虚拟机：<code>QEMU emulator version 2.11.1(Debian 1:2.11+dfsg-1ubuntu7.21)</code></li>
+<li>引导扇区代码：<a href="https://github.com/kviccn/asm-boooom/blob/master/0x02/boot.s">boot.s</a></li>
+</ul>
+<p>在操作系统的开发过程中我们通常使用<code>QEMU</code>虚拟机来运行我们开发的操作系统，使用<code>GDB</code>作为调试工具。<code>GDB</code>支持<code>远程调试</code>，这是通过一个简单的协议来实现的。<code>QEMU</code>支持该协议，所以我们可以配合这两者来完成我们的调试工作。</p>
+<p>先编译生成引导扇区文件：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
-
-<span class="nf">movw</span> <span class="no">$0x07c0</span><span class="p">,</span> <span class="nv">%ax</span>
-<span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ds</span>
-
-<span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
-<span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
-
-<span class="nf">xorw</span> <span class="nv">%si</span><span class="p">,</span> <span class="nv">%si</span>
-<span class="nf">movw</span> <span class="no">message_length</span><span class="p">,</span> <span class="nv">%cx</span>
-
-<span class="nl">l1:</span>
-  <span class="nf">movb</span> <span class="no">message</span><span class="p">(</span><span class="nv">%si</span><span class="p">),</span> <span class="nv">%bl</span>
-  <span class="nf">movb</span> <span class="nv">%bl</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:(</span><span class="nv">%si</span><span class="p">)</span>
-  <span class="nf">incw</span> <span class="nv">%si</span>
-  <span class="nf">loop</span> <span class="no">l1</span>
-
-<span class="nf">jmp</span> <span class="p">.</span>
-
-<span class="nl">message:</span>
-  <span class="na">.byte</span> <span class="err">&#39;</span><span class="no">H</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">e</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">l</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">l</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">o</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span> <span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">W</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">o</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">r</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">l</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">d</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0xa</span>
-<span class="nl">message_length:</span>
-  <span class="na">.word</span> <span class="p">.</span> <span class="p">-</span> <span class="no">message</span>
-
-<span class="na">.org</span> <span class="mi">510</span>
-<span class="na">.word</span> <span class="mi">0xAA55</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="解释">解释</h2>
-<h3 id="代码解释">代码解释</h3>
-<p>第<code>3、4</code>行用于将数据段寄存器<code>ds</code>的值设置为<code>0x07c0</code>，这是为了访问数据的方便。这里的数据指的是<code>message</code>和<code>message_length</code>这两个符号所处位置的数据。为什么是<code>0x07c0</code>呢？还记得我们在<a href="/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/">计算机是如何启动的</a>这篇文章中说的吗。<code>BIOS</code>会把我们的程序，也就是磁盘<code>0</code>柱面<code>0</code>磁道的第<code>1</code>个扇区加载到内存<code>0x7c00</code>处执行。因为<code>ds</code>是段寄存器，所以在寻址的时候左移<code>4</code>位，<code>0x07c0</code>转换为<code>0x7c00</code>。具体有什么好处需要结合下面的代码，稍后说。</p>
-<p>第<code>6, 7</code>行上一篇文章中讲过，将<code>es</code>设置为显存映射的内存段，方便操控屏幕。</p>
-<p>第<code>9</code>行使用异或指令<code>xor</code>将源索引寄存器<code>si</code>内容清空，即设置为<code>0</code>。可以把源索引寄存器想象成数组的下标，结合<code>message</code>标号处的数据，大概就能明白我们要做什么了吧？我们要通过这个索引来访问<code>message</code>标号开始处的数据，<code>si</code>每次增加<code>1</code>，依次，我们就能通过循环的方式访问所有的数据。</p>
-<p>第<code>10</code>行将内存地址<code>message_length</code>处的数据转移到<code>cx</code>寄存器。我们先来分析一下<code>message_length</code>，<code>message_length</code>定义在第<code>22</code>行，后面跟了一个冒号，是一个标号<code>(label)</code>。标号代表的就是所处行的位置，这个在稍后我们反编译的时候可以看到。我们在这个位置定义了一个<code>word</code>的数据，数据的内容是<code>message</code>内容的长度。计算的方式是用当前位置（用位置计数器<code>.</code>表示）减去标号<code>message</code>所表示的位置，中间的这一段数据就是我们要打印的字符及其显示属性。<code>cx</code>是一个通用寄存器，但是通用寄存器也有特殊的用途。例如<code>cx</code>，在串操作指令和<code>loop</code>指令中作计数器用；在移位、循环移位指令中作移位次数计数器用。其中<code>c</code>就是<code>count</code>的意思。下面我们要用到<code>loop</code>指令来依次打印每一个字符，所以在这里设置<code>cx</code>。</p>
-<p>第<code>13</code>行采用了<strong>寄存器相对寻址</strong>的方式将<code>ds:(si + message)</code>处的一个字节的数据转移到<code>bx</code>寄存器的低字节处<code>bl</code>。寻址方式我们稍后解释，这里先说明一下<code>bl</code>。<code>8086</code>中的<code>4</code>个<code>16</code>位数据寄存器<code>ax、bx、cx、dx</code>可以用来存放数据或地址，也可以将每个数据寄存器拆成两个独立的<code>8</code>位寄存器使用。高<code>8</code>位寄存器分别是<code>ah、bh、ch、dh</code>，低<code>8</code>位寄存器分别是<code>al、bl、cl、dl</code>。因为这里我们要移动一个字节的数据，所以拆了一个<code>8</code>位寄存器使用。</p>
-<p>第<code>14</code>行采用了<strong>寄存器间接寻址</strong>的方式将<code>bl</code>中的一字节数据转移到内存<code>es:si</code>处，这里我们显示的指明了要使用<code>es</code>作为段地址，因为在使用<code>si、di、bx</code>做偏移量时默认使用的是<code>ds</code>段寄存器。我们用<code>bl</code>做了一个中转，把<code>ds:(si + message)</code>处的一个字节的数据转移到了<code>es:si</code>处。为什么需要用寄存器做一次中转呢？答案是<code>8086</code>处理器不支持同时操作两个内存数。</p>
-<p>第<code>15</code>行使用了加一指令<code>inc</code>将<code>si</code>的值加一，相当于高级语言中常用的<code>i++</code>。</p>
-<p>第<code>16</code>行使用了<code>loop</code>指令来实现循环。<code>loop</code>指令的功能是重复执行一段相同的代码，处理器在执行它的时候会顺序做两件事：1. 将寄存器<code>cx</code>的内容减一；2. 如果<code>cx</code>的内容不为零，转移到指定的位置处执行，否则顺序执行后面的指令。</p>
-<p>第<code>20</code>行定义了标号<code>message</code>，标号实际上表示一个位置，它的一个功能就是方便我们引用数据。例如这里，如果我们手动去数<code>'H'</code>这个字符在内存中的第几个字节处，那这代码就没法写了，太痛苦了。但是当我们使用了标号时，编译器就会帮我们计算出<code>'H'</code>所在的位置，并在我们的代码中把使用了<code>message</code>的地方替换成实际的位置。</p>
-<p>第<code>21</code>行依次定义了每一个要显示的字符，每个数据的长度为一字节<code>(byte)</code>，每个字符由两个字节组成，<code>ASCII</code>码和显示属性<code>0xa</code>（浅绿色）。</p>
-<p>第<code>22</code>行定义了标号<code>message_length</code>，作为我们对要打印数据长度的引用。</p>
-<p>第<code>23</code>行定义了要打印的数据的长度，占用一个字<code>(word)</code>的存储空间，值为当前位置减去标号<code>message</code>所表示的位置，结果即<code>Hello World</code>及其显示属性所占据的内存空间的大小。</p>
-<h3 id="编译反编译">编译、反编译</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boot.s -o boot.o
-$ objdump -D -t -m i386 -Mi8086,suffix boot.o
-
-boot.o：     文件格式 elf32-i386
-
-SYMBOL TABLE:
-<span class="m">00000000</span> l    d  .text  <span class="m">00000000</span> .text
-<span class="m">00000000</span> l    d  .data  <span class="m">00000000</span> .data
-<span class="m">00000000</span> l    d  .bss   <span class="m">00000000</span> .bss
-<span class="m">00000032</span> l       .text  <span class="m">00000000</span> message_length
-<span class="m">00000010</span> l       .text  <span class="m">00000000</span> l1
-0000001c l       .text  <span class="m">00000000</span> message
-
-
-
-Disassembly of section .text:
-
-<span class="m">00000000</span> &lt;l1-0x10&gt;:
-   0:   b8 c0 <span class="m">07</span>                movw   <span class="nv">$0</span>x7c0,%ax
-   3:   8e d8                   movw   %ax,%ds
-   5:   b8 <span class="m">00</span> b8                movw   <span class="nv">$0</span>xb800,%ax
-   8:   8e c0                   movw   %ax,%es
-   a:   <span class="m">31</span> f6                   xorw   %si,%si
-   c:   8b 0e <span class="m">32</span> <span class="m">00</span>             movw   0x32,%cx
-
-<span class="m">00000010</span> &lt;l1&gt;:
-  10:   8a 9c 1c <span class="m">00</span>             movb   0x1c<span class="o">(</span>%si<span class="o">)</span>,%bl
-  14:   <span class="m">26</span> <span class="m">88</span> 1c                movb   %bl,%es:<span class="o">(</span>%si<span class="o">)</span>
-  17:   <span class="m">46</span>                      incw   %si
-  18:   e2 f6                   loopw  <span class="m">10</span> &lt;l1&gt;
-  1a:   eb fe                   jmp    1a &lt;l1+0xa&gt;
-
-0000001c &lt;message&gt;:
-  1c:   <span class="m">48</span>                      decw   %ax
-  1d:   0a <span class="m">65</span> 0a                orb    0xa<span class="o">(</span>%di<span class="o">)</span>,%ah
-  20:   6c                      insb   <span class="o">(</span>%dx<span class="o">)</span>,%es:<span class="o">(</span>%di<span class="o">)</span>
-  21:   0a 6c 0a                orb    0xa<span class="o">(</span>%si<span class="o">)</span>,%ch
-  24:   6f                      outsw  %ds:<span class="o">(</span>%si<span class="o">)</span>,<span class="o">(</span>%dx<span class="o">)</span>
-  25:   0a <span class="m">20</span>                   orb    <span class="o">(</span>%bx,%si<span class="o">)</span>,%ah
-  27:   0a <span class="m">57</span> 0a                orb    0xa<span class="o">(</span>%bx<span class="o">)</span>,%dl
-  2a:   6f                      outsw  %ds:<span class="o">(</span>%si<span class="o">)</span>,<span class="o">(</span>%dx<span class="o">)</span>
-  2b:   0a <span class="m">72</span> 0a                orb    0xa<span class="o">(</span>%bp,%si<span class="o">)</span>,%dh
-  2e:   6c                      insb   <span class="o">(</span>%dx<span class="o">)</span>,%es:<span class="o">(</span>%di<span class="o">)</span>
-  2f:   0a <span class="m">64</span> 0a                orb    0xa<span class="o">(</span>%si<span class="o">)</span>,%ah
-
-<span class="m">00000032</span> &lt;message_length&gt;:
-  32:   <span class="m">16</span>                      pushw  %ss
-        ...
- 1fb:   <span class="m">00</span> <span class="m">00</span>                   addb   %al,<span class="o">(</span>%bx,%si<span class="o">)</span>
- 1fd:   <span class="m">00</span> <span class="m">55</span> aa                addb   %dl,-0x56<span class="o">(</span>%di<span class="o">)</span>
+$ objcopy -O binary -j .text boot.o boot.bin
 </code></pre></td></tr></table>
 </div>
-</div><p>第<code>2</code>行，这次我们在反编译的时候加上了<code>-t</code>参数，表示要打印<code>符号表</code>。就是第<code>6</code>行到第<code>12</code>行的内容。</p>
-<p>第<code>10、11、12</code>行分别是我们在代码中定义的三个符号及其代表的值。<code>l1 -&gt; 10、message -&gt; 1c、message_length -&gt; 32</code>。</p>
-<p>第<code>24</code>行，<code>message_length</code>已经被替换成了<code>0x32</code>。</p>
-<p>第<code>27</code>行，<code>message</code>替换成了<code>0x1c</code>。</p>
-<p>第<code>30</code>行，<code>l1</code>替换成了<code>0x10</code>。</p>
-<p>第<code>34 - 44</code>行是我们定义的数据，即<code>Hello World</code>及其显示属性，但是被<code>objdump</code>无情的当成了代码，不用在意了。</p>
-<p>第<code>47</code>行是我们定义的数据的长度，是<code>. - message</code>计算的结果<code>0x16</code>，即十进制的<code>22</code>。我们可以数一数，或者计算一下，<code>Hello World</code>一共是<code>11</code>个字符（含空格），每一个字符包含显示属性的话占用两个字节，所以一共占用<code>22</code>个字节。</p>
-<h2 id="运行">运行</h2>
+</div><p>通过如下命令启动虚拟机：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boot.bin
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boot.bin -S -s
 </code></pre></td></tr></table>
 </div>
-</div><p>运行结果如下：</p>
-<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x02/boot.png" alt="运行结果" /></p>
-<h2 id="总结">总结</h2>
-<h3 id="代码总结">代码总结</h3>
+</div><p><code>-S</code>参数告诉虚拟机启动后先不运行。<br />
+<code>-s</code>参数告诉虚拟机开启一个<code>GDB</code>服务器等待客户端的连接，服务默认监听<code>TCP</code>端口<code>1234</code>。</p>
+<p>启动<code>GDB</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ gdb -q
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>-q</code>参数表示静默启动，不显示版本信息。</p>
+<p>连接到目标服务器：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> target remote localhost:1234
+Remote debugging using localhost:1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the <span class="s2">&#34;file&#34;</span> command.
+0x0000fff0 in ?? <span class="o">()</span>
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>设置<code>CPU</code>架构为<code>i8086</code>，因为最开始的这段代码运行在<code>16</code>位实地址模式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> architecture i8086
+The target architecture is assumed to be i8086
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><em>这个设置可能不会生效，这是<code>gdb</code>新版本中的一个<code>bug</code>，之前的版本是没有这个问题的。关于这个<code>bug</code>的讨论在<a href="https://sourceware.org/bugzilla/show_bug.cgi?id=22869">这里</a>。解决方案是手动设置一个<a href="https://github.com/kviccn/asm-boooom/blob/master/gdb/target.xml">描述文件</a>。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> tdesc filename target.xml
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>设置当程序停住或单步调试时自动显示指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> display/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+   0xffff0:     ljmp   <span class="nv">$0</span>xf000,<span class="nv">$0</span>xe05b
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><em><code>16</code>位实地址模式下物理地址计算方式为段寄存器左移<code>4</code>位，即乘以十进制的<code>16</code>，再加上偏移地址。</em></p>
+<p>因为<code>BIOS</code>会将引导扇区加载到<code>0x7c00</code>处开始执行，所以我们在这里打个断点：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> b *0x7c00
+Breakpoint <span class="m">1</span> at 0x7c00
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输入<code>c</code>使虚拟机恢复运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> c
+Continuing.
+
+Breakpoint 1, 0x00007c00 in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c00:      mov    <span class="nv">$0</span>x7c0,%ax
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>观察第<code>6</code>行，正是我们的引导扇区的第一条指令。</p>
+<p>查看寄存器内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0xaa55   <span class="m">43605</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x80     <span class="m">128</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x6f04   0x6f04
+ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c00   0x7c00
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x0      <span class="m">0</span>
+es             0x0      <span class="m">0</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时<code>eax</code>寄存器的内容为<code>0xaa55</code>。单步执行下一条指令再查看寄存器内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
+0x00007c03 in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c03:      mov    %ax,%ds
+<span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0x7c0    <span class="m">1984</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x80     <span class="m">128</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x6f04   0x6f04
+ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c03   0x7c03
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x0      <span class="m">0</span>
+es             0x0      <span class="m">0</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时<code>eax</code>寄存器的内容为<code>0x7c0</code>。继续调试：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
+0x00007c05 in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c05:      mov    <span class="nv">$0</span>xb800,%ax
+<span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0x7c0    <span class="m">1984</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x80     <span class="m">128</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x6f04   0x6f04
+ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c05   0x7c05
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x7c0    <span class="m">1984</span>
+es             0x0      <span class="m">0</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时数据段寄存器<code>ds</code>的内容已经是<code>0x7c0</code>了。再向后执行两条指令并查看寄存器内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si <span class="m">2</span>
+0x00007c0a in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c0a:      xor    %si,%si
+<span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0xb800   <span class="m">47104</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x80     <span class="m">128</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x6f04   0x6f04
+ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c0a   0x7c0a
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x7c0    <span class="m">1984</span>
+es             0xb800   <span class="m">47104</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时附加数据段寄存器<code>es</code>的内容为<code>0xb800</code>。</p>
+<p>引导扇区调试的基本过程就是这样了。在调试过程中可能会需要重启虚拟机，如果重新手动执行<code>qemu</code>和<code>gdb</code>，再重新走一遍上面的流程多少是有点麻烦的。下面教大家两种直接重启虚拟机的方法。</p>
 <ol>
-<li><code>xor</code>，异或指令，对源操作数和目的操作数做按位异或操作，结果保存在目的操作数中。</li>
-<li><code>inc</code>，加一指令，对操作数加一。</li>
-<li><code>loop</code>，循环指令，其功能是重复执行一段相同的代码，处理器在执行它的时候会顺序做两件事：
-<ul>
-<li>将寄存器<code>cx</code>的内容减一。</li>
-<li>如果<code>cx</code>的内容不为零，转移到指定的位置处执行，否则顺序执行后面的指令。</li>
-</ul>
+<li>
+<p>切换到<code>QEMU</code>窗口并按<code>Ctrl-Alt-2</code>以获取<code>QEMU</code>监视器，键入命令<code>system_reset</code>并使用<code>Ctrl-Alt-1</code>切换回去。如下所示：<br />
+<img src="/posts/images/qemu-monitor.png" alt="QEMU 监视器" /></p>
 </li>
-<li><code>label</code>，即<strong>标号</strong>，如<code>l1、message、message_length</code>。它们表示当前所处行的位置，当编译完成之后，会被替换成实际的位置。</li>
-<li><code>.byte</code>，伪指令，用于定义一字节大小的数据，也可以同时指定一组一字节大小的数据，使用逗号分隔。</li>
+<li>
+<p>跳转到<code>BIOS</code>重置指令的地址<code>0xf000:0xfff0</code>处。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> <span class="nv">$cs</span> <span class="o">=</span> 0xf000
+<span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> <span class="nv">$pc</span> <span class="o">=</span> 0xfff0
+<span class="o">(</span>gdb<span class="o">)</span> c
+Continuing.
+
+Breakpoint 1, 0x00007c00 in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c00:      mov    <span class="nv">$0</span>x7c0,%ax
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ol>
-<h3 id="寻址方式总结">寻址方式总结</h3>
-<p>指令的寻址方式很重要，也很简单。下面解释一下寻址的含义。</p>
-<p>汇编语言指令是由操作码和操作数两部分组成的。操作码是一组约定的二进制代码，用来指明所要执行的操作性质和方式，操作数字段除了可以是操作数本身外，还可以是操作数的地址或者地址的一部分。具体而言，可以是指向操作数地址的指针或其他有关操作数的信息。<em><strong>操作数存放的位置不同，寻找的方法也不同，寻找操作数的过程称为寻址。</strong></em></p>
-<p>在<code>8086</code>指令系统中，根据操作数的来源可将其分为<code>立即数操作数</code>、<code>寄存器操作数</code>和<code>存储器操作数</code>，相应的寻址方式分为<code>立即数寻址</code>、<code>寄存器寻址</code>和<code>存储器寻址</code>；此外，还有一种<code>端口寻址</code>。</p>
-<h4 id="立即数寻址">立即数寻址</h4>
-<p>立即就是立刻、马上的意思。立即数寻址就是说操作数就在指令后面，不需要再去寄存器或者内存中寻找。立即数是作为指令的一个部分置于指令代码的后部。</p>
-<p>观察反编译结果的第<code>19、21</code>行，<code>movw $0x7c0,%ax</code>、<code>movw $0xb800,%ax</code>对应的二进制代码<code>b8 c0 07</code>、<code>b8 00 b8</code>，可以发现其中的立即数<code>$0x7c0</code>、<code>$0xb800</code>是直接跟在指令后面的。</p>
-<h4 id="寄存器寻址">寄存器寻址</h4>
-<p>在寄存器寻址中，操作数是预先存放在<code>CPU</code>的内部寄存器中的，指令中的操作数部分只需给出寄存器的名称。</p>
-<p>如代码中的第<code>4</code>行，<code>movw %ax, %ds</code>，在上一步中我们已经把<code>ax</code>寄存器的值设置成了<code>0x07c0</code>，这里我们直接从寄存器中取值。</p>
-<h4 id="存储器寻址">存储器寻址</h4>
-<p>存储器寻址方式中，寻找的操作数是放在存储器中的，可以在存储器的数据段、代码段或堆栈段等存储区；指令中的操作数代码主要是存储单元的地址或生成地址的相关信息。由于<code>8086 CPU</code>的内存采用分段管理方式，段基址由段寄存器提供，存储器操作数寻址还应提供段内偏移量。段内偏移量通常也称为有效地址<code>(EA)</code>，这是一个<code>16</code>位的无符号数，代表距离段基址的字节数。<code>16</code>位有效地址<code>EA</code>可以由以下<code>3</code>部分算的：</p>
-<p>$$EA = 基址 + 变址 + 偏移量$$</p>
-<p>其中，基址由基址寄存器<code>bx</code>和基址指针<code>bp</code>提供，变址由变址寄存器<code>si、di</code>提供，偏移量是一个<code>8</code>位或<code>16</code>位二进制常数，即</p>
-<p>$$<br />
-ea =<br />
-\begin{Bmatrix}<br />
-bx\\<br />
-bp\\<br />
-\end{Bmatrix}<br />
-+<br />
-\begin{Bmatrix}<br />
-si\\<br />
-di\\<br />
-\end{Bmatrix}<br />
-+<br />
-偏移量<br />
-$$</p>
-<p>以上<code>3</code>个分量的不同组合可以构成<code>5</code>种不同的有效地址形成方式，即存储器操作数有<code>5</code>种寻址方式。</p>
-<p>有了有效地址<code>EA</code>和段寄存器提供的段基址，就可以计算出存储器单元的物理地址了，即 <code>物理地址（PA） = 段寄存器（左移4位） + 有效地址（EA）</code></p>
-<ol>
-<li>
-<p>直接寻址<br />
-即操作数地址的<code>16</code>位偏移量直接包含在指令代码中。例如上一篇文章中的<code>movb $0xa, %es:1</code>指令，其编译后的结果是<code>26 c6 06 01 00 0a</code>。其中的<code>01 00</code>（小端序，转换成常规顺序后就是<code>00 01</code>）即偏移量<code>1</code>。因为使用了<strong>段前缀</strong>显示的指明了使用<code>es</code>段寄存器，所以最终的内存单元就是<code>es</code>左移<code>4</code>位加<code>1</code>。因为此时<code>es</code>内容为<code>0xb800</code>，所以物理地址为<code>0xb8001</code>。</p>
-</li>
-<li>
-<p>寄存器间接寻址<br />
-即操作数地址的<code>16</code>位偏移量包含在寄存器<code>bx、bp、si或di</code>中，因为要通过寄存器<code>间接</code>获取到这个偏移量，所以叫寄存器间接寻址。因为每个寄存器除了通用功能外还有其特殊的用途，所以寄存器间接寻址还可以分为两种不同的类型。</p>
-<ul>
-<li>当使用<code>bx、si、di</code>做间接寻址时，段寄存器默认为<code>ds（数据段寄存器）</code>。例如<code>movb %bl, %es:(%si)</code>，因为我们加了段前缀<code>es</code>，所以目的操作数的物理地址为<code>es &lt;&lt; 4 + si</code>。如果不加段前缀的话则为<code>ds &lt;&lt; 4 + si</code>。</li>
-<li>当使用<code>bp</code>做间接寻址时，段寄存器默认为<code>ss（堆栈段寄存器）</code>。暂时没有涉及。</li>
-</ul>
-</li>
-<li>
-<p>寄存器相对寻址<br />
-寄存器相对寻址是由<strong>指定的寄存器内容</strong>加上<strong>指令中给出的偏移量</strong>作为存储器中操作数的偏移地址的寻址方式。<strong>用于相对寻址的寄存器必须是专用间接寻址寄存器<code>bx、bp、si或di</code></strong>。与寄存器间接寻址类似，寄存器相对寻址也可分两种类型。</p>
-<ul>
-<li>当使用<code>bx、si、di</code>作为变址寄存器时，段寄存器默认为<code>ds（数据段寄存器）</code>。例如<code>movb message(%si), %bl</code>中的源操作数<code>message(%si)</code>，标号<code>message</code>在编译后被替换成为<code>0x1c</code>，即源操作数为<code>0x1c(%si)</code>。因为默认使用<code>ds</code>寄存器，且此时<code>ds</code>寄存器的值为<code>0x07c0</code>，所以物理地址为<code>0x07c0 &lt;&lt; 4 + si + 0x1c</code>。结合<code>loop</code>和<code>inc</code>指令，我们可以控制<code>si</code>每次加一，循环<code>cx</code>次，达到访问所有数据的目的。</li>
-<li>当使用<code>bp</code>作为变址寄存器时，段寄存器默认为<code>ss（堆栈段寄存器）</code>。暂时没有涉及。</li>
-</ul>
-</li>
-<li>
-<p>基址加变址寻址<br />
-基址加变址的寻址方式是，操作数在存储器中，其偏移地址由<strong>基址寄存器<code>（bx或bp）</code> + 变址寄存器<code>（si或di）</code></strong>形成。基址寄存器若为<code>bx</code>，则默认在段寄存器<code>ds</code>指定的数据段中寻址；若用<code>bp</code>为基地址，则默认在段寄存器<code>ss</code>指定的堆栈段中寻址。两种情况的变址寄存器都用<code>si</code>或<code>di</code>。即<code>ea = bx/bp + si/di</code>。暂时没有涉及。</p>
-</li>
-<li>
-<p>相对基址加变址寻址<br />
-与基址加变址寻址类似，只是多加了偏移量。即<code>ea = bx/bp + si/di + 偏移量</code>。暂时没有涉及。</p>
-</li>
-</ol>
-<h4 id="端口寻址">端口寻址</h4>
-<p>在<code>8086</code>系统结构中，<code>I/O</code>端口的地址采用独立编址方法，即采用专门的输入/输出指令（<code>in</code>和<code>out</code>）对系统外围的<code>I/O</code>端口进行操作。指令系统中的输入/输出指令对<code>I/O</code>端口的寻址可采用直接寻址或间接寻址两种方式。</p>
-<ol>
-<li>
-<p>直接寻址<br />
-<code>I/O</code>端口地址以<code>8</code>位立即数方式在指令中直接给出，例如，输入指令：<code>in N, al</code>。由于只能使用<code>8</code>位立即数，所以该指令只能访问<code>（0~255）</code>范围内的端口。该指令的含义是从地址为<code>N</code>的端口读入一个<code>8</code>位的数据到<code>ax</code>寄存器的低<code>8</code>位<code>al</code>中。</p>
-</li>
-<li>
-<p>间接寻址<br />
-<code>I/O</code>端口的间接寻址类似于寄存器间接寻址，<code>16</code>位的<code>I/O</code>端口地址放在<code>dx</code>寄存器中，即通过<code>dx</code>间接寻址，可寻址的端口范围为<code>（0x0000~0xffff）</code>。例如，输出指令：<code>out al, dx</code>。该指令的功能是将<code>al</code>的内容输出到由<code>dx</code>指定的端口中去。<strong>注意，这里用<code>dx</code>作为间接寻址寄存器，在端口的间接寻址指令中是固定的。</strong></p>
-</li>
-</ol>
-<p>我们暂时还没有接触到端口寻址的例子，当以后需要控制光标，访问硬盘的时候就会碰到了，到时在结合代码具体说。</p>
+<p>命令摘要（使用前删除提示和注释）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boot.bin -S -s
+<span class="o">(</span>gdb<span class="o">)</span> target remote localhost:1234
+<span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> architecture i8086  <span class="c1"># 16-bit mode</span>
+<span class="o">(</span>gdb<span class="o">)</span> display/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>    <span class="c1"># show next instruction</span>
+<span class="o">(</span>gdb<span class="o">)</span> b *0x7c00               <span class="c1"># breakpoint at boot sector</span>
+<span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> <span class="nv">$cs</span> <span class="o">=</span> 0xf000
+<span class="o">(</span>gdb<span class="o">)</span> <span class="nb">set</span> <span class="nv">$pc</span> <span class="o">=</span> 0xfff0        <span class="c1"># reboot</span>
+<span class="o">(</span>gdb<span class="o">)</span> c                       <span class="c1"># continue execution</span>
+<span class="o">(</span>gdb<span class="o">)</span> si                      <span class="c1"># step instruction</span>
+<span class="o">(</span>gdb<span class="o">)</span> x/5i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>         <span class="c1"># disassemble five instrs</span>
+<span class="o">(</span>gdb<span class="o">)</span> info registers          <span class="c1"># show all registers</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>参考 <a href="https://weinholt.se/articles/debugging-boot-sectors/">Debugging PC Boot Sectors</a></p>
+</blockquote>
 
     </article>
     
@@ -1865,45 +1986,19 @@ $$</p>
     <section class="related">
     
     
-    <h1 class="related__title">
-      <hr class="hr-dots"/>
-      <div>
-        相关内容
-      </div>
-      <hr class="hr-dots"/>
-    </h1>
-    <ul class="related-ul">
-        
-        <li>
-          <a href="/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/" class="related__link">汇编语言一发入魂 0x01 - Hello World</a>
-        </li>
-        
-        <li>
-          <a href="/posts/2020/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x00-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E7%9A%84/" class="related__link">汇编语言一发入魂 0x00 - 计算机是如何启动的?</a>
-        </li>
-        
-    </ul>
-    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/" class="pagination-single__left">
+      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x02-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">汇编语言一发入魂 0x01 - Hello World</div>      
+        <div class="pagination-single__left-title">汇编语言一发入魂 0x02 - 指令的寻址方式</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">调试引导扇区</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2259,24 +2354,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
   <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#代码">代码</a></li>
-    <li><a href="#解释">解释</a>
-      <ul>
-        <li><a href="#代码解释">代码解释</a></li>
-        <li><a href="#编译反编译">编译、反编译</a></li>
-      </ul>
-    </li>
-    <li><a href="#运行">运行</a></li>
-    <li><a href="#总结">总结</a>
-      <ul>
-        <li><a href="#代码总结">代码总结</a></li>
-        <li><a href="#寻址方式总结">寻址方式总结</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </section>
 
@@ -2368,36 +2446,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$']],
-        processEscapes: true,
-        processEnvironments: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        TeX: {
-          equationNumbers: { autoNumber: "AMS" },
-          extensions: ["AMSmath.js", "AMSsymbols.js"]
-        }
-      }
-    });
-    MathJax.Hub.Queue(function () {
-      
-      
-      
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-
-    MathJax.Hub.Config({
-      
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
-    });
-  </script>
 
 
 
@@ -2758,7 +2806,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     
-    var lib = JSON.parse("[\"mathjax\"]");
+    var lib = JSON.parse("null");
 
     if (lib && lib.includes('mermaid')) {
       

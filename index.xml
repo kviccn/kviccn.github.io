@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, 杨河老李</copyright>
-    <lastBuildDate>Sat, 07 Mar 2020 15:12:50 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 14:44:57 +0800</lastBuildDate>
     
         <atom:link href="https://kviccn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,56 @@
         
       
 
+      
+      <item>
+        <title>调试引导扇区</title>
+        <link>https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/</link>
+        <pubDate>Tue, 10 Mar 2020 14:44:57 +0800</pubDate>
+        
+        <atom:modified>Tue, 10 Mar 2020 14:44:57 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/03/%E8%B0%83%E8%AF%95%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA/</guid>
+        <description>调试是软件开发过程中重要的一个环节。通常我们开发的软件是运行在操作系统之上的，调试器也运行在操作系统之上，加之大多数集成开发环境对调试器的集</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>引导扇区</category>
+            
+          
+            
+              <category>调试</category>
+            
+          
+            
+              <category>Boot Sectors</category>
+            
+          
+            
+              <category>Debug</category>
+            
+          
+            
+              <category>GDB</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+            
+              <category>操作系统</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>汇编语言一发入魂 0x02 - 指令的寻址方式</title>
