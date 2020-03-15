@@ -20,6 +20,42 @@
 
       
       <item>
+        <title>汇编语言一发入魂 0x05 - I/O接口技术</title>
+        <link>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/</link>
+        <pubDate>Sun, 15 Mar 2020 16:28:18 +0800</pubDate>
+        
+        <atom:modified>Sun, 15 Mar 2020 16:28:18 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/</guid>
+        <description>I/O接口用于CPU与外部I/O设备进行信息交换。例如与键盘、鼠标、打印机和显示等设备交互。I/O接口电路与总线系统看似很复杂，但是落实到汇</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>I/O</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言一发入魂</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>汇编语言一发入魂 0x04 - 堆栈</title>
         <link>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x04-%E5%A0%86%E6%A0%88/</link>
         <pubDate>Sat, 14 Mar 2020 16:31:56 +0800</pubDate>
@@ -33,10 +69,6 @@
         
         
         
-          
-            
-              <category>汇编语言</category>
-            
           
             
               <category>堆栈</category>
@@ -73,10 +105,6 @@
         
         
         
-          
-            
-              <category>汇编语言</category>
-            
           
             
               <category>寻址方式</category>
@@ -165,10 +193,6 @@
         
           
             
-              <category>汇编语言</category>
-            
-          
-            
               <category>寻址方式</category>
             
           
@@ -203,10 +227,6 @@
         
         
         
-          
-            
-              <category>汇编语言</category>
-            
           
             
               <category>显卡</category>
@@ -247,10 +267,6 @@
         
         
         
-          
-            
-              <category>汇编语言</category>
-            
           
             
               <category>QEMU</category>
