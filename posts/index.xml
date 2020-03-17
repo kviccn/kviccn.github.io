@@ -20,6 +20,42 @@
 
       
       <item>
+        <title>汇编语言一发入魂 0x06 - 硬盘操作</title>
+        <link>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/</link>
+        <pubDate>Mon, 16 Mar 2020 17:05:11 +0800</pubDate>
+        
+        <atom:modified>Mon, 16 Mar 2020 17:05:11 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/</guid>
+        <description>今天我们来学习如何从硬盘读取数据。主要从编程的角度来学习关于硬盘的知识，即学习如何通过端口控制硬盘。 硬盘 从存储数据的介质上区分，硬盘可以分为</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>硬盘操作</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言一发入魂</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>汇编语言一发入魂 0x05 - I/O接口技术</title>
         <link>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/</link>
         <pubDate>Sun, 15 Mar 2020 16:28:18 +0800</pubDate>

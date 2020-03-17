@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>汇编语言一发入魂 0x05 - I/O接口技术 – 杨河老李</title>
+    <title>汇编语言一发入魂 0x06 - 硬盘操作 – 杨河老李</title>
     
 
 
@@ -543,7 +543,7 @@
 
   
     
-    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/\"");
+    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1198,18 +1198,18 @@
 <meta name="description" content="The Zzo theme for Hugo example site." />
 
 
-<meta name="keywords" content="I/O">
+<meta name="keywords" content="硬盘操作">
 
-<meta name="created" content="2020-03-15T16:28:18&#43;0800">
-<meta name="modified" content="2020-03-15T16:28:18&#43;0800">
-<meta property="article:published_time" content="2020-03-15T16:28:18&#43;0800">
+<meta name="created" content="2020-03-16T17:05:11&#43;0800">
+<meta name="modified" content="2020-03-16T17:05:11&#43;0800">
+<meta property="article:published_time" content="2020-03-16T17:05:11&#43;0800">
 
 <meta name="author" content="杨河老李">
 
 
 <meta property="og:site_name" content="杨河老李">
-<meta property="og:title" content="汇编语言一发入魂 0x05 - I/O接口技术">
-<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/">
+<meta property="og:title" content="汇编语言一发入魂 0x06 - 硬盘操作">
+<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The Zzo theme for Hugo example site.">
 
@@ -1222,7 +1222,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/">
+<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1236,12 +1236,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "汇编语言一发入魂 0x05 - I/O接口技术",
-    "datePublished": "2020-03-15T16:28:18+08:00",
-    "dateModified": "2020-03-15T16:28:18+08:00",
-    "url" : "https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/",
-    "description": "I/O接口用于CPU与外部I/O设备进行信息交换。例如与键盘、鼠标、打印机和显示等设备交互。I/O接口电路与总线系统看似很复杂，但是落实到汇",
-    "keywords": ["I/O"],
+    "headline": "汇编语言一发入魂 0x06 - 硬盘操作",
+    "datePublished": "2020-03-16T17:05:11+08:00",
+    "dateModified": "2020-03-16T17:05:11+08:00",
+    "url" : "https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/",
+    "description": "今天我们来学习如何从硬盘读取数据。主要从编程的角度来学习关于硬盘的知识，即学习如何通过端口控制硬盘。 硬盘 从存储数据的介质上区分，硬盘可以分为",
+    "keywords": ["硬盘操作"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://kviccn.github.io"
@@ -1484,7 +1484,7 @@
   
   <li  class="is-active" >
     
-      <span>汇编语言一发入魂 0x05 - I/O接口技术</span>
+      <span>汇编语言一发入魂 0x06 - 硬盘操作</span>
     
   </li>
   
@@ -1496,11 +1496,11 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">汇编语言一发入魂 0x05 - I/O接口技术</h2>
+    <h2 class="single__title" data-ani="true">汇编语言一发入魂 0x06 - 硬盘操作</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="创建日期">📅&nbsp;2020年03月15日 </time>  &middot; <span class="single__info" title="阅读时长"> ☕ 6 分钟 </span>
+  <time class="single__info" title="创建日期">📅&nbsp;2020年03月16日 </time>  &middot; <span class="single__info" title="阅读时长"> ☕ 6 分钟 </span>
   <span class="single__info">
     
   </span>
@@ -1512,229 +1512,37 @@
     🏷️
   
   
-    <li><a href="https://kviccn.github.io/tags/i/o/" class="single__tag" title="I/O">#I/O</a></li>
-  
 
 </div>
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p><code>I/O</code>接口用于<code>CPU</code>与外部<code>I/O</code>设备进行信息交换。例如与键盘、鼠标、打印机和显示等设备交互。<code>I/O</code>接口电路与总线系统看似很复杂，但是落实到汇编语言代码上实则是很简单的。下面简要介绍一下<code>I/O</code>接口技术。</p>
-<h2 id="io-接口技术">I/O 接口技术</h2>
-<p>在计算机中，<code>CPU</code>与外设并不是直接相连的，在它们中间设有<code>I/O</code>接口电路。<code>CPU</code>通过数据总线、地址总线和控制总线与<code>I/O</code>接口电路相连，以实现与外设交换数据信息、状态信息和控制信息。外设的状态信息通过接口电路的状态端口经由数据总线进入<code>CPU</code>，而<code>CPU</code>向外设发出的控制信号也是经由数据总线，通过接口电路的控制端口来实现的。</p>
-<h3 id="io-端口">I/O 端口</h3>
-<p>具体来说，<code>CPU</code>是通过<code>I/O</code>端口和外设交互的。<code>I/O</code>端口是接口电路中能被<code>CPU</code>直接访问的寄存器或存储器。通常，根据数据性质，<code>I/O</code>接口电路中可分为<code>3</code>种类型的端口，即<code>数据端口</code>、<code>状态端口</code>和<code>控制端口</code>。</p>
+      <p>今天我们来学习如何从硬盘读取数据。主要从编程的角度来学习关于硬盘的知识，即学习如何通过端口控制硬盘。</p>
+<h2 id="硬盘">硬盘</h2>
+<p>从存储数据的介质上区分，硬盘可以分为<strong>机械硬盘</strong>和<strong>固态硬盘</strong>，机械硬盘采用磁性碟片来存储数据，固态硬盘通过闪存颗粒存储数据。从编程的角度看，固态硬盘是兼容机械硬盘的，所以我们以机械硬盘为例，简要介绍一下硬盘。</p>
+<h3 id="基础知识">基础知识</h3>
+<p>机械硬盘主要由磁盘盘片、磁头、主轴与传动轴等组成，数据存放在磁盘盘片中。每个盘片分为上下两面，每面由一个磁头<code>(Head)</code>进行读写。磁头统一固定在同一个支架上，由步进电动机控制，同时在盘片的中心和边缘之间来回移动。当盘片高速旋转时，磁头每步进一次，都会从它所在的位置开始，绕着圆心“画”出一个看不见的圆圈，这就是磁道<code>(Track)</code>。磁道是数据记录的轨迹。因为所有磁头都是联动的，故每个盘面上的同一条磁道又可以形成一个虚拟的圆柱，称为柱面<code>(Cylinder)</code>。</p>
+<p>每条磁道划分为若干扇区<code>(Sector)</code>，扇区是硬盘读写数据的最小单位。每个扇区以扇区头开始，然后是<code>512</code>字节的数据区。扇区头包含了每个扇区自己的信息，主要有本扇区的磁道号、磁头号和扇区号。</p>
+<h3 id="访问模式">访问模式</h3>
+<p>硬盘读取数据的模式有两种：</p>
 <ol>
-<li>
-<p>数据端口。用于存放<code>CPU</code>与外设之间交换的数据，数据的长度通常为<code>1~2</code>个字节。</p>
-</li>
-<li>
-<p>状态端口。用于指示外设的当前状态。每种状态用<code>1</code>位二进制数据表示，可由<code>CPU</code>通过数据总线和相关电路读取。状态端口的不同状态位的含义有：</p>
+<li><code>CHS</code>模式，即向硬盘控制器分别发送磁头号、柱面号和扇区号来访问。</li>
+<li><code>LBA</code>模式，通过对所有扇区统一编址，形成逻辑扇区，访问时提供逻辑扇区号即可。使用<code>LBA</code>模式不需要考虑扇区的物理位置，对于编程来说比较友好，下面我们来介绍<code>LBA</code>模式。</li>
+</ol>
+<p><code>LBA</code>模式又分为<code>LBA28</code>和<code>LBA48</code>两种。<code>LBA28</code>使用<code>28</code>个<code>bit</code>表示逻辑扇区号，每个扇区<code>512B</code>，总共可管理<code>128GB</code>的硬盘；<code>LBA48</code>使用<code>48</code>个<code>bit</code>表示逻辑扇区号，可管理<code>131072TB</code>的硬盘容量。。</p>
+<p>在<a href="/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/">上一篇</a>文章中，我们给出了部分<code>I/O</code>设备的端口地址分配，其中主硬盘接口分配的端口号是<code>0x1f0~0x1f7</code>，副硬盘接口分配的端口号是<code>0x170~0x177</code>。下面给出当使用<code>LBA28</code>方式访问硬盘时每个端口的用途。</p>
 <ul>
-<li>
-<p>准备就绪位<code>(ready)</code>。对于输入端口，<code>ready=1</code>表示数据寄存器已准备好数据，等待<code>CPU</code>读取；当数据取走后，此位由<code>CPU</code>清零；对于输出端口，<code>ready=1</code>表示输出数据寄存器已空，可以接受下一个数据；当新数据到达后，该位由外设清零。</p>
-</li>
-<li>
-<p>忙位<code>(busy)</code>。<code>busy</code>表明外设是否能够接收数据。<code>busy=1</code>表示外设忙，暂时不允许<code>CPU</code>送数据过来。<code>busy=0</code>表示外设已空闲，允许<code>CPU</code>发送下一个数据。</p>
-</li>
-<li>
-<p>错误位<code>(error)</code>。<code>error=1</code>表示在数据传送过程中出现错误，<code>CPU</code>正在进行相应的处理，重新传送或中止操作等。</p>
-</li>
+<li><code>0x1f0</code>，<code>16</code>位数据端口，用于读取或写入数据，每次读写<code>1</code>个字，循环直到读完所有数据。</li>
+<li><code>0x1f1</code>，读取时的错误信息或写入时的额外参数。</li>
+<li><code>0x1f2</code>，指定读取或写入的扇区数。</li>
+<li><code>0x1f3</code>，<code>LBA</code>地址低<code>8</code>位。</li>
+<li><code>0x1f4</code>，<code>LBA</code>地址中<code>8</code>位。</li>
+<li><code>0x1f5</code>，<code>LBA</code>地址高<code>8</code>位。</li>
+<li><code>0x1f6</code>，低<code>4</code>位保存<code>LBA</code>地址的前<code>4</code>位，高<code>4</code>位指定访问模式和访问的设备。其中第<code>4</code>位指示硬盘号，<code>0</code>表示主盘，<code>1</code>表示从盘；第<code>6</code>位指定访问模式，<code>0</code>表示<code>CHS 模式</code>，<code>1</code>表示<code>LBA 模式</code>。第<code>5、7</code>位为<code>1</code>。</li>
+<li><code>0x1f7</code>，既是命令端口，又是状态端口。作为命令端口时，写入<code>0x20</code>表示请求读硬盘；写入<code>0x30</code>表示请求写硬盘。作为状态端口时，第<code>0</code>位为<code>1</code>表示前一个命令执行错误，具体原因可访问端口<code>0x1f1</code>；第<code>3</code>位为<code>1</code>表示硬盘已经准备好和主机进行数据交互；第<code>7</code>位为<code>1</code>表示硬盘忙。</li>
 </ul>
-</li>
-<li>
-<p>控制端口。用于存放<code>CPU</code>向接口发出的各种命令、控制字和控制信号，以便控制外设的不同操作。</p>
-</li>
-</ol>
-<h3 id="io-端口的寻址方式">I/O 端口的寻址方式</h3>
-<p><code>CPU</code>对端口的寻址方式通常有两种：</p>
-<ol>
-<li>存储器统一编址。又称为存储器映像编址，在这种编址方式中，<code>I/O</code>端口和内存单元统一编址，即把<code>I/O</code>端口当作内存单元对待，从整个内存空间中划出一个子空间给<code>I/O</code>端口，每一个<code>I/O</code>端口分配一个地址码，用访问存储器的指令对<code>I/O</code>端口进行操作。典型的例子是我们一直在使用的显存缓冲区，虽然我们使用的是操作内存的方式，但实际上操作的是显卡。</li>
-<li><code>I/O</code>独立编址。<code>I/O</code>端口编址和存储器的编址相互独立，即<code>I/O</code>端口地址空间和存储器地址空间分开设置，互不影响。采用这种编址方式，对<code>I/O</code>端口的操作使用输入/输出指令（<code>I/O</code>指令）。</li>
-</ol>
-<h3 id="io-端口地址分配">I/O 端口地址分配</h3>
-<table>
-<thead>
-<tr>
-<th>端口地址范围</th>
-<th>分配说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x000 &mdash; 0x01F</td>
-<td>8237A DMA控制器1</td>
-</tr>
-<tr>
-<td>0x020 &mdash; 0x03F</td>
-<td>8259A可编程中断控制器1</td>
-</tr>
-<tr>
-<td>0x040 &mdash; 0x05F</td>
-<td>8253/8254A 定时计数器</td>
-</tr>
-<tr>
-<td>0x060 &mdash; 0x06F</td>
-<td>8042键盘控制器</td>
-</tr>
-<tr>
-<td>0x070 &mdash; 0x07F</td>
-<td>CMOS RAM/实时时钟RTC</td>
-</tr>
-<tr>
-<td>0x080 &mdash; 0x09F</td>
-<td>DMA页面寄存器访问端口</td>
-</tr>
-<tr>
-<td>0x0A0 &mdash; 0x0BF</td>
-<td>8259A可编程中断控制器2</td>
-</tr>
-<tr>
-<td>0x0C0 &mdash; 0x0DF</td>
-<td>8237A DMA控制器2</td>
-</tr>
-<tr>
-<td>0x0F0 &mdash; 0x0FF</td>
-<td>协处理器访问端口</td>
-</tr>
-<tr>
-<td>0x170 &mdash; 0x177</td>
-<td>IDE硬盘控制器1</td>
-</tr>
-<tr>
-<td>0x1F0 &mdash; 0x1F7</td>
-<td>IDE硬盘控制器0</td>
-</tr>
-<tr>
-<td>0x278 &mdash; 0x27F</td>
-<td>并行打印机端口2</td>
-</tr>
-<tr>
-<td>0x2F8 &mdash; 0x2FF</td>
-<td>串行控制器2</td>
-</tr>
-<tr>
-<td>0x378 &mdash; 0x37F</td>
-<td>并行打印机端口1</td>
-</tr>
-<tr>
-<td>0x3B0 &mdash; 0x3BF</td>
-<td>单色MDA显示控制器</td>
-</tr>
-<tr>
-<td>0x3C0 &mdash; 0x3CF</td>
-<td>彩色CGA显示控制器</td>
-</tr>
-<tr>
-<td>0x3D0 &mdash; 0x3DF</td>
-<td>彩色EGA/VGA显示控制器</td>
-</tr>
-<tr>
-<td>0x3F0 &mdash; 0x3F7</td>
-<td>软盘控制器</td>
-</tr>
-<tr>
-<td>0x3F8 &mdash; 0x3FF</td>
-<td>串行控制器1</td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验">实验</h2>
-<p>这一小节老李给大家介绍一下关于屏幕光标的一些知识，并借助<code>QEMU</code>提供的访问<code>I/O</code>端口的能力在不写代码的情况下体验一下<code>I/O</code>端口的操作。</p>
-<h3 id="屏幕光标控制">屏幕光标控制</h3>
-<p>我们从控制屏幕光标来学习<code>I/O</code>端口的操作，因为控制屏幕光标很简单，只需要操作两个端口即可。</p>
-<p>在之前的学习中，我们知道了计算机启动后显卡默认被初始化到<code>标准 VGA 文本模式</code>，该模式下屏幕总共可以显示<code>80 x 25 = 2000</code>个字符。从<code>0</code>开始计数，光标的范围在数值上为<code>0~1999</code>。光标在屏幕上的位置保存在显卡内部的两个光标寄存器中，每个寄存器都是<code>8</code>位的，合起来形成一个<code>16</code>位的数值。这两个寄存器在显卡内部的索引值分别是<code>14(0x0e)</code>和<code>15(0x0f)</code>，分别用于提供光标位置的高<code>8</code>位和低<code>8</code>位。在读写这两个寄存器之前需要先通过索引寄存器指定它们的索引，索引寄存器的端口号是<code>0x3d4</code>。指定了寄存器之后，就可以通过数据端口<code>0x3d5</code>来进行读写了。</p>
-<p>下面就让我们通过<code>QEMU</code>来体验一下如何操作<code>I/O</code>端口。配合这个实验的主引导扇区代码如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
-
-<span class="nf">jmp</span> <span class="p">.</span>
-
-<span class="na">.org</span> <span class="mi">510</span>
-<span class="na">.word</span> <span class="mi">0xAA55</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这段代码只有一个功能，就是陷入死循环。下面启动虚拟机：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 empty.s -o empty.o
-$ objcopy -O binary -j .text empty.o empty.bin
-$ qemu-system-i386 empty.bin -monitor stdio
-</code></pre></td></tr></table>
-</div>
-</div><p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x05/empty_01.png" alt="empty_01" /></p>
-<p>可以看到光标的默认位置在<code>B</code>下方，我们通过端口将光标的实际位置取出来，看看和我们肉眼所见的位置一不一样。</p>
-<p>需要注意的一点是这次我们启动虚拟机的时候加了参数<code>-monitor stdio</code>，这会使标准输入输出设备与<code>QEMU</code>的<code>监视器</code>关联，我们可以直接在终端向虚拟机发命令，而不需要每次都通过<code>Ctrl-Alt-2</code>切换到<code>监视器</code>。</p>
-<p>向索引寄存器的端口<code>0x3d4</code>写入<code>0xe</code>，因为我们接下来准备读取光标位置的高<code>8</code>位：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>qemu<span class="o">)</span> o/1xb 0x3d4 0xe
-</code></pre></td></tr></table>
-</div>
-</div><p>这是<code>QEMU</code>提供的读写<code>I/O</code>端口的命令，并不是汇编指令，这一点不要搞混。</p>
-<p>从数据端口<code>0x3d5</code>读取光标位置高<code>8</code>位：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>qemu<span class="o">)</span> i/1xb 0x3d5
-portb<span class="o">[</span>0x03d5<span class="o">]</span> <span class="o">=</span> 0x2
-</code></pre></td></tr></table>
-</div>
-</div><p>结果是<code>0x2</code>。</p>
-<p>再用同样的方式读取光标位置低<code>8</code>位：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>qemu<span class="o">)</span> o/1xb 0x3d4 0xf
-<span class="o">(</span>qemu<span class="o">)</span> i/1xb 0x3d5
-portb<span class="o">[</span>0x03d5<span class="o">]</span> <span class="o">=</span> 0x80
-</code></pre></td></tr></table>
-</div>
-</div><p>结果是<code>0x80</code>，将高<code>8</code>位与低<code>8</code>位组合在一起得到<code>0x280</code>，即十进制<code>640</code>，除以每行字符数<code>80</code>，得到<code>8</code>。即第<code>8</code>行，从<code>0</code>开始计。可能不太好数，我们来换个方式，把位置<code>0</code>写入到光标位置寄存器，看看光标会发生什么变化。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>qemu<span class="o">)</span> o/1xb 0x3d4 0xe
-<span class="o">(</span>qemu<span class="o">)</span> o/1xb 0x3d5 <span class="m">0</span>
-<span class="o">(</span>qemu<span class="o">)</span> o/1xb 0x3d4 0xf
-<span class="o">(</span>qemu<span class="o">)</span> o/1xb 0x3d5 <span class="m">0</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>此时的结果如下：<br />
-<img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x05/empty_02.png" alt="empty_02" /></p>
-<p>可以看到光标已经在左上角的位置了。</p>
-<p><em>上面用到的<code>Qemu</code>命令的格式我并没有解释，<code>1xb</code>分别代表什么请查看<a href="https://www.qemu.org/docs/master/system/monitor.html">文档</a>。</em></p>
 <h2 id="实战">实战</h2>
-<p>下面我们使用汇编语言完成和上面一样的功能，当程序运行完成后，光标的初始位置被保存在<code>cx</code>中。</p>
+<p>有了上面的知识我们就可以开始编码从硬盘读取数据了。我们打算创建一个<code>1KB</code>大小的虚拟硬盘，即<code>1024</code>字节大小。虚拟硬盘的大小其实并不影响我们的学习，能说明问题就可以了，小一点，理解起来可能会更容易。<code>1024</code>字节刚好可以分成两个逻辑扇区，逻辑扇区<code>0</code>和逻辑扇区<code>1</code>。逻辑扇区<code>0</code>作为主引导记录会被<code>BIOS</code>自动加载到内存，我们的目标就是将逻辑扇区<code>1</code>读入内存<code>0x10000</code>处。</p>
 <h3 id="代码">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1778,43 +1586,67 @@ portb<span class="o">[</span>0x03d5<span class="o">]</span> <span class="o">=</s
 </span><span class="lnt">38
 </span><span class="lnt">39
 </span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
 
-<span class="c"># 将初始光标位置读入 cx
-</span><span class="c"></span><span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
-<span class="nf">movb</span> <span class="no">$0xe</span><span class="p">,</span> <span class="nv">%al</span>
+<span class="nf">movw</span> <span class="no">$0x1000</span><span class="p">,</span> <span class="nv">%ax</span>
+<span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
+
+<span class="nf">xorw</span> <span class="nv">%di</span><span class="p">,</span> <span class="nv">%di</span>
+
+<span class="nf">movw</span> <span class="no">$0x1f2</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="nf">movb</span> <span class="no">$1</span><span class="p">,</span> <span class="nv">%al</span>
 <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
 
-<span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
-<span class="nf">inb</span> <span class="nv">%dx</span><span class="p">,</span> <span class="nv">%al</span>
-<span class="nf">movb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%ch</span>
-
-<span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
-<span class="nf">movb</span> <span class="no">$0xf</span><span class="p">,</span> <span class="nv">%al</span>
+<span class="nf">movw</span> <span class="no">$0x1f3</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="nf">movb</span> <span class="no">$1</span><span class="p">,</span> <span class="nv">%al</span>
 <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
 
-<span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
-<span class="nf">inb</span> <span class="nv">%dx</span><span class="p">,</span> <span class="nv">%al</span>
-<span class="nf">movb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%cl</span>
-
-<span class="c"># 设置光标位置为 0
-</span><span class="c"></span><span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
-<span class="nf">movb</span> <span class="no">$0xe</span><span class="p">,</span> <span class="nv">%al</span>
-<span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
-
-<span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="nf">movw</span> <span class="no">$0x1f4</span><span class="p">,</span> <span class="nv">%dx</span>
 <span class="nf">movb</span> <span class="no">$0</span><span class="p">,</span> <span class="nv">%al</span>
 <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
 
-<span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
-<span class="nf">movb</span> <span class="no">$0xf</span><span class="p">,</span> <span class="nv">%al</span>
-<span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
-
-<span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="nf">movw</span> <span class="no">$0x1f5</span><span class="p">,</span> <span class="nv">%dx</span>
 <span class="nf">movb</span> <span class="no">$0</span><span class="p">,</span> <span class="nv">%al</span>
 <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+<span class="nf">movw</span> <span class="no">$0x1f6</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="nf">movb</span> <span class="no">$0</span><span class="p">,</span> <span class="nv">%al</span>
+<span class="nf">orb</span>  <span class="no">$0xe0</span><span class="p">,</span> <span class="nv">%al</span>     <span class="c"># b&#39;1110xxxx&#39; LBA 主硬盘
+</span><span class="c"></span><span class="no">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+<span class="nf">movw</span> <span class="no">$0x1f7</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="nf">movb</span> <span class="no">$0x20</span><span class="p">,</span> <span class="nv">%al</span>     <span class="c"># 读硬盘
+</span><span class="c"></span><span class="no">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+<span class="nl">.wait:</span>              <span class="c"># 等待硬盘不忙且准备好数据
+</span><span class="c"></span>  <span class="nf">inb</span> <span class="nv">%dx</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">andb</span> <span class="no">$0x88</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">cmpb</span> <span class="no">$0x08</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">jnz</span> <span class="no">.wait</span>
+
+<span class="nf">movw</span> <span class="no">$256</span><span class="p">,</span> <span class="nv">%cx</span>
+<span class="nf">movw</span> <span class="no">$0x1f0</span><span class="p">,</span> <span class="nv">%dx</span>
+<span class="na">rep</span> <span class="nf">insw</span>
+
+<span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
+<span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ds</span>
+
+<span class="nf">movw</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="nv">%ax</span>
+<span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="mi">0</span>
 
 <span class="nf">jmp</span> <span class="p">.</span>
 
@@ -1823,44 +1655,105 @@ portb<span class="o">[</span>0x03d5<span class="o">]</span> <span class="o">=</s
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="解释">解释</h3>
-<p>第<code>4~6</code>行使用<code>out</code>指令将<code>0xe</code>写入端口<code>0x3d4</code>，用于设置要访问的寄存器的索引。<code>out</code>指令的格式是固定的，源操作数必须是寄存器<code>al</code>或者<code>ax</code>，目的操作数可以是<code>8</code>位立即数或者寄存器<code>dx</code>。因为目标端口是一个<code>8</code>位端口，所以使用<code>al</code>寄存器；因为端口号<code>0x3d5</code>大于<code>0xff（8位立即数能表示的最大端口号）</code>，所以使用<code>dx</code>寄存器。</p>
-<p>第<code>8、9</code>行从数据端口<code>0x3d5</code>读取数据到<code>al</code>。<code>in</code>指令的格式与<code>out</code>指令正好相反。</p>
-<p>第<code>10</code>行将光标位置的高<code>8</code>位从<code>al</code>移动到<code>ch</code>，因为稍后还要使用<code>al</code>。</p>
-<p>第<code>12~18</code>行用于读出光标位置的低<code>8</code>位并移动到<code>cl</code>中。此时<code>cx</code>中保存着光标完整的位置。</p>
-<p>剩下的指令用于将光标位置的高<code>8</code>位和低<code>8</code>位分别置为<code>0</code>。</p>
-<h3 id="运行">运行</h3>
+<p>第<code>3、4、6</code>行用于设置<code>es:di</code>，将<code>es</code>设置为<code>0x1000</code>，<code>di</code>设置为<code>0</code>。指向物理地址的<code>0x10000</code>处，我们的数据将加载到这里。配合第<code>41</code>行的<code>insw</code>指令。</p>
+<p>第<code>8~10</code>行向端口<code>0x1f2</code>写入<code>1</code>，表示要读取<code>1</code>个扇区。</p>
+<p>第<code>12~14</code>行向端口<code>0x1f3</code>写入<code>1</code>，这是<code>28</code>位逻辑扇区号的<code>0~7</code>位。</p>
+<p>第<code>16~18、20~22</code>行分别向端口<code>0x1f4</code>和<code>0x1f5</code>写入逻辑扇区号的中间<code>8~15</code>位和<code>16~23</code>位。</p>
+<p>第<code>24~27</code>行向端口<code>0x1f6</code>写入<code>0xe0</code>，即二进制<code>1110 0000</code>。其中低<code>4</code>位是<code>LBA</code>编号的前<code>4</code>位，高<code>4</code>位<code>1110</code>表示以<code>LBA 模式</code>访问主硬盘。</p>
+<p>第<code>29~31</code>行向端口<code>0x1f7</code>写入命令<code>0x20</code>，表示读硬盘。</p>
+<p>告诉硬盘我们要读取数据之后便采用忙等的形式一直测试硬盘的状态，直到硬盘准备好数据。</p>
+<p>第<code>33~37</code>行不断的读取硬盘的状态并测试。<code>andb $0x88, %al</code>用于提取第<code>7</code>位和第<code>3</code>位，即硬盘是否忙，数据是否准备好。<code>cmpb $0x08, %al</code>用于测试，如果相等则表明硬盘不忙且已经准备好数据，不相等则继续测试。</p>
+<p>第<code>39</code>行将计数寄存器<code>cx</code>设置为<code>256</code>。因为<code>insw</code>一次从端口读取<code>2</code>字节数据，一个扇区<code>512</code>字节，需要读取<code>256</code>次。</p>
+<p>第<code>40</code>行将<code>dx</code>设置为数据端口<code>0x1f0</code>。</p>
+<p>第<code>41</code>行使用<code>insw</code>指令从端口读取数据，数据将会被读取到<code>es:di</code>指向的内存单元。配合<code>rep</code>前缀便可以实现批量操作。</p>
+<p>第<code>43~47</code>行用于将物理地址<code>0x10000</code>处的数据打印在屏幕上。我们会在虚拟硬盘文件的逻辑扇区<code>1</code>开始处放置一个字符<code>'A'</code>，所以屏幕此时会打印出字符<code>'A'</code>。与以往不同，这个字符是从硬盘中读取出来的。</p>
+<h3 id="编译并制作虚拟硬盘">编译并制作虚拟硬盘</h3>
+<ol>
+<li>编译主引导扇区文件</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boot.s -o boot.o
 $ objcopy -O binary -j .text boot.o boot.bin
-$ qemu-system-i386 boot.bin -monitor stdio
 </code></pre></td></tr></table>
 </div>
-</div><p>结果与上面一致，就不贴图了。此时我们查看寄存器的值：</p>
+</div><ol start="2">
+<li>创建数据文件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">echo</span> <span class="s1">&#39;A&#39;</span> &gt;&gt; message.data
+</code></pre></td></tr></table>
+</div>
+</div><p>使用<code>echo</code>命令创建一个文件，向其中写入字符<code>'A'</code>。因为<code>echo</code>的输出是以行为单位的，所以字符<code>'A'</code>后面还会跟一个换行符<code>'\n'</code>。而<code>'\n'</code>的<code>ASCII</code>编码正好是<code>0a</code>，即在数值上等于显示属性<code>黑底绿字，高亮显示</code>。</p>
+<ol start="3">
+<li>将主引导扇区文件和数据文件合并成虚拟硬盘文件</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>qemu<span class="o">)</span> info registers
-<span class="nv">EAX</span><span class="o">=</span>0000aa00 <span class="nv">EBX</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">ECX</span><span class="o">=</span><span class="m">00000280</span> <span class="nv">EDX</span><span class="o">=</span>000003d5
-<span class="nv">ESI</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">EDI</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">EBP</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">ESP</span><span class="o">=</span>00006f04
-<span class="nv">EIP</span><span class="o">=</span>00007c30 <span class="nv">EFL</span><span class="o">=</span><span class="m">00000202</span> <span class="o">[</span>-------<span class="o">]</span> <span class="nv">CPL</span><span class="o">=</span><span class="m">0</span> <span class="nv">II</span><span class="o">=</span><span class="m">0</span> <span class="nv">A20</span><span class="o">=</span><span class="m">1</span> <span class="nv">SMM</span><span class="o">=</span><span class="m">0</span> <span class="nv">HLT</span><span class="o">=</span><span class="m">0</span>
-...
-<span class="o">(</span>qemu<span class="o">)</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>boot.img <span class="nv">bs</span><span class="o">=</span><span class="m">512</span> <span class="nv">count</span><span class="o">=</span><span class="m">2</span>
+$ dd <span class="k">if</span><span class="o">=</span>boot.bin <span class="nv">of</span><span class="o">=</span>boot.img <span class="nv">conv</span><span class="o">=</span>notrunc
+$ dd <span class="k">if</span><span class="o">=</span>message.data <span class="nv">of</span><span class="o">=</span>boot.img <span class="nv">seek</span><span class="o">=</span><span class="m">1</span> <span class="nv">conv</span><span class="o">=</span>notrunc
 </code></pre></td></tr></table>
 </div>
-</div><p>内容比较多，我们只关注第<code>2</code>行的<code>ecx</code>，值为<code>0x280</code>。与我们之前手动取出来的值是一致的。</p>
+</div><p>此时我们便得到了虚拟硬盘文件<code>boot.img</code>，查看一下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ xxd -a boot.img
+00000000: b800 108e c031 ffba f201 b001 eeba f301  .....1..........
+00000010: b001 eeba f401 b000 eeba f501 b000 eeba  ................
+00000020: f601 b000 0ce0 eeba f701 b020 eeec <span class="m">2488</span>  ........... ..$.
+00000030: 3c08 75f9 b900 01ba f001 f36d b800 b88e  &lt;.u........m....
+00000040: d826 a100 00a3 <span class="m">0000</span> ebfe <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  .<span class="p">&amp;</span>..............
+00000050: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
+*
+000001f0: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> 55aa  ..............U.
+00000200: 410a <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  A...............
+00000210: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
+*
+000003f0: <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span> <span class="m">0000</span>  ................
+</code></pre></td></tr></table>
+</div>
+</div><p>其中前<code>512</code>字节是主引导扇区，以<code>0x55、0xaa</code>结束。第二个扇区开始处的两个字节为<code>0x41、0x0a</code>。</p>
+<h3 id="运行">运行</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 -drive <span class="nv">file</span><span class="o">=</span>boot.img,format<span class="o">=</span>raw
+</code></pre></td></tr></table>
+</div>
+</div><p>启动参数中我们指明的虚拟硬盘的格式为<code>raw</code>，如果不指定并且<code>qemu</code>识别不了的话总是有警告。运行结果如下：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x06/disk_char_A.png" alt="disk_char_A" /></p>
+<p>有兴趣的同学可以尝试将<code>message.data</code>中的<code>'A'</code>修改为别的字符，在不修改主引导扇区代码的情况下重新构建虚拟硬盘文件，运行并观察结果。</p>
 
     </article>
     
@@ -1924,21 +1817,14 @@ $ qemu-system-i386 boot.bin -monitor stdio
 <nav class="pagination-single">
   
     
-      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x04-%E5%A0%86%E6%A0%88/" class="pagination-single__left">
+      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x05-i/o%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">汇编语言一发入魂 0x04 - 堆栈</div>      
+        <div class="pagination-single__left-title">汇编语言一发入魂 0x05 - I/O接口技术</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">汇编语言一发入魂 0x06 - 硬盘操作</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2296,22 +2182,17 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#io-接口技术">I/O 接口技术</a>
+    <li><a href="#硬盘">硬盘</a>
       <ul>
-        <li><a href="#io-端口">I/O 端口</a></li>
-        <li><a href="#io-端口的寻址方式">I/O 端口的寻址方式</a></li>
-        <li><a href="#io-端口地址分配">I/O 端口地址分配</a></li>
-      </ul>
-    </li>
-    <li><a href="#实验">实验</a>
-      <ul>
-        <li><a href="#屏幕光标控制">屏幕光标控制</a></li>
+        <li><a href="#基础知识">基础知识</a></li>
+        <li><a href="#访问模式">访问模式</a></li>
       </ul>
     </li>
     <li><a href="#实战">实战</a>
       <ul>
         <li><a href="#代码">代码</a></li>
         <li><a href="#解释">解释</a></li>
+        <li><a href="#编译并制作虚拟硬盘">编译并制作虚拟硬盘</a></li>
         <li><a href="#运行">运行</a></li>
       </ul>
     </li>
