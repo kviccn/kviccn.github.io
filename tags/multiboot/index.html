@@ -1273,6 +1273,11 @@
     </script>
     <div id="container">
         
+
+
+
+
+
         <div class="wrapper" data-type="tags" data-kind="taxonomy">
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
@@ -1507,7 +1512,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x01-hello-world/'> 老李教你写操作系统 0x01 - Hello World</a> </h5>
-        <h6 class="subtitle caption"><time title="创建日期" dir="ltr">📅 2020年02月15日 </time>  <span title="阅读时长" dir="ltr"> &middot; ☕ 6 分钟 </span></h6>
+        <h6 class="subtitle caption">
+          <time title="创建日期" dir="ltr">📅&nbsp;2020年02月15日 </time>
+          
+          <span title="阅读时长" dir="ltr"> &middot; ☕&nbsp;6&nbsp;分钟 </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1911,73 +1921,79 @@
 </main>
 
 <script>
-  
-  var sidebarPosition = JSON.parse("\"right\"");
-  
-  var enableSidebar = JSON.parse("true");
+    
+    var sidebarPosition = JSON.parse("\"right\"");
+    
+    var enableSidebar = JSON.parse("true");
 
-  var listMainElem = document.querySelector('.list__main');
-  var listSideElem = document.querySelector('.list__sidebar');
+    var listMainElem = document.querySelector('.list__main');
+    var listSideElem = document.querySelector('.list__sidebar');
 
-  var gridSmall = 'l';
-  var gridBig = 'mr';
-  var gridFull = 'lmr'
+    var gridSmall = 'l';
+    var gridBig = 'mr';
+    var gridFull = 'lmr'
 
-  if (sidebarPosition === "right") {
-      gridSmall = 'r';
-      gridBig = 'lm'
-  }
+    if (sidebarPosition === "right") {
+        gridSmall = 'r';
+        gridBig = 'lm'
+    }
 
-  enquire.register("screen and (max-width: 769px)", {
-    match: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridBig);
-        listMainElem.classList.add(gridFull);
-        listSideElem.classList.remove(gridSmall);
-        listSideElem.classList.add('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+    enquire.register("screen and (max-width: 769px)", {
+        match: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-    },
-    unmatch: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridFull);
-        listMainElem.classList.add(gridBig);
-        listSideElem.classList.add(gridSmall);
-        listSideElem.classList.remove('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-      
-      var navCollapseBtn = document.querySelector('.navbar__burger');
-      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
-      if (navCollapse) {
-        navCollapse.setAttribute('data-open', false);
-        navCollapse.style.maxHeight = 0;
-        navCollapseBtn.classList.remove('is-active');
-      }
-      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
-    },
-    setup: function () { },
-    deferSetup: true,
-    destroy: function () { },
-  });
+        },
+        unmatch: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+            var navCollapseBtn = document.querySelector('.navbar__burger');
+            var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+            if (navCollapse) {
+                navCollapse.setAttribute('data-open', false);
+                navCollapse.style.maxHeight = 0;
+                navCollapseBtn.classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
+        },
+        setup: function () { },
+        deferSetup: true,
+        destroy: function () { },
+    });
 </script>
+
 
 
             
@@ -2115,7 +2131,12 @@
 
         </div>
         
-<div class="wrapper__right hide" dir="ltr">
+
+
+
+
+
+<div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
   
 </div>
