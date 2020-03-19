@@ -12,13 +12,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, 杨河老李</copyright>
-    <lastBuildDate>Mon, 16 Mar 2020 17:05:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 14:46:48 +0800</lastBuildDate>
     
         <atom:link href="https://kviccn.github.io/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>汇编语言一发入魂 0x07 - 过程调用</title>
+        <link>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/</link>
+        <pubDate>Thu, 19 Mar 2020 14:46:48 +0800</pubDate>
+        
+        <atom:modified>Thu, 19 Mar 2020 14:46:48 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/</guid>
+        <description>前两篇文章中我们学习了如何控制屏幕光标，如何从硬盘读取数据。这种常用的功能我们希望将它封装成过程调用，类似于高级语言中的函数，这样当我们控制</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>过程调用</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言一发入魂</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>汇编语言一发入魂 0x06 - 硬盘操作</title>
