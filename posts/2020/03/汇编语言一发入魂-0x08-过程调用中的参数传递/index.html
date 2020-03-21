@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>汇编语言一发入魂 0x07 - 过程调用 – 杨河老李</title>
+    <title>汇编语言一发入魂 0x08 - 过程调用中的参数传递 – 杨河老李</title>
     
 
 
@@ -543,7 +543,7 @@
 
   
     
-    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/\"");
+    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x08-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1200,16 +1200,16 @@
 
 <meta name="keywords" content="过程调用">
 
-<meta name="created" content="2020-03-19T14:46:48&#43;0800">
-<meta name="modified" content="2020-03-19T14:46:48&#43;0800">
-<meta property="article:published_time" content="2020-03-19T14:46:48&#43;0800">
+<meta name="created" content="2020-03-21T13:31:27&#43;0800">
+<meta name="modified" content="2020-03-21T13:31:27&#43;0800">
+<meta property="article:published_time" content="2020-03-21T13:31:27&#43;0800">
 
 <meta name="author" content="杨河老李">
 
 
 <meta property="og:site_name" content="杨河老李">
-<meta property="og:title" content="汇编语言一发入魂 0x07 - 过程调用">
-<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/">
+<meta property="og:title" content="汇编语言一发入魂 0x08 - 过程调用中的参数传递">
+<meta property="og:url" content="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x08-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The Zzo theme for Hugo example site.">
 
@@ -1222,7 +1222,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/">
+<link rel="canonical" href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x08-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1236,11 +1236,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "汇编语言一发入魂 0x07 - 过程调用",
-    "datePublished": "2020-03-19T14:46:48+08:00",
-    "dateModified": "2020-03-19T14:46:48+08:00",
-    "url" : "https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/",
-    "description": "前两篇文章中我们学习了如何控制屏幕光标，如何从硬盘读取数据。这种常用的功能我们希望将它封装成过程调用，类似于高级语言中的函数，这样当我们控制",
+    "headline": "汇编语言一发入魂 0x08 - 过程调用中的参数传递",
+    "datePublished": "2020-03-21T13:31:27+08:00",
+    "dateModified": "2020-03-21T13:31:27+08:00",
+    "url" : "https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x08-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/",
+    "description": "通常我们封装过程是为了方便调用，避免写重复的代码。过程调用时通常需要通过传递参数来控制过程的执行，今天我们来讲一讲参数传递时的一些规范和需要",
     "keywords": ["过程调用"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1489,7 +1489,7 @@
   
   <li  class="is-active" >
     
-      <span>汇编语言一发入魂 0x07 - 过程调用</span>
+      <span>汇编语言一发入魂 0x08 - 过程调用中的参数传递</span>
     
   </li>
   
@@ -1501,13 +1501,13 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">汇编语言一发入魂 0x07 - 过程调用</h2>
+    <h2 class="single__title" data-ani="true">汇编语言一发入魂 0x08 - 过程调用中的参数传递</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="创建日期">📅&nbsp;2020年03月19日 </time>
+  <time class="single__info" title="创建日期">📅&nbsp;2020年03月21日 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;6&nbsp;分钟 </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;5&nbsp;分钟 </span>
   
   <span class="single__info">
     
@@ -1525,13 +1525,91 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>前两篇文章中我们学习了如何控制屏幕光标，如何从硬盘读取数据。这种常用的功能我们希望将它封装成过程调用，类似于高级语言中的函数，这样当我们控制光标或者从硬盘读取数据时就不需要每次都写大段的重复代码了。</p>
-<p>在<code>CPU</code>中，执行的指令通过<code>cs:ip</code>来确定。过程调用实际上就是通过<code>call</code>或<code>lcall</code>指令来修改<code>ip</code>或<code>cs:ip</code>来达到跳转到另一段指令中执行的目的。</p>
-<p><code>call</code>指令通过修改<code>ip</code>来实现过程调用，因为只修改<code>ip</code>，所以被调例程与原例程在同一个代码段内，也称为近调用。处理器在执行<code>call</code>指令时先将<code>call</code>后面的第一条指令的偏移地址压栈，再通过操作数计算出新的<code>ip</code>替换当前<code>ip</code>。</p>
-<p><code>lcall</code>指令通过修改<code>cs:ip</code>来实现过程调用，因为同时修改<code>cs</code>和<code>ip</code>，所以被调例程与原例程不在同一个代码段内，也称为远调用。处理器在执行<code>lcall</code>指令时先将<code>cs、ip</code>依次压栈，再用指令中给出的段地址代替<code>cs</code>原有的内容，用指令中给出的偏移地址代替<code>ip</code>原有的内容。</p>
-<p>从子例程返回到原例程使用<code>ret</code>或<code>lret</code>指令。<code>ret</code>指令用栈中的数据修改<code>ip</code>的内容，实现近转移；<code>lret</code>用栈中的数据修改<code>cs:ip</code>，实现远转移。<code>CPU</code>执行<code>ret</code>指令时相当于执行<code>pop ip</code>，执行<code>lret</code>指令时相当于执行<code>pop ip</code>、<code>pop cs</code>。</p>
-<p>下面我们通过一些简单的例子来学习一下如何使用这些指令。</p>
+      <p>通常我们封装过程是为了方便调用，避免写重复的代码。过程调用时通常需要通过传递参数来控制过程的执行，今天我们来讲一讲参数传递时的一些规范和需要注意的地方。</p>
+<p>先来看一个例子：</p>
 <h2 id="示例一">示例一</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
+
+<span class="nf">movw</span> <span class="no">$0x7c00</span><span class="p">,</span> <span class="nv">%sp</span>
+
+<span class="nf">callw</span> <span class="no">set_cursor</span>
+
+<span class="nf">jmp</span> <span class="p">.</span>
+
+<span class="c"># 目的: 设置光标位置为 0
+</span><span class="c">#
+</span><span class="c"># 输入: 无
+</span><span class="c">#
+</span><span class="c"># 输出: 无
+</span><span class="c"></span><span class="nl">set_cursor:</span>
+  <span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0xe</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0xf</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">retw</span>
+
+<span class="na">.org</span> <span class="mi">510</span>
+<span class="na">.word</span> <span class="mi">0xAA55</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这个例子中的过程<code>set_cursor</code>，或者称为函数，没有输入，也没有输出。这个函数实际上是没有什么实际用处的，因为它只能将光标位置设置为<code>0</code>，即屏幕左上角。想要这个函数有实际的用处的话就需要给它传递参数，将想要设置的位置作为参数传递给它。传递参数的方式大体上来说有三种：</p>
+<ol>
+<li>通过寄存器传递。即将参数预先放入寄存器中，被调用的函数执行时去这个寄存器中获取参数。</li>
+<li>通过堆栈传递。即调用函数前，先将参数压入栈中，被调函数通过<code>bp</code>寄存器间接寻址，获取堆栈上放置的参数。</li>
+<li>通过寄存器和堆栈传递。即一部分参数放在寄存器中，一部分放在堆栈上。</li>
+</ol>
+<p>通过寄存器传递参数很简单，所以我们主要讲解一下通过堆栈传递参数时需要注意的地方。下面看一下改造后的可以接收参数的<code>set_cursor</code>：</p>
+<h2 id="示例二">示例二</h2>
 <h3 id="代码">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1551,20 +1629,66 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
 
 <span class="nf">movw</span> <span class="no">$0x7c00</span><span class="p">,</span> <span class="nv">%sp</span>
 
-<span class="nf">callw</span> <span class="no">put_char_A</span>
+<span class="nf">pushw</span> <span class="no">$79</span>
+<span class="nf">callw</span> <span class="no">set_cursor</span>
+<span class="nf">addw</span> <span class="no">$2</span><span class="p">,</span> <span class="nv">%sp</span>
 
 <span class="nf">jmp</span> <span class="p">.</span>
 
-<span class="nl">put_char_A:</span>
-  <span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
-  <span class="nf">movw</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span> <span class="err">|</span> <span class="mi">0x0a00</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span>
+<span class="c"># 目的: 设置光标位置
+</span><span class="c">#
+</span><span class="c"># 输入:
+</span><span class="c">#   参数1 光标所在位置
+</span><span class="c">#
+</span><span class="c"># 输出: 无
+</span><span class="c"></span><span class="nl">set_cursor:</span>
+  <span class="nf">movw</span> <span class="nv">%sp</span><span class="p">,</span> <span class="nv">%bp</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0xe</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="mi">3</span><span class="p">(</span><span class="nv">%bp</span><span class="p">),</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0xf</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="mi">2</span><span class="p">(</span><span class="nv">%bp</span><span class="p">),</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
   <span class="nf">retw</span>
 
 <span class="na">.org</span> <span class="mi">510</span>
@@ -1572,67 +1696,26 @@
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="解释">解释</h3>
-<p>第<code>3</code>行设置堆栈栈顶指针。因为<code>call</code>指令和<code>ret</code>指令的执行依赖于堆栈。</p>
-<p>第<code>5</code>行调用了我们在第<code>9</code>行定义的子例程。</p>
-<p>第<code>13</code>行使用<code>ret</code>指令跳回原来的执行流程。</p>
-<h3 id="编译反编译">编译、反编译</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boota.s -o boota.o
-$ objcopy -O binary -j .text boota.o boota.bin
-$ objdump -D -b binary -m i386 -Mi8086,suffix boota.bin
-
-boota.bin：     文件格式 binary
-
-
-Disassembly of section .data:
-
-<span class="m">00000000</span> &lt;.data&gt;:
-   0:   bc <span class="m">00</span> 7c                movw   <span class="nv">$0</span>x7c00,%sp
-   3:   e8 <span class="m">02</span> <span class="m">00</span>                callw  0x8
-   6:   eb fe                   jmp    0x6
-   8:   b8 <span class="m">00</span> b8                movw   <span class="nv">$0</span>xb800,%ax
-   b:   8e c0                   movw   %ax,%es
-   d:   <span class="m">26</span> c7 <span class="m">06</span> <span class="m">00</span> <span class="m">00</span> <span class="m">41</span> 0a    movw   <span class="nv">$0</span>xa41,%es:0x0
-  14:   c3                      retw
-        ...
- 1fd:   <span class="m">00</span> <span class="m">55</span> aa                addb   %dl,-0x56<span class="o">(</span>%di<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>第<code>12</code>行编译后的指令是<code>e8 02 00</code>，其中<code>e8</code>是操作码，<code>02 00</code>是操作数，转换成正常顺序即<code>00 02</code>。编译器在计算这个操作数的时候先使用标号的汇编地址<code>（该例中为8）</code>减去本指令的汇编地址<code>（该例中为3）</code>，再减去<code>3</code>，作为机器指令的操作数。即<code>8 - 3 - 3 = 2</code>。同样，指令在执行时，<code>CPU</code>先用<code>ip</code>当前的值加上指令中的操作数，再加上<code>3</code>，得到偏移地址。然后将<code>call</code>指令之后的第一条指令的地址压入栈中，再使用刚才计算得到的<code>ip</code>替换当前<code>ip</code>，从而完成跳转。因为此时栈中压入的是<code>call</code>后的第一条指令的偏移地址，所以当子例程通过<code>ret</code>返回时，会使用这个地址替换<code>ip</code>。从而使调用例程继续执行后续指令。</p>
+<p>第<code>5</code>行将参数<code>79</code>压入栈中，因为一行是<code>80</code>列，从<code>0</code>开始计数，<code>79</code>是第一行的最后一列。</p>
+<p>第<code>6</code>行调用<code>set_cursor</code>，注意这里有一个隐含的将<code>ip</code>压栈的操作。</p>
+<p>第<code>7</code>行用于恢复栈顶指针。</p>
+<p>第<code>18</code>行将当前栈顶指针复制给<code>bp</code>，因为要通过<code>bp</code>间接访问堆栈中的参数。</p>
+<p>第<code>25、33</code>行分别通过<code>3(%bp)、2(%bp)</code>访问参数的高<code>8</code>位和低<code>8</code>位。此时<code>bp</code>指向栈顶，从栈顶向上的两个字节保存的是<code>ip</code>，即偏移量为<code>0, 1</code>的两个内存单元，<code>2, 3</code>这两个单元保存的是我们压入栈中的参数。</p>
+<p>第<code>36</code>行通过<code>ret</code>从函数返回，同时将<code>ip</code>出栈，此时堆栈中只剩调用函数之前压入的参数了。</p>
 <h3 id="调试">调试</h3>
-<p>启动虚拟机：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 boota.bin -S -s
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 bootb.s -o bootb.o
+$ objcopy -O binary -j .text bootb.o bootb.bin
+$ qemu-system-i386 bootb.bin -S -s
 </code></pre></td></tr></table>
 </div>
-</div><p>在另一个终端启动<code>gdb</code>（配合<a href="https://github.com/kviccn/asm-boooom/blob/master/gdb/.gdbinit">.gdbinit</a>）：</p>
-<div class="highlight"><div class="chroma">
+</div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1648,24 +1731,7 @@ Breakpoint 1, 0x00007c00 in ?? <span class="o">()</span>
 <span class="o">(</span>gdb<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>向后执行一条指令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
-0x00007c03 in ?? <span class="o">()</span>
-1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-<span class="o">=</span>&gt; 0x7c03:      call   0x7c08
-<span class="o">(</span>gdb<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>可以看到这里计算出来的地址是<code>0x7c08</code>，当前指令的地址<code>0x7c03</code>，加操作数<code>2</code>，再加<code>3</code>，得到<code>0x7c08</code>。继续执行并查看寄存器内容：</p>
+</div><p>设置<code>sp</code>并查看寄存器内容：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1692,9 +1758,61 @@ Breakpoint 1, 0x00007c00 in ?? <span class="o">()</span>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
-0x00007c08 in ?? <span class="o">()</span>
+0x00007c03 in ?? <span class="o">()</span>
 1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-<span class="o">=</span>&gt; 0x7c08:      mov    <span class="nv">$0</span>xb800,%ax
+<span class="o">=</span>&gt; 0x7c03:      push   <span class="nv">$0</span>x4f
+<span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0xaa55   <span class="m">43605</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x80     <span class="m">128</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x7c00   0x7c00
+ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c03   0x7c03
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x0      <span class="m">0</span>
+es             0x0      <span class="m">0</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时<code>sp</code>指向<code>0x7c00</code>，将参数压栈并查看寄存器和堆栈内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
+0x00007c05 in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c05:      call   0x7c0d
 <span class="o">(</span>gdb<span class="o">)</span> info registers
 eax            0xaa55   <span class="m">43605</span>
 ecx            0x0      <span class="m">0</span>
@@ -1702,6 +1820,113 @@ edx            0x80     <span class="m">128</span>
 ebx            0x0      <span class="m">0</span>
 esp            0x7bfe   0x7bfe
 ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c05   0x7c05
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x0      <span class="m">0</span>
+es             0x0      <span class="m">0</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+<span class="o">(</span>gdb<span class="o">)</span> x/1dh 0x7bfe
+0x7bfe: <span class="m">79</span>
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此时栈中压入一个参数，<code>sp</code>减<code>2</code>，指向<code>0x7bfe</code>。调用函数并查看寄存器中的值：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
+0x00007c0d in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c0d:      mov    %sp,%bp
+<span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0xaa55   <span class="m">43605</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x80     <span class="m">128</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x7bfc   0x7bfc
+ebp            0x0      0x0
+esi            0x0      <span class="m">0</span>
+edi            0x0      <span class="m">0</span>
+eip            0x7c0d   0x7c0d
+eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+cs             0x0      <span class="m">0</span>
+ss             0x0      <span class="m">0</span>
+ds             0x0      <span class="m">0</span>
+es             0x0      <span class="m">0</span>
+fs             0x0      <span class="m">0</span>
+gs             0x0      <span class="m">0</span>
+<span class="o">(</span>gdb<span class="o">)</span> x/2xh 0x7bfc
+0x7bfc: 0x7c08  0x004f
+<span class="o">(</span>gdb<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>call</code>指令隐式的将<code>ip</code>压栈，<code>sp</code>减<code>2</code>，指向<code>0x7bfc</code>。执行到函数返回，查看寄存器内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si <span class="m">14</span>
+0x00007c08 in ?? <span class="o">()</span>
+1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
+<span class="o">=</span>&gt; 0x7c08:      add    <span class="nv">$0</span>x2,%sp
+<span class="o">(</span>gdb<span class="o">)</span> info registers
+eax            0xaa4f   <span class="m">43599</span>
+ecx            0x0      <span class="m">0</span>
+edx            0x3d5    <span class="m">981</span>
+ebx            0x0      <span class="m">0</span>
+esp            0x7bfe   0x7bfe
+ebp            0x7bfc   0x7bfc
 esi            0x0      <span class="m">0</span>
 edi            0x0      <span class="m">0</span>
 eip            0x7c08   0x7c08
@@ -1714,79 +1939,7 @@ fs             0x0      <span class="m">0</span>
 gs             0x0      <span class="m">0</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>此时<code>ip</code>的内容为<code>0x7c08</code>，<code>sp</code>的内容为<code>0x7bfe</code>。<code>sp</code>初始时我们设置成了<code>0x7c00</code>，在执行<code>call</code>指令时处理器会将<code>call</code>后面一条指令的偏移地址压栈，所以<code>sp</code>的值变成了<code>0x7bfe</code>。我们来查看一下栈中的内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> x/1xh 0x7bfe
-0x7bfe: 0x7c06
-<span class="o">(</span>gdb<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><code>0x7c06</code>正好是后面<code>jmp</code>指令的偏移地址。稍后<code>ret</code>指令执行时会将这个偏移地址从栈中弹出到<code>ip</code>，来跳回到原来的执行流程。</p>
-<p>向后执行<code>3</code>条指令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si <span class="m">3</span>
-0x00007c14 in ?? <span class="o">()</span>
-1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-<span class="o">=</span>&gt; 0x7c14:      ret
-<span class="o">(</span>gdb<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>此时屏幕左上角会打印出字符<code>'A'</code>，常规操作就不贴图了。观察上面的输出，下一条要执行的便是<code>ret</code>指令，查看一下此时的寄存器内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> info registers
-eax            0xb800   <span class="m">47104</span>
-ecx            0x0      <span class="m">0</span>
-edx            0x80     <span class="m">128</span>
-ebx            0x0      <span class="m">0</span>
-esp            0x7bfe   0x7bfe
-ebp            0x0      0x0
-esi            0x0      <span class="m">0</span>
-edi            0x0      <span class="m">0</span>
-eip            0x7c14   0x7c14
-eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
-cs             0x0      <span class="m">0</span>
-ss             0x0      <span class="m">0</span>
-ds             0x0      <span class="m">0</span>
-es             0xb800   <span class="m">47104</span>
-fs             0x0      <span class="m">0</span>
-gs             0x0      <span class="m">0</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><code>ip</code>是<code>0x7c14</code>，要跳转到的偏移地址还保存在<code>0x7bfe</code>处。执行<code>ret</code>指令，观察结果：</p>
+</div><p>此时函数已通过<code>ret</code>指令返回，<code>ip</code>被弹出，<code>sp</code>加<code>2</code>，恢复到压入参数后的状态。继续执行，将<code>sp</code>恢复到参数压栈前：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1813,32 +1966,31 @@ gs             0x0      <span class="m">0</span>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si
-0x00007c06 in ?? <span class="o">()</span>
+0x00007c0b in ?? <span class="o">()</span>
 1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-<span class="o">=</span>&gt; 0x7c06:      jmp    0x7c06
+<span class="o">=</span>&gt; 0x7c0b:      jmp    0x7c0b
 <span class="o">(</span>gdb<span class="o">)</span> info registers
-eax            0xb800   <span class="m">47104</span>
+eax            0xaa4f   <span class="m">43599</span>
 ecx            0x0      <span class="m">0</span>
-edx            0x80     <span class="m">128</span>
+edx            0x3d5    <span class="m">981</span>
 ebx            0x0      <span class="m">0</span>
 esp            0x7c00   0x7c00
-ebp            0x0      0x0
+ebp            0x7bfc   0x7bfc
 esi            0x0      <span class="m">0</span>
 edi            0x0      <span class="m">0</span>
-eip            0x7c06   0x7c06
-eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
+eip            0x7c0b   0x7c0b
+eflags         0x216    <span class="o">[</span> PF AF IF <span class="o">]</span>
 cs             0x0      <span class="m">0</span>
 ss             0x0      <span class="m">0</span>
 ds             0x0      <span class="m">0</span>
-es             0xb800   <span class="m">47104</span>
+es             0x0      <span class="m">0</span>
 fs             0x0      <span class="m">0</span>
 gs             0x0      <span class="m">0</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>看到了吗？<code>ip</code>的值已经是<code>0x7c06</code>了，下一条要执行的指令也如我们所愿是<code>jmp</code>了。</p>
-<p><code>call</code>指令的操作数还可以在寄存器或内存中，例如<code>callw *%cx</code>或<code>callw *procedure_address</code>。需要注意的是正如你看到的，寄存器或内存地址前需要加一个<code>*</code>，就好像指针一样。具体的代码戳<a href="https://github.com/kviccn/asm-boooom/blob/master/0x07/bootb.s">这里</a>。</p>
-<p>下面来看一个<code>lcall</code>的例子。</p>
-<h2 id="示例二">示例二</h2>
+</div><p>虽然我们初步实现了功能，但是可以看到有些寄存器的内容也被我们的函数更改了，例如<code>bp</code>。想想一下，如果我们有多个函数需要嵌套调用，每一个函数都需要通过<code>bp</code>访问堆栈中的参数，每一个函数执行完成之后都会修改<code>bp</code>，那么调用函数的过程就无法再使用<code>bp</code>访问自己的参数了。为了解决这个问题，我们需要将函数中被修改的寄存器先保存在堆栈中，函数返回时再恢复被修改过的寄存器。</p>
+<p>来看看完整的示例：</p>
+<h2 id="示例三">示例三</h2>
 <h3 id="代码-1">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1859,42 +2011,84 @@ gs             0x0      <span class="m">0</span>
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.code16</span>
 
 <span class="nf">movw</span> <span class="no">$0x7c00</span><span class="p">,</span> <span class="nv">%sp</span>
 
-<span class="nf">lcallw</span> <span class="no">$0x07d0</span><span class="p">,</span> <span class="no">$0</span>
+<span class="nf">pushw</span> <span class="no">$79</span>
+<span class="nf">callw</span> <span class="no">set_cursor</span>
+<span class="nf">addw</span> <span class="no">$2</span><span class="p">,</span> <span class="nv">%sp</span>
 
 <span class="nf">jmp</span> <span class="p">.</span>
 
-<span class="na">.org</span> <span class="mi">0x100</span>
-<span class="nl">put_char_A:</span>
-  <span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
-  <span class="nf">movw</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span> <span class="err">|</span> <span class="mi">0x0a00</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span>
-  <span class="nf">lretw</span>
+<span class="c"># 目的: 设置光标位置
+</span><span class="c">#
+</span><span class="c"># 输入:
+</span><span class="c">#   参数1 光标所在位置
+</span><span class="c">#
+</span><span class="c"># 输出: 无
+</span><span class="c"></span><span class="nl">set_cursor:</span>
+  <span class="nf">pushw</span> <span class="nv">%bp</span>
+  <span class="nf">movw</span> <span class="nv">%sp</span><span class="p">,</span> <span class="nv">%bp</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0xe</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="mi">5</span><span class="p">(</span><span class="nv">%bp</span><span class="p">),</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d4</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="no">$0xf</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="no">$0x3d5</span><span class="p">,</span> <span class="nv">%dx</span>
+  <span class="nf">movb</span> <span class="mi">4</span><span class="p">(</span><span class="nv">%bp</span><span class="p">),</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="nv">%dx</span>
+
+  <span class="nf">movw</span> <span class="nv">%bp</span><span class="p">,</span> <span class="nv">%sp</span>
+  <span class="nf">popw</span> <span class="nv">%bp</span>
+
+  <span class="nf">retw</span>
 
 <span class="na">.org</span> <span class="mi">510</span>
 <span class="na">.word</span> <span class="mi">0xAA55</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="解释-1">解释</h3>
-<p>第<code>5</code>行<code>lcall</code>指令的格式为<code>lcall $section, $offset</code>。<code>0x07d0</code>是远调用的代码段地址，<code>0</code>是段内偏移。</p>
-<p>第<code>9</code>行使用伪指令<code>.org</code>将位置计数器移动到了<code>0x100</code>处。因为主引导记录是被加载到<code>0x7c00</code>处的，所以标号<code>put_char_A</code>在程序执行时的实际物理地址是<code>0x7c00 + 0x100 = 0x7d00</code>，对应段地址<code>0x07d0</code>，段内偏移<code>0</code>。</p>
-<p>第<code>14</code>行使用<code>lret</code>指令将栈中保存的段内偏移和段地址依次弹出到<code>ip、cs</code>，恢复原来的执行流程。</p>
-<h3 id="调试-1">调试</h3>
-<p>启动虚拟机：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 bootla.bin -S -s
-</code></pre></td></tr></table>
-</div>
-</div><p>启动<code>gdb</code>:</p>
+<p>第<code>18、19</code>行先将<code>bp</code>保存在栈中，然后将当前栈顶指针复制到<code>bp</code>。</p>
+<p>第<code>26、34</code>行的偏移量分别比上一个示例中增加了<code>2</code>，因为多压了<code>bp</code>在栈中。</p>
+<p>第<code>37、38</code>行恢复<code>bp</code>。</p>
+<p>通常在进入函数和离开函数时都需要保存和恢复<code>bp</code>，即执行下面的指令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1904,63 +2098,14 @@ gs             0x0      <span class="m">0</span>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ gdb -q
-Breakpoint 1, 0x00007c00 in ?? <span class="o">()</span>
-1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-<span class="o">=</span>&gt; 0x7c00:      mov    <span class="nv">$0</span>x7c00,%sp
-<span class="o">(</span>gdb<span class="o">)</span>
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">pushw</span> <span class="nv">%bp</span>
+<span class="nf">movw</span> <span class="nv">%sp</span><span class="p">,</span> <span class="nv">%bp</span>
+
+<span class="nf">movw</span> <span class="nv">%bp</span><span class="p">,</span> <span class="nv">%sp</span>
+<span class="nf">popw</span> <span class="nv">%bp</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>向后执行两条指令，此时已经进入到了子例程，查看寄存器状态：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si <span class="m">2</span>
-0x00000000 in ?? <span class="o">()</span>
-1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-   0x7d00:      mov    <span class="nv">$0</span>xb800,%ax
-<span class="o">(</span>gdb<span class="o">)</span> info registers
-eax            0xaa55   <span class="m">43605</span>
-ecx            0x0      <span class="m">0</span>
-edx            0x80     <span class="m">128</span>
-ebx            0x0      <span class="m">0</span>
-esp            0x7bfc   0x7bfc
-ebp            0x0      0x0
-esi            0x0      <span class="m">0</span>
-edi            0x0      <span class="m">0</span>
-eip            0x0      0x0
-eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
-cs             0x7d0    <span class="m">2000</span>
-ss             0x0      <span class="m">0</span>
-ds             0x0      <span class="m">0</span>
-es             0x0      <span class="m">0</span>
-fs             0x0      <span class="m">0</span>
-gs             0x0      <span class="m">0</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>此时已经跳转到了段<code>0x7d0</code>，段内偏移<code>0x0</code>处了。<code>sp</code>也因为<code>cs:ip</code>压入栈中变成了<code>0x7bfc</code>，查看栈中的内容：</p>
+</div><p>所以处理器也为我们提供了简化的指令分别对应上面的两组指令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1968,62 +2113,15 @@ gs             0x0      <span class="m">0</span>
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> x/2xh 0x7bfc
-0x7bfc: 0x7c08  0x0000
-<span class="o">(</span>gdb<span class="o">)</span>
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">enterw</span>
+
+<span class="nf">leavew</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>低地址处是<code>ip 0x7c08</code>，高地址处是<code>cs 0x0000</code>。向后执行<code>4</code>条指令并查看寄存器内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> si <span class="m">4</span>
-0x00007c08 in ?? <span class="o">()</span>
-1: x/i <span class="nv">$cs</span>*16+<span class="nv">$pc</span>
-<span class="o">=</span>&gt; 0x7c08:      jmp    0x7c08
-<span class="o">(</span>gdb<span class="o">)</span> info registers
-eax            0xb800   <span class="m">47104</span>
-ecx            0x0      <span class="m">0</span>
-edx            0x80     <span class="m">128</span>
-ebx            0x0      <span class="m">0</span>
-esp            0x7c00   0x7c00
-ebp            0x0      0x0
-esi            0x0      <span class="m">0</span>
-edi            0x0      <span class="m">0</span>
-eip            0x7c08   0x7c08
-eflags         0x202    <span class="o">[</span> IF <span class="o">]</span>
-cs             0x0      <span class="m">0</span>
-ss             0x0      <span class="m">0</span>
-ds             0x0      <span class="m">0</span>
-es             0xb800   <span class="m">47104</span>
-fs             0x0      <span class="m">0</span>
-gs             0x0      <span class="m">0</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>可以看到在<code>lret</code>指令执行后，<code>cs</code>恢复成了<code>0x0</code>，<code>ip</code>恢复成了<code>0x7c08</code>。<code>sp</code>因为<code>ip</code>和<code>cs</code>的出栈恢复了初始值<code>0x7c00</code>。</p>
-<p><code>lcall</code>的操作数也可以在内存中，例如<code>lcallw *procedure_address</code>。具体的代码戳<a href="https://github.com/kviccn/asm-boooom/blob/master/0x07/bootlb.s">这里</a></p>
+</div><p>完整的示例戳<a href="https://github.com/kviccn/asm-boooom/blob/master/0x08/bootb2.s">这里</a>。</p>
+<p>关于函数调用之后的<code>sp</code>的恢复除了在调用函数中通过<code>add</code>指令恢复外还可以在被调函数中通过<code>ret</code>指令的操作数来恢复。戳<a href="https://github.com/kviccn/asm-boooom/blob/master/0x08/bootc.s">这里</a>。</p>
+<p>最后再给大家一个功能多一点的<a href="https://github.com/kviccn/asm-boooom/blob/master/0x08/boote.s">例子</a>。实现了清屏，设置光标位置，获取光标位置，打印字符，打印字符串等功能。比较完整的演示了函数调用中的参数传递，返回值，嵌套调用等情况。示例的输出如下，有兴趣的小朋友可以自己研究研究。</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x08/boote.png" alt="boote" /></p>
 
     </article>
     
@@ -2082,26 +2180,34 @@ gs             0x0      <span class="m">0</span>
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        相关内容
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/" class="related__link">汇编语言一发入魂 0x07 - 过程调用</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x06-%E7%A1%AC%E7%9B%98%E6%93%8D%E4%BD%9C/" class="pagination-single__left">
+      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">汇编语言一发入魂 0x06 - 硬盘操作</div>      
+        <div class="pagination-single__left-title">汇编语言一发入魂 0x07 - 过程调用</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x08-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">汇编语言一发入魂 0x08 - 过程调用中的参数传递</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2459,19 +2565,18 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#示例一">示例一</a>
+    <li><a href="#示例一">示例一</a></li>
+    <li><a href="#示例二">示例二</a>
       <ul>
         <li><a href="#代码">代码</a></li>
         <li><a href="#解释">解释</a></li>
-        <li><a href="#编译反编译">编译、反编译</a></li>
         <li><a href="#调试">调试</a></li>
       </ul>
     </li>
-    <li><a href="#示例二">示例二</a>
+    <li><a href="#示例三">示例三</a>
       <ul>
         <li><a href="#代码-1">代码</a></li>
         <li><a href="#解释-1">解释</a></li>
-        <li><a href="#调试-1">调试</a></li>
       </ul>
     </li>
   </ul>
