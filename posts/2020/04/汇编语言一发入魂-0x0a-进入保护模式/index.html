@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>使用c语言编写运行于16位实模式下的代码 – 杨河老李</title>
+    <title>汇编语言一发入魂 0x0A - 进入保护模式 – 杨河老李</title>
     
 
 
@@ -543,7 +543,7 @@
 
   
     
-    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/04/%E4%BD%BF%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E8%BF%90%E8%A1%8C%E4%BA%8E16%E4%BD%8D%E5%AE%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81/\"");
+    var permalink = JSON.parse("\"https://kviccn.github.io/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1195,23 +1195,23 @@
 
 
     
-<meta name="description" content="The Zzo theme for Hugo example site." />
+<meta name="description" content="" />
 
 
-<meta name="keywords" content="16位,x86,实模式">
+<meta name="keywords" content="32位,保护模式">
 
-<meta name="created" content="2020-04-06T12:41:41&#43;0800">
-<meta name="modified" content="2020-04-06T12:41:41&#43;0800">
-<meta property="article:published_time" content="2020-04-06T12:41:41&#43;0800">
+<meta name="created" content="2020-04-07T12:46:55&#43;0800">
+<meta name="modified" content="2020-04-07T12:46:55&#43;0800">
+<meta property="article:published_time" content="2020-04-07T12:46:55&#43;0800">
 
 <meta name="author" content="杨河老李">
 
 
 <meta property="og:site_name" content="杨河老李">
-<meta property="og:title" content="使用c语言编写运行于16位实模式下的代码">
-<meta property="og:url" content="https://kviccn.github.io/posts/2020/04/%E4%BD%BF%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E8%BF%90%E8%A1%8C%E4%BA%8E16%E4%BD%8D%E5%AE%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81/">
+<meta property="og:title" content="汇编语言一发入魂 0x0A - 进入保护模式">
+<meta property="og:url" content="https://kviccn.github.io/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="The Zzo theme for Hugo example site.">
+<meta property="og:description" content="">
 
 <meta name="generator" content="Hugo 0.72.0-DEV" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1222,7 +1222,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://kviccn.github.io/posts/2020/04/%E4%BD%BF%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E8%BF%90%E8%A1%8C%E4%BA%8E16%E4%BD%8D%E5%AE%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81/">
+<link rel="canonical" href="https://kviccn.github.io/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1236,12 +1236,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "使用c语言编写运行于16位实模式下的代码",
-    "datePublished": "2020-04-06T12:41:41+08:00",
-    "dateModified": "2020-04-06T12:41:41+08:00",
-    "url" : "https://kviccn.github.io/posts/2020/04/%E4%BD%BF%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E8%BF%90%E8%A1%8C%E4%BA%8E16%E4%BD%8D%E5%AE%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81/",
-    "description": "通常16位实模式下的代码都是用汇编语言写的，但是为什么要用c语言写呢？因为爽啊！今天老李就教大家怎么用c语言写出来可以运行在实模式下的代码。",
-    "keywords": ["16位","x86","实模式"],
+    "headline": "汇编语言一发入魂 0x0A - 进入保护模式",
+    "datePublished": "2020-04-07T12:46:55+08:00",
+    "dateModified": "2020-04-07T12:46:55+08:00",
+    "url" : "https://kviccn.github.io/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/",
+    "description": "保护模式实际上很简单，只是概念比较多。今天老李就带领大家进入保护模式，然后在实操中逐一攻克每个概念。 进入保护模式 进入保护模式总共分三步。 第一",
+    "keywords": ["32位","保护模式"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://kviccn.github.io"
@@ -1489,7 +1489,7 @@
   
   <li  class="is-active" >
     
-      <span>使用c语言编写运行于16位实模式下的代码</span>
+      <span>汇编语言一发入魂 0x0A - 进入保护模式</span>
     
   </li>
   
@@ -1501,13 +1501,13 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">使用c语言编写运行于16位实模式下的代码</h2>
+    <h2 class="single__title" data-ani="true">汇编语言一发入魂 0x0A - 进入保护模式</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="创建日期">📅&nbsp;2020年04月06日 </time>
+  <time class="single__info" title="创建日期">📅&nbsp;2020年04月07日 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;6&nbsp;分钟 </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;9&nbsp;分钟 </span>
   
   <span class="single__info">
     
@@ -1519,29 +1519,102 @@
   🏷️
   
 
-  <li><a href="https://kviccn.github.io/tags/16%E4%BD%8D/" class="single__tag" title="16位">#16位</a></li>
+  <li><a href="https://kviccn.github.io/tags/32%E4%BD%8D/" class="single__tag" title="32位">#32位</a></li>
 
-  <li><a href="https://kviccn.github.io/tags/x86/" class="single__tag" title="x86">#x86</a></li>
-
-  <li><a href="https://kviccn.github.io/tags/%E5%AE%9E%E6%A8%A1%E5%BC%8F/" class="single__tag" title="实模式">#实模式</a></li>
+  <li><a href="https://kviccn.github.io/tags/%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/" class="single__tag" title="保护模式">#保护模式</a></li>
 
 </ul>
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>通常<code>16</code>位实模式下的代码都是用汇编语言写的，但是为什么要用<code>c</code>语言写呢？因为爽啊！今天老李就教大家怎么用<code>c</code>语言写出来可以运行在实模式下的代码。话不多说，开干！</p>
-<h2 id="环境准备">环境准备</h2>
+      <p>保护模式实际上很简单，只是概念比较多。今天老李就带领大家进入保护模式，然后在实操中逐一攻克每个概念。</p>
+<h2 id="进入保护模式">进入保护模式</h2>
+<p>进入保护模式总共分三步。</p>
 <ul>
-<li>系统：<code>Ubuntu 18.04.4 LTS</code></li>
-<li>编译器：<code>gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)</code></li>
-<li>汇编器：<code>GNU as (GNU Binutils for Ubuntu) 2.30</code></li>
-<li>链接器：<code>GNU ld (GNU Binutils for Ubuntu) 2.30</code></li>
-<li>虚拟机：<code>QEMU emulator version 2.11.1(Debian 1:2.11+dfsg-1ubuntu7.21)</code></li>
+<li>第一步，打开<code>A20</code>地址线。</li>
+<li>第二步，加载<code>GDT</code>。</li>
+<li>第三步，将处理器切换到<code>保护模式</code>。</li>
 </ul>
+<p>下面我们就来详细讲解一下这三个步骤。</p>
+<h3 id="a20-地址线">A20 地址线</h3>
+<p>众所周知，<code>8086</code>处理器有<code>20</code>根地址线，可访问的最大内存地址是<code>0xfffff</code>，即<code>1MB</code>。<code>32</code>位处理器具有<code>32</code>根地址线，可访问的最大内存地址是<code>0xffffffff</code>，即<code>4GB</code>。在<code>32</code>位处理器刚面世的时候并没有太多针对<code>32</code>位处理器开发的软件，更多的是为<code>8086</code>开发的软件，计算机制造商为了能够兼容这些软件，便想出了一个办法，在计算机启动后将第<code>21</code>根地址线，即<code>A20</code>，置为<code>0</code>。这样，当地址超过<code>0xfffff</code>后，由于第<code>21</code>根地址线为<code>0</code>，所以地址又会绕回到<code>0x00000</code>开始。从外表上看就好像是一个<code>16</code>位的处理器。</p>
+<p>现在，我们要做的就是打开<code>A20</code>，让处理器可以使用全部的<code>32</code>根地址线。打开<code>A20</code>的方法有很<a href="https://wiki.osdev.org/A20_Line">多种</a>，这里我们介绍一种被称为<code>Fast A20 Gate</code>的方法，通过读写<code>0x92</code>端口控制<code>A20</code>的开关。代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">inb</span> <span class="no">$0x92</span><span class="p">,</span> <span class="nv">%al</span>    <span class="c"># 读出原数据
+</span><span class="c"></span><span class="no">orb</span> <span class="no">$0x2</span><span class="p">,</span> <span class="nv">%al</span>     <span class="c"># 将第`2`位置为`1`
+</span><span class="c"></span><span class="no">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="no">$0x92</span>   <span class="c"># 写入数据
+</span></code></pre></td></tr></table>
+</div>
+</div><p>这样就打开了<code>A20</code>。</p>
+<h3 id="gdt-global-descriptor-table">GDT (Global Descriptor Table)</h3>
+<p><code>GDT</code>即全局描述符表，<code>GDT</code>中的项被称为<strong>段描述符 (Segment Descriptor)</strong>。段描述符用于描述内存段，描述符中包含内存段的基地址、段界限和用于访问检测、数据保护的信息，每一个段描述符占据<code>8</code>个字节，每一个字节的图解如下：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/segment_descriptor.png" alt="segment_descriptor" /></p>
+<p>可以看到 <strong>基地址(base)</strong> 和 <strong>段界限(limit)</strong> 是分散存放的，这是由历史原因造成的。其中基地址共占据<code>32</code>位，即基地址可以起始于<code>4GB</code>内存空间的任何位置，但更好的做法还是选取那些<code>16</code>字节对齐的地址，这样寻址效率更高；段界限共有<code>20</code>位，取值范围为<code>0~0xfffff</code>，用于限制段的扩展范围，这需要和图中所示的<code>G</code>位，即<strong>粒度位</strong>结合起来使用。<code>G</code>位为<code>0</code>时，段界限以字节为单位，段的扩展范围为<code>1B~1MB</code>。<code>G</code>位为<code>1</code>时，段界限以<code>4KB</code>为单位的，段的扩展范围为<code>4KB~4GB</code>。下面解释一下其余位的含义：</p>
+<ul>
+<li>
+<p><code>D/B</code> 位表示默认的操作数大小或默认的堆栈指针大小。为<code>0</code>时表示指令中的偏移地址或者操作数是<code>16</code>位的，相应的指令指针寄存器取<code>ip</code>，堆栈指针寄存器取<code>sp</code>；为<code>1</code>时表示指令中的偏移地址或者操作数是<code>32</code>位的，相应的指令指针寄存器取<code>eip</code>，堆栈指针寄存器取<code>esp</code>。</p>
+</li>
+<li>
+<p><code>L</code> 位是<code>64</code>位代码段标志，我们目前用不到，置<code>0</code>即可。</p>
+</li>
+<li>
+<p><code>AVL</code> 位是留给开发者使用的，置位还是清除就看你的兴趣了。</p>
+</li>
+<li>
+<p><code>P</code> 位即存在位，用于指示描述符所对应的段是否在内存中。当访问不存在的内存段时会触发中断，我们可以在中断处理程序中将不存在的内存段从磁盘中置换到内存中。</p>
+</li>
+<li>
+<p><code>DPL (Descriptor Privilege Level)</code> 用于表示描述符的特权级，占两位，可以表示<code>0，1，2，3</code>四种特权级。<code>0</code>级最高，<code>3</code>级最低。</p>
+</li>
+<li>
+<p><code>S</code> 位表示描述符类型。为<code>1</code>时表示代码段或数据段，为<code>0</code>时表示系统段。</p>
+</li>
+<li>
+<p><code>TYPE</code> 占据四位。其含义根据<code>S</code>位的不同可以分为如下两大类：</p>
+</li>
+</ul>
+<p>当<code>S</code>位置位时，即<code>S</code>位为<code>1</code>时，描述符表示代码段或数据段，<code>TYPE</code>的具体含义如下表：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/s1_type.jpg" alt="s1_type" /></p>
+<p>当<code>S</code>位清除时，即<code>S</code>位为<code>0</code>时，描述符表示系统段，<code>TYPE</code>的具体含义如下表：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/s0_type.jpg" alt="s0_type" /></p>
+<p>表格内容比较多，但是我们现在需要用到的并不多，以后遇到了再逐一讲解。</p>
+<p>至此，每一个描述符的含意我们就清楚了。把所有的描述符放在一起就构成了一个描述符表，如果用一个结构<code>(struct)</code>表示一个描述符的话那么很明显，描述符表就是一个结构数组。</p>
+<p>每一个描述符需要占据<code>8</code>个字节，显然我们不可能把描述符表全部保存在寄存器中，因为没有那么多的寄存器空间。所以全局描述符表是被放在内存中的，处理器中有一个<code>48</code>位的，专用于保存全局描述符表信息的寄存器 —— <strong>全局描述符表寄存器(GDTR)</strong>。其中低<code>16</code>位<code>(0~15)</code>表示<code>GDT</code>的边界，其值为表的长度减一，从<code>0</code>开始计，高<code>32</code>位<code>(16~47)</code>存放<code>GDT</code>在内存中的基地址。图示如下：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/gdtr.png" alt="GDTR" /></p>
+<p>一旦准备好了<code>GDT</code>，就可以通过<code>lgdt</code>指令将其描述信息加载到<code>GDTR</code>中，指令格式如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">lgdt</span> <span class="no">gdtdesc</span>  <span class="c"># gdtdesc 是全局描述符表信息在内存中的地址
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="将处理器切换到保护模式">将处理器切换到保护模式</h3>
+<p>将处理器从实模式切换到保护模式非常的简单，只须将控制寄存器<code>cr0</code>的<code>PE</code>位置位即可。<code>cr0</code>寄存器每一位的含义如下：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/cr0.png" alt="cr0" /></p>
+<p>当处理器刚加电时，<code>PE</code>位，即保护模式允许位<code>(Protection Enable)</code>默认为<code>0</code>，表示处理器运行在实模式下，处理器的寻址，计算都按照实模式来。一旦<code>PE</code>位置为<code>1</code>，则处理器立刻切换到保护模式执行。这也意味着，我们必须在将处理器运行模式切换到保护模式之前设置好<code>全局描述符表</code>并开启<code>A20</code>。设置<code>PE</code>位的代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">movl</span> <span class="nv">%cr0</span><span class="p">,</span> <span class="nv">%eax</span>
+<span class="nf">orl</span> <span class="no">$0x1</span><span class="p">,</span> <span class="nv">%eax</span>
+<span class="nf">movl</span> <span class="nv">%eax</span><span class="p">,</span> <span class="nv">%cr0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>有了上面的理论知识，下面我们开始实战。</p>
 <h2 id="实战">实战</h2>
-<p>我们还是按照讲解代码的套路来。先来看看实模式下的常规操作，涉及<a href="/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x07-%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/">过程调用</a>和<a href="/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x01-hello-world/">显存的操作</a>。</p>
-<h3 id="常规操作">常规操作</h3>
-<h4 id="代码">代码</h4>
+<h3 id="代码">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1579,428 +1652,206 @@
 </span><span class="lnt">33
 </span><span class="lnt">34
 </span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.section</span> <span class="no">.text</span>
-
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.set</span> <span class="no">PROT_MODE_CSEG</span><span class="p">,</span> <span class="mi">0x08</span>        <span class="c"># code segment selector
+</span><span class="c"></span><span class="no">.set</span> <span class="no">PROT_MODE_DSEG</span><span class="p">,</span> <span class="mi">0x10</span>        <span class="c"># data segment selector
+</span><span class="c"></span>
 <span class="na">.globl</span> <span class="no">start</span>
 <span class="nl">start:</span>
   <span class="na">.code16</span>
-  <span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
+  <span class="nf">cli</span>
 
-  <span class="nf">xorw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ss</span>
+  <span class="c"># Enable A20
+</span><span class="c"></span>  <span class="nf">inb</span> <span class="no">$0x92</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">orb</span> <span class="no">$0x2</span><span class="p">,</span> <span class="nv">%al</span>
+  <span class="nf">outb</span> <span class="nv">%al</span><span class="p">,</span> <span class="no">$0x92</span>
 
-  <span class="nf">movw</span> <span class="no">$0x7c00</span><span class="p">,</span> <span class="nv">%sp</span>
+  <span class="c"># Load GDT
+</span><span class="c"></span>  <span class="nf">lgdt</span> <span class="no">gdtdesc</span>
 
-  <span class="nf">pushw</span> <span class="no">$1</span>
-  <span class="nf">pushw</span> <span class="no">$2</span>
-  <span class="nf">callw</span> <span class="no">sum</span>
-  <span class="nf">addw</span> <span class="no">$4</span><span class="p">,</span> <span class="nv">%sp</span>
+  <span class="c"># Switch from real to protected mode
+</span><span class="c"></span>  <span class="nf">movl</span> <span class="nv">%cr0</span><span class="p">,</span> <span class="nv">%eax</span>
+  <span class="nf">orl</span> <span class="no">$0x1</span><span class="p">,</span> <span class="nv">%eax</span>
+  <span class="nf">movl</span> <span class="nv">%eax</span><span class="p">,</span> <span class="nv">%cr0</span>
 
-  <span class="nf">orw</span> <span class="no">$0x0a30</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span>
+  <span class="c"># Jump into 32-bit protected mode
+</span><span class="c"></span>  <span class="nf">ljmp</span> <span class="no">$PROT_MODE_CSEG</span><span class="p">,</span> <span class="no">$protcseg</span>
 
-  <span class="nf">jmp</span> <span class="p">.</span>
+  <span class="na">.code32</span>
+<span class="nl">protcseg:</span>
+  <span class="nf">movw</span> <span class="no">$PROT_MODE_DSEG</span><span class="p">,</span> <span class="nv">%ax</span>
+  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ds</span>
 
-<span class="nl">sum:</span>
-  <span class="nf">pushw</span> <span class="nv">%bp</span>
-  <span class="nf">movw</span> <span class="nv">%sp</span><span class="p">,</span> <span class="nv">%bp</span>
+  <span class="nf">movb</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">L</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">0</span>
+  <span class="nf">movb</span> <span class="no">$0x0a</span><span class="p">,</span><span class="mi">1</span>
 
-  <span class="nf">movw</span> <span class="mi">4</span><span class="p">(</span><span class="nv">%bp</span><span class="p">),</span> <span class="nv">%ax</span>
-  <span class="nf">addw</span> <span class="mi">6</span><span class="p">(</span><span class="nv">%bp</span><span class="p">),</span> <span class="nv">%ax</span>
+  <span class="nf">movb</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">a</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">2</span>
+  <span class="nf">movb</span> <span class="no">$0x0a</span><span class="p">,</span><span class="mi">3</span>
 
-  <span class="nf">popw</span> <span class="nv">%bp</span>
-  <span class="nf">retw</span>
+  <span class="nf">movb</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">o</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">4</span>
+  <span class="nf">movb</span> <span class="no">$0x0a</span><span class="p">,</span><span class="mi">5</span>
+
+  <span class="nf">movb</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">l</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">6</span>
+  <span class="nf">movb</span> <span class="no">$0x0a</span><span class="p">,</span><span class="mi">7</span>
+
+  <span class="nf">movb</span> <span class="no">$</span><span class="err">&#39;</span><span class="no">i</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">8</span>
+  <span class="nf">movb</span> <span class="no">$0x0a</span><span class="p">,</span><span class="mi">9</span>
+
+<span class="nf">hlt</span>
+
+<span class="na">.p2align</span> <span class="mi">2</span>
+<span class="nl">gdt:</span>
+  <span class="na">.quad</span> <span class="mi">0x0</span>
+  <span class="na">.quad</span> <span class="mi">0x00cf98000000ffff</span>
+  <span class="na">.quad</span> <span class="mi">0x0040920b8000ffff</span>
+
+<span class="nl">gdtdesc:</span>
+  <span class="na">.word</span> <span class="no">gdtdesc</span> <span class="p">-</span> <span class="no">gdt</span> <span class="p">-</span> <span class="mi">1</span>
+  <span class="na">.long</span> <span class="no">gdt</span>
 
 <span class="na">.org</span> <span class="mi">510</span>
 <span class="na">.word</span> <span class="mi">0xAA55</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="解释">解释</h4>
-<p>第<code>6、7</code>行设置显存。</p>
-<p>第<code>9、10、12</code>行设置堆栈段及栈顶指针。</p>
-<p>第<code>14、15</code>行将<code>sum</code>函数要用到的两个参数压栈。我们使用的是<code>pushw</code>指定了数据宽度为<code>16</code>位。注意这里只能选择相加之后结果是个位数的参数，因为作为示例，我们这里只处理了个位数的显示。</p>
-<p>第<code>16</code>行调用<code>sum</code>函数。</p>
-<p>第<code>17</code>行恢复栈顶指针。</p>
-<p>第<code>19</code>行将数字转化为对应的<code>ascii</code>码<code>(+0x30)</code>并附加显示属性<code>(0x0a)</code>。</p>
-<p>第<code>20</code>行将要显示的数据送入显存对应的内存。</p>
-<p>第<code>22</code>行陷入死循环。</p>
-<p>第<code>24</code>行开始定义<code>sum</code>函数。</p>
-<p>第<code>25</code>行将<code>bp</code>压栈保护。</p>
-<p>第<code>26</code>行将<code>sp</code>赋值给<code>bp</code>，下面通过<code>bp</code>读取压入栈中的参数。</p>
-<p>第<code>28</code>行将第二个压入的参数，即立即数<code>2</code>从栈中移动到<code>ax</code>中。因为<code>call</code>指令隐式压入了<code>ip</code>、<code>pushw %bp</code>压入了<code>bp</code>，占用了<code>4</code>个字节，所以第二个压入的参数距离栈顶的偏移量是<code>4</code>，第一个参数偏移量是<code>6</code>。</p>
-<p>第<code>29</code>行取出第一个参数和第二个参数相加，结果保存在<code>ax</code>中。</p>
-<p>第<code>31</code>行恢复<code>bp</code>。</p>
-<p>第<code>32</code>行退出函数。</p>
-<h4 id="编译运行">编译运行</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boot.s -o boot.o
-$ objcopy -O binary -j .text boot.o boot.bin
-$ qemu-system-i386 boot.bin
-</code></pre></td></tr></table>
-</div>
-</div><p><img src="/posts/images/16bit_c_1.jpg" alt="16bit_c_1" /></p>
-<h4 id="反编译">反编译</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ objdump -D -b binary -m i386 -Mi8086,suffix boot.bin
-
-boot.bin：     文件格式 binary
-
-
-Disassembly of section .data:
-
-<span class="m">00000000</span> &lt;.data&gt;:
-   0:   b8 <span class="m">00</span> b8                movw   <span class="nv">$0</span>xb800,%ax
-   3:   8e c0                   movw   %ax,%es
-   5:   <span class="m">31</span> c0                   xorw   %ax,%ax
-   7:   8e d0                   movw   %ax,%ss
-   9:   bc <span class="m">00</span> 7c                movw   <span class="nv">$0</span>x7c00,%sp
-   c:   6a <span class="m">01</span>                   pushw  <span class="nv">$0</span>x1
-   e:   6a <span class="m">02</span>                   pushw  <span class="nv">$0</span>x2
-  10:   e8 0c <span class="m">00</span>                callw  0x1f
-  13:   <span class="m">83</span> c4 <span class="m">04</span>                addw   <span class="nv">$0</span>x4,%sp
-  16:   0d <span class="m">30</span> 0a                orw    <span class="nv">$0</span>xa30,%ax
-  19:   <span class="m">26</span> a3 <span class="m">00</span> <span class="m">00</span>             movw   %ax,%es:0x0
-  1d:   eb fe                   jmp    0x1d
-  1f:   <span class="m">55</span>                      pushw  %bp
-  20:   <span class="m">89</span> e5                   movw   %sp,%bp
-  22:   8b <span class="m">46</span> <span class="m">04</span>                movw   0x4<span class="o">(</span>%bp<span class="o">)</span>,%ax
-  25:   <span class="m">03</span> <span class="m">46</span> <span class="m">06</span>                addw   0x6<span class="o">(</span>%bp<span class="o">)</span>,%ax
-  28:   5d                      popw   %bp
-  29:   c3                      retw
-        ...
- 1fe:   <span class="m">55</span>                      pushw  %bp
- 1ff:   aa                      stosb  %al,%es:<span class="o">(</span>%di<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>先把结果放在这里，稍后过来对比。</p>
-<p>下面我们尝试一下<code>32</code>位指令和寄存器。</p>
-<h3 id="使用-32-位指令和寄存器">使用 32 位指令和寄存器</h3>
-<h4 id="代码-1">代码</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.section</span> <span class="no">.text</span>
-
-<span class="na">.globl</span> <span class="no">start</span>
-<span class="nl">start:</span>
-  <span class="na">.code16</span>
-  <span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
-
-  <span class="nf">xorw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ss</span>
-
-  <span class="nf">movw</span> <span class="no">$0x7c00</span><span class="p">,</span> <span class="nv">%sp</span>
-
-  <span class="nf">pushl</span> <span class="no">$1</span>
-  <span class="nf">pushl</span> <span class="no">$2</span>
-  <span class="nf">calll</span> <span class="no">sum</span>
-  <span class="nf">addl</span> <span class="no">$8</span><span class="p">,</span> <span class="nv">%esp</span>
-
-  <span class="nf">orw</span> <span class="no">$0x0a30</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span>
-
-  <span class="nf">jmp</span> <span class="p">.</span>
-
-<span class="nl">sum:</span>
-  <span class="nf">pushl</span> <span class="nv">%ebp</span>
-  <span class="nf">movl</span> <span class="nv">%esp</span><span class="p">,</span> <span class="nv">%ebp</span>
-
-  <span class="nf">movl</span> <span class="mi">0x8</span><span class="p">(</span><span class="nv">%ebp</span><span class="p">),</span> <span class="nv">%eax</span>
-  <span class="nf">addl</span> <span class="mi">0xc</span><span class="p">(</span><span class="nv">%ebp</span><span class="p">),</span> <span class="nv">%eax</span>
-
-  <span class="nf">popl</span> <span class="nv">%ebp</span>
-  <span class="nf">retl</span>
-
-<span class="na">.org</span> <span class="mi">510</span>
-<span class="na">.word</span> <span class="mi">0xAA55</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="解释-1">解释</h4>
-<p>与常规操作中的主要区别在第<code>14~17</code>行和<code>sum</code>函数中。我们指定了指令的长度为<code>32</code>位，加了<code>l</code>后缀。</p>
-<p>第<code>17</code>行因为指定数据的长度是<code>32</code>位，所以一个操作数的长度是<code>4</code>个字节，压入了两个，这里加<code>8</code>恢复栈顶指针。</p>
-<p>第<code>28、29</code>行因为数据都是<code>32</code>位的，<code>eip</code>、<code>ebp</code>也都是<code>32</code>位的，所以这里参数的偏移量是<code>2*4 = 8</code>、<code>2*4+4 = 0xc</code>。</p>
-<h4 id="编译运行-1">编译运行</h4>
-<p>结果同上，不贴图了。我们主要反编译一下，看一下同样的效果，底层的区别在哪里。</p>
-<h4 id="反编译-1">反编译</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ objdump -D -b binary -m i386 -Mi8086,suffix boot.bin
-
-boot.bin：     文件格式 binary
-
-
-Disassembly of section .data:
-
-<span class="m">00000000</span> &lt;.data&gt;:
-   0:   b8 <span class="m">00</span> b8                movw   <span class="nv">$0</span>xb800,%ax
-   3:   8e c0                   movw   %ax,%es
-   5:   <span class="m">31</span> c0                   xorw   %ax,%ax
-   7:   8e d0                   movw   %ax,%ss
-   9:   bc <span class="m">00</span> 7c                movw   <span class="nv">$0</span>x7c00,%sp
-   c:   <span class="m">66</span> 6a <span class="m">01</span>                pushl  <span class="nv">$0</span>x1
-   f:   <span class="m">66</span> 6a <span class="m">02</span>                pushl  <span class="nv">$0</span>x2
-  12:   <span class="m">66</span> e8 0d <span class="m">00</span> <span class="m">00</span> <span class="m">00</span>       calll  0x25
-  18:   <span class="m">66</span> <span class="m">83</span> c4 <span class="m">08</span>             addl   <span class="nv">$0</span>x8,%esp
-  1c:   0d <span class="m">30</span> 0a                orw    <span class="nv">$0</span>xa30,%ax
-  1f:   <span class="m">26</span> a3 <span class="m">00</span> <span class="m">00</span>             movw   %ax,%es:0x0
-  23:   eb fe                   jmp    0x23
-  25:   <span class="m">66</span> <span class="m">55</span>                   pushl  %ebp
-  27:   <span class="m">66</span> <span class="m">89</span> e5                movl   %esp,%ebp
-  2a:   <span class="m">67</span> <span class="m">66</span> 8b <span class="m">45</span> <span class="m">08</span>          movl   0x8<span class="o">(</span>%ebp<span class="o">)</span>,%eax
-  2f:   <span class="m">67</span> <span class="m">66</span> <span class="m">03</span> <span class="m">45</span> 0c          addl   0xc<span class="o">(</span>%ebp<span class="o">)</span>,%eax
-  34:   <span class="m">66</span> 5d                   popl   %ebp
-  36:   <span class="m">66</span> c3                   retl
-        ...
- 1fc:   <span class="m">00</span> <span class="m">00</span>                   addb   %al,<span class="o">(</span>%bx,%si<span class="o">)</span>
- 1fe:   <span class="m">55</span>                      pushw  %bp
- 1ff:   aa                      stosb  %al,%es:<span class="o">(</span>%di<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>对比第<code>14~17</code>行，这<code>4</code>行指令前都多了前缀<code>0x66</code>。<code>0x66</code>指令前缀用于反转当前默认操作数大小，处理器当前运行在<code>16</code>位实模式下，操作数大小反转后成为<code>32</code>位。</p>
-<p>第<code>23、24</code>行多了前缀<code>0x67</code>。<code>0x67</code>指令前缀用于反转当前默认地址大小，因为这两行涉及内存寻址。</p>
-<p>有了上面两个示例作为基础，下面我们将<code>sum</code>改造为<code>c</code>语言函数。</p>
-<h3 id="使用-c-语言">使用 C 语言</h3>
-<h4 id="代码-2">代码</h4>
-<h5 id="汇编代码">汇编代码</h5>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.section</span> <span class="no">.text</span>
-
-<span class="na">.globl</span> <span class="no">start</span>
-<span class="nl">start:</span>
-  <span class="na">.code16</span>
-  <span class="nf">movw</span> <span class="no">$0xb800</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
-
-  <span class="nf">xorw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ss</span>
-
-  <span class="nf">movw</span> <span class="no">$0x7c00</span><span class="p">,</span> <span class="nv">%sp</span>
-
-  <span class="nf">pushl</span> <span class="no">$1</span>
-  <span class="nf">pushl</span> <span class="no">$2</span>
-  <span class="nf">calll</span> <span class="no">sum</span>
-  <span class="nf">addl</span> <span class="no">$8</span><span class="p">,</span> <span class="nv">%esp</span>
-
-  <span class="nf">orw</span> <span class="no">$0x0a30</span><span class="p">,</span> <span class="nv">%ax</span>
-  <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span><span class="p">:</span><span class="mi">0</span>
-
-  <span class="nf">jmp</span> <span class="p">.</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>汇编部分我们从上面的示例中删掉了<code>jmp</code>指令之后的内容。<code>sum</code>函数我们放在<code>c</code>语言的代码中，引导标识<code>0xAA55</code>我们稍后手动写入。</p>
-<h5 id="c-语言代码">c 语言代码</h5>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">sum</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>和通常的代码没有区别，只是编译、链接稍有不同。</p>
-<h4 id="编译链接">编译链接</h4>
-<h5 id="编译">编译</h5>
-<p>先来编译汇编语言的部分。</p>
+</div><h3 id="解释">解释</h3>
+<p>前两行分别定义了两个符号，值分别为<code>0x08</code>，<code>0x10</code>。这个很好理解，但是注释里的话是什么意思？什么是段选择子<code>(segment selector)</code>？这个我们稍后解释。</p>
+<p>第<code>4</code>行定义了一个全局可见的符号<code>start</code>，<code>start</code>做为一个标号定义在第<code>5</code>行，这是代码的起始位置。</p>
+<p>第<code>6</code>行用伪指令<code>.code16</code>告诉汇编器下面的代码按照<code>16</code>位的格式汇编。</p>
+<p>第<code>7</code>行<code>cli</code>指令用于关闭中断，因为我们还没有设置如何处理保护模式下的中断。</p>
+<p>第<code>10~12</code>行 开启<code>A20</code>。</p>
+<p>第<code>15</code>行 加载<code>GDT</code>。看到第<code>53~55</code>行，<code>gdtdesc</code>定义在这里，其中低<code>16</code>位是<code>GDT</code>的长度减一，高<code>32</code>位是<code>GDT</code>的基地址。</p>
+<p>第<code>18~20</code>行 从实模式切换到保护模式。</p>
+<p>第<code>23</code>行 使用<code>ljmp</code>长跳转指令跳转到保护模式代码段中，偏移量为<code>protcseg</code>的位置，即跳转到第<code>26</code>行处继续执行。这是<code>intel</code>的要求，因为<code>ljmp</code>指令可以使处理器清空流水线和指令预读取队列。这里我们碰到了第一行定义的符号<code>PROT_MODE_CSEG</code>，其值为<code>0x08</code>。现在我们来解释一下它的含义。</p>
+<p>实模式下，段寄存器<code>cs、ds、es、ss</code>中保存的是<code>16</code>位的段基地址。保护模式下，段寄存器中保存的就不是段基地址了，而是<strong>段选择子</strong>，并且每个段寄存器还包含了一个<code>64</code>位的不可见部分，被称为<strong>描述符高速缓存器</strong>，如下图：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/descriptor_cache.jpg" alt="descriptor_cache" /></p>
+<p><strong>描述符高速缓存器</strong>中保存的就是我们在描述符表中定义的段的信息，而<strong>段选择子</strong>就是用于在描述符表中定位描述符的。段选择子也是<code>16</code>位的，其格式如下：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/segment_selector.jpg" alt="segment_selector.jpg" /></p>
+<p>这<code>16</code>位的信息分为三部分，第<code>0、1</code>位是<code>RPL（请求特权级）</code>，表示给出当前选择子的程序的特权级别，用于处理器固件校验权限。第<code>2</code>位是<code>TI</code>位，用于标识所需要的段描述符在<code>GDT</code>还是<code>LDT</code>中，<code>GDT</code>我们之前介绍过，<code>LDT</code>是<strong>局部描述符表</strong>，和<code>GDT</code>类似。当<code>TI</code>位为<code>0</code>时表示在<code>GDT</code>中取描述符，为<code>1</code>时表示在<code>LDT</code>中取描述符。第<code>3~15</code>位时<strong>索引</strong>，如果把描述符表看作一个数组的话，这里的索引就相当于数组的下标。因为每个描述符占<code>8</code>个字节，所以处理器拿到索引后先将其乘以<code>8</code>，在以得到的结果为偏移量到描述符表中获取相应的描述符。</p>
+<p>以<code>PROT_MODE_CSEG</code>为例，其值为<code>0x08</code>，对应二进制<code>0000000000001_0_00</code>，根据上面的知识就很好理解了。<code>RPL</code>为<code>0</code>，表示最高特权级；<code>TI</code>为<code>0</code>，表示请求的描述符在<code>GDT</code>中；<code>Index</code>为<code>1</code>，<code>1 * 8 = 8</code>，表示该描述符相对于描述符表的基地址偏移量为<code>8</code>，即描述符表中的第二个描述符。为什么不用第一个描述符呢？这是因为<code>Intel</code>规定，全局描述符表中的第一个描述符必须为<strong>空描述符</strong>，即<code>8</code>个字节全为<code>0</code>，所以我们能使用的描述符只能从第二个开始了。我们将段选择子<code>0x08</code>指向的描述符表示的段做为代码段，其定义在第<code>50</code>行，如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boot.s -o boot.o
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.quad</span> <span class="mi">0x00cf98000000ffff</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>编译<code>c</code>语言部分。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cc -m16 -ffreestanding -fno-pic -c sum.c -o sum.o
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>
-<p><code>-m16</code> 告知编译器生成 16 位指令</p>
-</li>
-<li>
-<p><code>-ffreestanding</code> 告知编译器按独立环境编译，该环境可以没有标准库，且对<code>main()</code>函数没有要求。该选项隐含设置了<code>-fno-builtin</code>，且与<code>-fno-hosted</code>等价</p>
-</li>
-<li>
-<p><code>-fno-pic</code> 告知编译器生成位置无关的代码</p>
-</li>
+</div><p>为了简单，在这里我们直接写入了<code>64</code>位的数据。将这<code>64</code>位的数据按照段描述符的格式拆解可得：</p>
+<ul>
+<li><code>Base 31_24: 00</code></li>
+<li><code>G: 1</code></li>
+<li><code>D/B: 1</code></li>
+<li><code>L: 0</code></li>
+<li><code>AVL: 0</code></li>
+<li><code>Limit 19_16: f</code></li>
+<li><code>P: 1</code></li>
+<li><code>DPL: 0</code></li>
+<li><code>S: 1</code></li>
+<li><code>TYPE: 8</code></li>
+<li><code>Base 23_16: 00</code></li>
+<li><code>Base 15_00: 0000</code></li>
+<li><code>Limit 15_00: ffff</code></li>
 </ul>
-<h5 id="链接">链接</h5>
+<p>整理可得：</p>
+<ul>
+<li><code>Base: 0x00000000</code></li>
+<li><code>Limit: 0xfffff</code></li>
+<li><code>G: 1</code> 段界限粒度为<code>4KB</code></li>
+<li><code>D/B: 1</code> <code>32</code>位操作数</li>
+<li><code>L: 0</code></li>
+<li><code>AVL: 0</code></li>
+<li><code>P: 1</code> 对应的段在内存中</li>
+<li><code>DPL: 0</code> 特权级为<code>0</code></li>
+<li><code>S: 1</code> 描述符为代码段或数据段</li>
+<li><code>TYPE: 8</code> 只执行代码段</li>
+</ul>
+<p>其中段界限为<code>0xfffff</code>，粒度为<code>4KB</code>，段界限与粒度相乘可得上限为<code>4GB</code>。基地址为<code>0x0</code>，所以这个描述符表示的范围是全部的<code>4GB</code>内存空间。</p>
+<p>第<code>25</code>行，伪指令<code>.code32</code>告诉汇编器，之后的指令都按照<code>32</code>位格式编译。</p>
+<p>第<code>27、28</code>行，我们将数据段设置为选择子<code>PROT_MODE_DSEG</code>，值为<code>0x10</code>，对应的描述符定义在第<code>51</code>行，如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ld -m elf_i386 boot.o sum.o -o boot.elf
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="na">.quad</span> <span class="mi">0x0040920b8000ffff</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>这里会有一个警告，因为我们没有指定入口点，而默认的入口点是<code>_start</code>。我们并没有用到，不理他就行了。</p>
-<p>接下来从<code>elf</code>文件中复制出纯二进制的代码段内容。</p>
+</div><p>拆解可得：</p>
+<ul>
+<li><code>Base: 0x000b8000</code></li>
+<li><code>Limit: 0x0ffff</code></li>
+<li><code>G: 0</code> 段界限粒度为<code>1B</code></li>
+<li><code>D/B: 1</code> <code>32</code>位操作数</li>
+<li><code>L: 0</code></li>
+<li><code>AVL: 0</code></li>
+<li><code>P: 1</code> 对应的段在内存中</li>
+<li><code>DPL: 0</code> 特权级为<code>0</code></li>
+<li><code>S: 1</code> 描述符为代码段或数据段</li>
+<li><code>TYPE: 2</code> 可读可写数据段</li>
+</ul>
+<p>基地址<code>0xb8000</code>对应显存的起始地址，段界限<code>0xffff * 1 = 0xffff</code>，即<code>64KB</code>。</p>
+<p>第<code>30~43</code>行，向数据段，即显存对应的内存段写入数据以显示字符。</p>
+<p>第<code>45</code>行，<code>hlt</code>使处理器暂停。</p>
+<p>第<code>47</code>行，伪指令<code>.p2align 2</code>强制<code>4</code>字节对齐。</p>
+<p>第<code>49</code>行，处理器规定的空描述符。</p>
+<h3 id="编译链接">编译、链接</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ objcopy -O binary -j .text boot.elf boot.bin
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ as --32 boot.s -o boot.o
+$ ld -e start -Ttext<span class="o">=</span>0x7c00 -m elf_i386 --oformat binary boot.o -o boot.bin
 </code></pre></td></tr></table>
 </div>
-</div><p>手动添加可引导标志<code>0xAA55</code>，这里我们通过之前写的一个<a href="https://github.com/kviccn/asm-boooom/blob/master/0x00/sign.c">小工具</a>来完成这项工作。</p>
+</div><p>这次我们使用了链接器<code>ld</code>而不是<code>objcopy</code>制作最终的启动文件。其参数含义如下：</p>
+<ul>
+<li><code>-e</code> 指定程序入口点为<code>start</code>，这是我们在代码里导出的符号</li>
+<li><code>-T</code> 指定代码段<code>(text)</code>的地址为<code>0x7c00</code></li>
+<li><code>-m</code> 指定生成<code>i386</code>格式的指令</li>
+<li><code>--oformat binary</code> 指定生成纯二进制的文件</li>
+</ul>
+<h3 id="运行">运行</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ./sign boot.bin
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ qemu-system-i386 -drive <span class="nv">file</span><span class="o">=</span>boot.bin,format<span class="o">=</span>raw -monitor stdio
+QEMU 2.11.1 monitor - <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> more information
+<span class="o">(</span>qemu<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>运行结果还是同上，不贴图了。</p>
-<h4 id="反编译-2">反编译</h4>
-<p>来看看包含<code>c</code>语言代码的程序和之前纯汇编的有什么不同。</p>
+</div><p>我们在启动虚拟机的同时将<code>Qemu</code>的<code>monitor</code>关联到了<code>stdio</code>，也就是控制台。此时运行情况如下：</p>
+<p><img src="/posts/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82/images/0x0A/boot.jpg" alt="boot.jpg" /></p>
+<p>我们在<code>monitor</code>中输入<code>info registers</code>查看寄存器状态。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2021,83 +1872,31 @@ Disassembly of section .data:
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ objdump -D -b binary -m i386 -Mi8086,suffix boot.bin
-
-boot.bin：     文件格式 binary
-
-
-Disassembly of section .data:
-
-<span class="m">00000000</span> &lt;.data&gt;:
-   0:   b8 <span class="m">00</span> b8                movw   <span class="nv">$0</span>xb800,%ax
-   3:   8e c0                   movw   %ax,%es
-   5:   <span class="m">31</span> c0                   xorw   %ax,%ax
-   7:   8e d0                   movw   %ax,%ss
-   9:   bc <span class="m">00</span> 7c                movw   <span class="nv">$0</span>x7c00,%sp
-   c:   <span class="m">66</span> 6a <span class="m">01</span>                pushl  <span class="nv">$0</span>x1
-   f:   <span class="m">66</span> 6a <span class="m">02</span>                pushl  <span class="nv">$0</span>x2
-  12:   <span class="m">66</span> e8 0d <span class="m">00</span> <span class="m">00</span> <span class="m">00</span>       calll  0x25
-  18:   <span class="m">66</span> <span class="m">83</span> c4 <span class="m">08</span>             addl   <span class="nv">$0</span>x8,%esp
-  1c:   0d <span class="m">30</span> 0a                orw    <span class="nv">$0</span>xa30,%ax
-  1f:   <span class="m">26</span> a3 <span class="m">00</span> <span class="m">00</span>             movw   %ax,%es:0x0
-  23:   eb fe                   jmp    0x23
-  25:   <span class="m">66</span> <span class="m">55</span>                   pushl  %ebp
-  27:   <span class="m">66</span> <span class="m">89</span> e5                movl   %esp,%ebp
-  2a:   <span class="m">67</span> <span class="m">66</span> 8b <span class="m">55</span> <span class="m">08</span>          movl   0x8<span class="o">(</span>%ebp<span class="o">)</span>,%edx
-  2f:   <span class="m">67</span> <span class="m">66</span> 8b <span class="m">45</span> 0c          movl   0xc<span class="o">(</span>%ebp<span class="o">)</span>,%eax
-  34:   <span class="m">66</span> <span class="m">01</span> d0                addl   %edx,%eax
-  37:   <span class="m">66</span> 5d                   popl   %ebp
-  39:   <span class="m">66</span> c3                   retl
-        ...
- 1fb:   <span class="m">00</span> <span class="m">00</span>                   addb   %al,<span class="o">(</span>%bx,%si<span class="o">)</span>
- 1fd:   <span class="m">00</span> <span class="m">55</span> aa                addb   %dl,-0x56<span class="o">(</span>%di<span class="o">)</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>qemu<span class="o">)</span> info registers
+<span class="nv">EAX</span><span class="o">=</span><span class="m">00000010</span> <span class="nv">EBX</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">ECX</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">EDX</span><span class="o">=</span><span class="m">00000080</span>
+<span class="nv">ESI</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">EDI</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">EBP</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">ESP</span><span class="o">=</span>00006f04
+<span class="nv">EIP</span><span class="o">=</span>00007c68 <span class="nv">EFL</span><span class="o">=</span><span class="m">00000006</span> <span class="o">[</span>-----P-<span class="o">]</span> <span class="nv">CPL</span><span class="o">=</span><span class="m">0</span> <span class="nv">II</span><span class="o">=</span><span class="m">0</span> <span class="nv">A20</span><span class="o">=</span><span class="m">1</span> <span class="nv">SMM</span><span class="o">=</span><span class="m">0</span> <span class="nv">HLT</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">ES</span> <span class="o">=</span><span class="m">0000</span> <span class="m">00000000</span> 0000ffff <span class="m">00009300</span> <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> DS16 <span class="o">[</span>-WA<span class="o">]</span>
+<span class="nv">CS</span> <span class="o">=</span><span class="m">0008</span> <span class="m">00000000</span> ffffffff 00cf9800 <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> CS32 <span class="o">[</span>---<span class="o">]</span>
+<span class="nv">SS</span> <span class="o">=</span><span class="m">0000</span> <span class="m">00000000</span> 0000ffff <span class="m">00009300</span> <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> DS16 <span class="o">[</span>-WA<span class="o">]</span>
+<span class="nv">DS</span> <span class="o">=</span><span class="m">0010</span> 000b8000 0000ffff <span class="m">00409300</span> <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> DS   <span class="o">[</span>-WA<span class="o">]</span>
+<span class="nv">FS</span> <span class="o">=</span><span class="m">0000</span> <span class="m">00000000</span> 0000ffff <span class="m">00009300</span> <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> DS16 <span class="o">[</span>-WA<span class="o">]</span>
+<span class="nv">GS</span> <span class="o">=</span><span class="m">0000</span> <span class="m">00000000</span> 0000ffff <span class="m">00009300</span> <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> DS16 <span class="o">[</span>-WA<span class="o">]</span>
+<span class="nv">LDT</span><span class="o">=</span><span class="m">0000</span> <span class="m">00000000</span> 0000ffff <span class="m">00008200</span> <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> LDT
+<span class="nv">TR</span> <span class="o">=</span><span class="m">0000</span> <span class="m">00000000</span> 0000ffff 00008b00 <span class="nv">DPL</span><span class="o">=</span><span class="m">0</span> TSS32-busy
+<span class="nv">GDT</span><span class="o">=</span>     00007c68 <span class="m">00000017</span>
+<span class="nv">IDT</span><span class="o">=</span>     <span class="m">00000000</span> 000003ff
+<span class="nv">CR0</span><span class="o">=</span><span class="m">00000011</span> <span class="nv">CR2</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">CR3</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">CR4</span><span class="o">=</span><span class="m">00000000</span>
+<span class="nv">DR0</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">DR1</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">DR2</span><span class="o">=</span><span class="m">00000000</span> <span class="nv">DR3</span><span class="o">=</span><span class="m">00000000</span>
+<span class="nv">DR6</span><span class="o">=</span>ffff0ff0 <span class="nv">DR7</span><span class="o">=</span><span class="m">00000400</span>
+...
 </code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">23,26c23,27
-&lt;   2a:   <span class="m">67</span> <span class="m">66</span> 8b <span class="m">45</span> <span class="m">08</span>          movl   0x8<span class="o">(</span>%ebp<span class="o">)</span>,%eax
-&lt;   2f:   <span class="m">67</span> <span class="m">66</span> <span class="m">03</span> <span class="m">45</span> 0c          addl   0xc<span class="o">(</span>%ebp<span class="o">)</span>,%eax
-&lt;   34:   <span class="m">66</span> 5d                   popl   %ebp
-&lt;   36:   <span class="m">66</span> c3                   retl
----
-&gt;   2a:   <span class="m">67</span> <span class="m">66</span> 8b <span class="m">55</span> <span class="m">08</span>          movl   0x8<span class="o">(</span>%ebp<span class="o">)</span>,%edx
-&gt;   2f:   <span class="m">67</span> <span class="m">66</span> 8b <span class="m">45</span> 0c          movl   0xc<span class="o">(</span>%ebp<span class="o">)</span>,%eax
-&gt;   34:   <span class="m">66</span> <span class="m">01</span> d0                addl   %edx,%eax
-&gt;   37:   <span class="m">66</span> 5d                   popl   %ebp
-&gt;   39:   <span class="m">66</span> c3                   retl
-</code></pre></td></tr></table>
-</div>
-</div><p>对比一下，我们发现在<code>c</code>语言的版本中，编译后的指令中多了一个步骤，上面的第<code>7</code>行，将一个参数放入<code>edx</code>中。比我们的纯汇编代码多了一条指令，换句话说，<code>c</code>语言生成的代码没有我们手写的汇编语言代码效率高。因为完成同样的任务，我们用了更少的指令。</p>
-<h2 id="总结">总结</h2>
-<p>首先要意识到虽然是在实模式下，但是我们的处理器是<code>32</code>位处理器，所以我们能够使用<code>32</code>位寄存器。在汇编代码中是通过给指令加<code>l</code>后缀指定操作数或地址的大小，对应生成的机器码中会加上<code>0x66</code>、<code>0x67</code>前缀反转当前默认操作数或地址大小。其次是<code>C</code>语言部分，虽然代码的写法和平常一样，但是编译的时候需要指定生成<code>16</code>位代码。</p>
+</div><p>观察第<code>6</code>行，<code>cs</code>的值为<code>0x08</code>，段基址为<code>0</code>，上限为<code>0xffffffff</code>，属性为<code>0xcf98</code>，与我们设置的一致。</p>
+<p>第<code>8</code>行，<code>ds</code>的值为<code>0x10</code>，段基址为<code>0xb8000</code>，上限为<code>0xffff</code>，属性为<code>0x4093</code>，与我们设置的有点出入，我们设置的是<code>0x4092</code>，其中<code>2</code>表示可读可写数据段，查表可知<code>3</code>表示已访问过的可读可写数据段。这说明当我们访问这个段时处理器已经将其标记为<strong>已访问</strong>。</p>
+<p>一切水到渠成，简单三步进入保护模式。</p>
 
     </article>
     
@@ -2161,21 +1960,14 @@ Disassembly of section .data:
 <nav class="pagination-single">
   
     
-      <a href="https://kviccn.github.io/posts/2020/03/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x09-%E4%B8%AD%E6%96%AD/" class="pagination-single__left">
+      <a href="https://kviccn.github.io/posts/2020/04/%E4%BD%BF%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E8%BF%90%E8%A1%8C%E4%BA%8E16%E4%BD%8D%E5%AE%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">汇编语言一发入魂 0x09 - 中断</div>      
+        <div class="pagination-single__left-title">使用c语言编写运行于16位实模式下的代码</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://kviccn.github.io/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">汇编语言一发入魂 0x0A - 进入保护模式</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2533,15 +2325,21 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#环境准备">环境准备</a></li>
-    <li><a href="#实战">实战</a>
+    <li><a href="#进入保护模式">进入保护模式</a>
       <ul>
-        <li><a href="#常规操作">常规操作</a></li>
-        <li><a href="#使用-32-位指令和寄存器">使用 32 位指令和寄存器</a></li>
-        <li><a href="#使用-c-语言">使用 C 语言</a></li>
+        <li><a href="#a20-地址线">A20 地址线</a></li>
+        <li><a href="#gdt-global-descriptor-table">GDT (Global Descriptor Table)</a></li>
+        <li><a href="#将处理器切换到保护模式">将处理器切换到保护模式</a></li>
       </ul>
     </li>
-    <li><a href="#总结">总结</a></li>
+    <li><a href="#实战">实战</a>
+      <ul>
+        <li><a href="#代码">代码</a></li>
+        <li><a href="#解释">解释</a></li>
+        <li><a href="#编译链接">编译、链接</a></li>
+        <li><a href="#运行">运行</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
