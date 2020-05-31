@@ -1240,7 +1240,7 @@
     "datePublished": "2020-05-30T12:00:55+08:00",
     "dateModified": "2020-05-30T12:00:55+08:00",
     "url" : "https://kviccn.github.io/posts/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0b-%E6%8B%A5%E6%8A%B1-c-%E8%AF%AD%E8%A8%80/",
-    "description": "汇编语言的基础已经讲了很多了，也带领大家进入了保护模式。想必大家在学习进入保护模式这一章时就发现我们已经涉及了很多数据结构，全局描述符表、段",
+    "description": "汇编语言的基础已经讲了很多，也带领大家进入了保护模式。想必大家在学习进入保护模式这一章时就发现我们已经涉及了很多数据结构，全局描述符表、段描",
     "keywords": ["32位","保护模式","C 语言"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1267,7 +1267,7 @@
     
 </head>
 
-<body id="root" class="theme__dark">
+<body id="root" class="theme__solarized">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1306,6 +1306,10 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1315,10 +1319,6 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
-          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1415,6 +1415,10 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1424,10 +1428,6 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
-          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1529,7 +1529,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>汇编语言的基础已经讲了很多了，也带领大家进入了保护模式。想必大家在学习<a href="/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/">进入保护模式</a>这一章时就发现我们已经涉及了很多<code>数据结构</code>，<code>全局描述符表</code>、<code>段描述符</code>、<code>GDTR</code>等。如果可以使用<code>C 语言</code>，将他们和<code>struct</code>对应起来那将会减少很多的工作量。今天老李就教大家如何从<code>汇编语言</code>过渡到<code>C 语言</code>。</p>
+      <p>汇编语言的基础已经讲了很多，也带领大家进入了保护模式。想必大家在学习<a href="/posts/2020/04/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0a-%E8%BF%9B%E5%85%A5%E4%BF%9D%E6%8A%A4%E6%A8%A1%E5%BC%8F/">进入保护模式</a>这一章时就发现我们已经涉及了很多<code>数据结构</code>，<code>全局描述符表</code>、<code>段描述符</code>、<code>GDTR</code>等。如果可以使用<code>C 语言</code>，将他们和<code>struct</code>对应起来那将会减少很多的工作量。今天老李就教大家如何从<code>汇编语言</code>过渡到<code>C 语言</code>。</p>
 <h2 id="预处理">预处理</h2>
 <p>先来教大家一个技巧，在<code>汇编语言</code>中使用<code>预处理</code>。改造上一篇文章中的示例代码。</p>
 <h3 id="代码">代码</h3>
@@ -2228,6 +2228,13 @@ $ ./sign boot
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://kviccn.github.io/posts/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0c-%E8%A7%A3%E6%94%BE%E7%94%9F%E4%BA%A7%E5%8A%9B/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">汇编语言一发入魂 0x0C - 解放生产力</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -3061,7 +3068,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (lib && lib.includes('mermaid')) {
       
-      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"solarized\"");
 
       if (themeVariant === "dark" || themeVariant === "hacker") {
         mermaid.initialize({ theme: 'dark' });

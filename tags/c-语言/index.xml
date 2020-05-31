@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, 杨河老李</copyright>
-    <lastBuildDate>Sat, 30 May 2020 12:00:55 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 11:00:55 +0800</lastBuildDate>
     
         <atom:link href="https://kviccn.github.io/tags/c-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,13 +21,65 @@
 
       
       <item>
+        <title>汇编语言一发入魂 0x0C - 解放生产力</title>
+        <link>https://kviccn.github.io/posts/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0c-%E8%A7%A3%E6%94%BE%E7%94%9F%E4%BA%A7%E5%8A%9B/</link>
+        <pubDate>Sun, 31 May 2020 11:00:55 +0800</pubDate>
+        
+        <atom:modified>Sun, 31 May 2020 11:00:55 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0c-%E8%A7%A3%E6%94%BE%E7%94%9F%E4%BA%A7%E5%8A%9B/</guid>
+        <description>在上一篇文章中，老李已经教大家将控制权从汇编语言转移到C 语言，但是我们的活动范围依然受限于512字节的引导扇区。今天老李就带领大家突破这51</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>32位</category>
+            
+          
+            
+              <category>保护模式</category>
+            
+          
+            
+              <category>C 语言</category>
+            
+          
+            
+              <category>内联汇编</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言</category>
+            
+          
+            
+              <category>C 语言</category>
+            
+          
+        
+        
+          
+            
+              <category>汇编语言一发入魂</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>汇编语言一发入魂 0x0B - 拥抱 C 语言</title>
         <link>https://kviccn.github.io/posts/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0b-%E6%8B%A5%E6%8A%B1-c-%E8%AF%AD%E8%A8%80/</link>
         <pubDate>Sat, 30 May 2020 12:00:55 +0800</pubDate>
         
         <atom:modified>Sat, 30 May 2020 12:00:55 +0800</atom:modified>
         <guid>https://kviccn.github.io/posts/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%80%E5%8F%91%E5%85%A5%E9%AD%82-0x0b-%E6%8B%A5%E6%8A%B1-c-%E8%AF%AD%E8%A8%80/</guid>
-        <description>汇编语言的基础已经讲了很多了，也带领大家进入了保护模式。想必大家在学习进入保护模式这一章时就发现我们已经涉及了很多数据结构，全局描述符表、段</description>
+        <description>汇编语言的基础已经讲了很多，也带领大家进入了保护模式。想必大家在学习进入保护模式这一章时就发现我们已经涉及了很多数据结构，全局描述符表、段描</description>
         
         <dc:creator>杨河老李</dc:creator>
         

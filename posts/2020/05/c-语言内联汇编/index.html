@@ -1267,7 +1267,7 @@
     
 </head>
 
-<body id="root" class="theme__dark">
+<body id="root" class="theme__solarized">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1306,6 +1306,10 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1315,10 +1319,6 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
-          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1415,6 +1415,10 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1424,10 +1428,6 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
-          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1519,9 +1519,9 @@
   🏷️
   
 
-  <li><a href="https://kviccn.github.io/tags/c%E8%AF%AD%E8%A8%80/" class="single__tag" title="C语言">#C语言</a></li>
-
   <li><a href="https://kviccn.github.io/tags/%E5%86%85%E8%81%94%E6%B1%87%E7%BC%96/" class="single__tag" title="内联汇编">#内联汇编</a></li>
+
+  <li><a href="https://kviccn.github.io/tags/c%E8%AF%AD%E8%A8%80/" class="single__tag" title="C语言">#C语言</a></li>
 
   <li><a href="https://kviccn.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" class="single__tag" title="汇编语言">#汇编语言</a></li>
 
@@ -2797,7 +2797,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (lib && lib.includes('mermaid')) {
       
-      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"solarized\"");
 
       if (themeVariant === "dark" || themeVariant === "hacker") {
         mermaid.initialize({ theme: 'dark' });
