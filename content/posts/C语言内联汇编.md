@@ -3,7 +3,7 @@ title: 'C 语言内联汇编'
 date: 2020-05-28T21:28:24+08:00
 description:
 tags:
-  - C语言
+  - C 语言
   - 汇编语言
   - 内联汇编
 categories:
