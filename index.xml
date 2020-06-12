@@ -728,6 +728,54 @@
       </item>
       
       <item>
+        <title>老李教你写操作系统 0x00 - bootloader</title>
+        <link>https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x00-bootloader/</link>
+        <pubDate>Fri, 14 Feb 2020 17:44:01 +0800</pubDate>
+        
+        <atom:modified>Fri, 14 Feb 2020 17:44:01 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2020/02/%E8%80%81%E6%9D%8E%E6%95%99%E4%BD%A0%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-0x00-bootloader/</guid>
+        <description>今天开始，我们来学习操作系统的开发。 前置知识 你需要一点汇编语言的知识，老李为此专门写了一个系列文章，算是要用到的基础知识。按逻辑上来讲，本文</description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>操作系统</category>
+            
+          
+            
+              <category>QEMU</category>
+            
+          
+            
+              <category>GRUB</category>
+            
+          
+            
+              <category>multiboot</category>
+            
+          
+        
+        
+          
+            
+              <category>操作系统</category>
+            
+          
+        
+        
+          
+            
+              <category>老李教你写操作系统</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Hello 2020</title>
         <link>https://kviccn.github.io/posts/2020/01/hello-2020/</link>
         <pubDate>Wed, 01 Jan 2020 00:00:01 +0800</pubDate>
