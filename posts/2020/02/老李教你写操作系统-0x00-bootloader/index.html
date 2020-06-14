@@ -1267,7 +1267,7 @@
     
 </head>
 
-<body id="root" class="theme__solarized">
+<body id="root" class="theme__dark">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1306,10 +1306,6 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          solarized
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1319,6 +1315,10 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1415,10 +1415,6 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          solarized
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1428,6 +1424,10 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1828,8 +1828,8 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
 </div><p>其中可加载的段有两个，如第<code>9</code>行所示，该段相对于文件起始的偏移量为<code>0x1000</code>，虚拟地址为<code>0x100000</code>，物理地址为<code>0x100000</code>，在文件中的大小为<code>0xe8</code>，在内存中的大小为<code>0xe8</code>。这意味着如果我们知道内核文件在硬盘中的起始位置，那么用它加上<code>offset 0x1000</code>就可以得到该段在硬盘中的起始位置，然后从该位置开始，读取<code>FileSiz 0xe8</code>字节的数据到物理地址<code>PhysAddr 0x100000</code>，最后将<code>FileSiz</code>和<code>MemSiz</code>相差的地方填充成<code>0</code>即可。</p>
 <p>下面给出<code>bootloader</code>的代码。</p>
 <h3 id="bootloader">bootloader</h3>
-<p><code>bootloader</code>由准备<code>保护模式</code>环境的汇编语言源文件<code>boot.S</code>和读取硬盘加载内核的<code>main.c</code>组成。</p>
-<p><code>boot.S</code></p>
+<p><code>bootloader</code>由准备<code>保护模式</code>环境的汇编语言源文件<code>bootasm.S</code>和读取硬盘加载内核的<code>bootmain.c</code>组成。</p>
+<p><code>bootasm.S</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1884,14 +1884,14 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="c">#include &#34;mmu.h&#34;
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="c">#include &#34;asm.h&#34;
 </span><span class="c"></span>
 <span class="na">.set</span> <span class="no">PROT_MODE_CSEG</span><span class="p">,</span> <span class="mi">0x08</span>        <span class="c"># code segment selector
 </span><span class="c"></span><span class="no">.set</span> <span class="no">PROT_MODE_DSEG</span><span class="p">,</span> <span class="mi">0x10</span>        <span class="c"># data segment selector
 </span><span class="c"></span>
+<span class="na">.code16</span>
 <span class="na">.globl</span> <span class="no">start</span>
 <span class="nl">start:</span>
-  <span class="na">.code16</span>
   <span class="nf">cli</span>
 
   <span class="c"># Enable A20
@@ -1908,10 +1908,10 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
   <span class="nf">movl</span> <span class="nv">%eax</span><span class="p">,</span> <span class="nv">%cr0</span>
 
   <span class="c"># Jump into 32-bit protected mode
-</span><span class="c"></span>  <span class="nf">ljmp</span> <span class="no">$PROT_MODE_CSEG</span><span class="p">,</span> <span class="no">$protcseg</span>
+</span><span class="c"></span>  <span class="nf">ljmp</span> <span class="no">$PROT_MODE_CSEG</span><span class="p">,</span> <span class="no">$start32</span>
 
-  <span class="na">.code32</span>
-<span class="nl">protcseg:</span>
+<span class="na">.code32</span>
+<span class="nl">start32:</span>
   <span class="nf">movw</span> <span class="no">$PROT_MODE_DSEG</span><span class="p">,</span> <span class="nv">%ax</span>
   <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%ds</span>
   <span class="nf">movw</span> <span class="nv">%ax</span><span class="p">,</span> <span class="nv">%es</span>
@@ -1927,16 +1927,16 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
 
 <span class="na">.p2align</span> <span class="mi">2</span>
 <span class="nl">gdt:</span>
-  <span class="nf">SEG_NULL</span>
-  <span class="nf">SEG</span><span class="p">(</span><span class="no">STA_X</span> <span class="err">|</span> <span class="no">STA_R</span><span class="p">,</span> <span class="mi">0x0</span><span class="p">,</span> <span class="mi">0xffffffff</span><span class="p">)</span>
-  <span class="nf">SEG</span><span class="p">(</span><span class="no">STA_W</span><span class="p">,</span> <span class="mi">0x0</span><span class="p">,</span> <span class="mi">0xffffffff</span><span class="p">)</span>
+  <span class="nf">SEG_NULLASM</span>
+  <span class="nf">SEG_ASM</span><span class="p">(</span><span class="no">STA_X</span> <span class="err">|</span> <span class="no">STA_R</span><span class="p">,</span> <span class="mi">0x0</span><span class="p">,</span> <span class="mi">0xffffffff</span><span class="p">)</span>
+  <span class="nf">SEG_ASM</span><span class="p">(</span><span class="no">STA_W</span><span class="p">,</span> <span class="mi">0x0</span><span class="p">,</span> <span class="mi">0xffffffff</span><span class="p">)</span>
 
 <span class="nl">gdtdesc:</span>
   <span class="na">.word</span> <span class="no">gdtdesc</span> <span class="p">-</span> <span class="no">gdt</span> <span class="p">-</span> <span class="mi">1</span>
   <span class="na">.long</span> <span class="no">gdt</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>main.c</code></p>
+</div><p><code>bootmain.c</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2091,7 +2091,7 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
 <p>第<code>13</code>行声明了<code>uint8_t *</code>类型的变量<code>pa</code>，用于指向每一个段将要加载到的物理地址。</p>
 <p>第<code>15</code>行，将<code>elf</code>指向内存<code>0x10000</code>处，我们的内核<code>ELF Header</code>将加载到这里。</p>
 <p>第<code>17</code>行，调用<code>readseg</code>从内核映像起始处读取<code>4096</code>个字节到内存<code>0x10000</code>处。<code>4096</code>个字节对于我们的内核文件头来说时足够的，所以我们可以确保已经将<code>ELF Header</code>完整的读入了内存。</p>
-<p>第<code>19</code>行，判断文件头的魔数是否正确，错误的话直接返回到<code>boot.S</code>中，陷入死循环。</p>
+<p>第<code>19</code>行，判断文件头的魔数是否正确，错误的话直接返回到<code>bootasm.S</code>中，陷入死循环。</p>
 <p>第<code>22</code>行，将<code>ph</code>指向第一个<code>Program Header</code>。</p>
 <p>第<code>23</code>行，将<code>eph</code>指向最后一个<code>Program Header</code>的结尾处。</p>
 <p>第<code>24</code>行开始遍历所有的<code>Program Header</code>，并将对应的段加载到内存中。</p>
@@ -2114,11 +2114,11 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cc -m32 -g -c -o boot.o boot.S
-$ cc -m32 -g -fno-builtin -fno-pic -fno-stack-protector -nostdinc -Os -c -o main.o main.c
-$ ld -N -e start -Ttext<span class="o">=</span>0x7c00 -m elf_i386 -o boot.elf boot.o main.o
-$ objcopy -S -O binary -j .text boot.elf boot
-$ ./sign boot
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cc -m32 -g -c -o bootasm.o bootasm.S
+$ cc -m32 -g -fno-builtin -fno-pic -fno-stack-protector -nostdinc -Os -c -o bootmain.o bootmain.c
+$ ld -N -e start -Ttext<span class="o">=</span>0x7c00 -m elf_i386 -o bootblock.o bootasm.o bootmain.o
+$ objcopy -S -O binary -j .text bootblock.o bootblock
+$ ./sign bootblock
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="制作镜像">制作镜像</h4>
@@ -2130,7 +2130,7 @@ $ ./sign boot
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>kernel.img <span class="nv">count</span><span class="o">=</span><span class="m">10000</span>
-$ dd <span class="k">if</span><span class="o">=</span>boot <span class="nv">of</span><span class="o">=</span>kernel.img <span class="nv">conv</span><span class="o">=</span>notrunc
+$ dd <span class="k">if</span><span class="o">=</span>bootblock <span class="nv">of</span><span class="o">=</span>kernel.img <span class="nv">conv</span><span class="o">=</span>notrunc
 $ dd <span class="k">if</span><span class="o">=</span>kernel <span class="nv">of</span><span class="o">=</span>kernel.img <span class="nv">seek</span><span class="o">=</span><span class="m">1</span> <span class="nv">conv</span><span class="o">=</span>notrunc
 </code></pre></td></tr></table>
 </div>
@@ -3140,7 +3140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (lib && lib.includes('mermaid')) {
       
-      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"solarized\"");
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
 
       if (themeVariant === "dark" || themeVariant === "hacker") {
         mermaid.initialize({ theme: 'dark' });
