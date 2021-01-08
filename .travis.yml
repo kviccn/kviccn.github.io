@@ -1,7 +1,4 @@
-language: go
-
-go:
-  - 1.13.5
+language: minimal
 
 os: linux
 
@@ -9,8 +6,10 @@ branches:
   only:
     - blog
 
-install:
-  - go get -tags extended github.com/gohugoio/hugo
+addons:
+  snaps:
+    - name: hugo
+      channel: extended
 
 script:
   - hugo
