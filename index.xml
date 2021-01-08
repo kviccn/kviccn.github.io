@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, 杨河老李</copyright>
-    <lastBuildDate>Sun, 31 May 2020 11:00:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:01 +0800</lastBuildDate>
     
         <atom:link href="https://kviccn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>Hello 2021</title>
+        <link>https://kviccn.github.io/posts/2021/01/hello-2021/</link>
+        <pubDate>Fri, 01 Jan 2021 00:00:01 +0800</pubDate>
+        
+        <atom:modified>Fri, 08 Jan 2021 16:42:02 +0800</atom:modified>
+        <guid>https://kviccn.github.io/posts/2021/01/hello-2021/</guid>
+        <description>Hello 2021 </description>
+        
+        <dc:creator>杨河老李</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>汇编语言一发入魂 0x0C - 解放生产力</title>
