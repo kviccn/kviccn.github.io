@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kviccn.github.io/posts/2021/05/%E6%82%BC%E5%BF%B5%E8%A2%81%E9%9A%86%E5%B9%B3/</loc>
-    <lastmod>2021-05-22T16:21:44+08:00</lastmod>
+    <loc>https://kviccn.github.io/posts/2021/06/shell%E4%B8%8D%E8%AE%B2%E6%AD%A6%E5%BE%B7/</loc>
+    <lastmod>2021-06-20T17:28:39+08:00</lastmod>
   </url><url>
     <loc>https://kviccn.github.io/</loc>
+    <lastmod>2021-06-20T17:28:39+08:00</lastmod>
+  </url><url>
+    <loc>https://kviccn.github.io/posts/2021/05/%E6%82%BC%E5%BF%B5%E8%A2%81%E9%9A%86%E5%B9%B3/</loc>
     <lastmod>2021-05-22T16:21:44+08:00</lastmod>
   </url><url>
     <loc>https://kviccn.github.io/posts/2021/01/hello-2021/</loc>
