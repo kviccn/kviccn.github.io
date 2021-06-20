@@ -1213,7 +1213,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="The Zzo theme for Hugo example site.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.84.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -2014,27 +2014,27 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
 </span><span class="cp"></span>
 <span class="cp">#define SECTSIZE 512
 </span><span class="cp"></span>
-<span class="kt">void</span> <span class="nf">readseg</span><span class="p">(</span><span class="n">uint8_t</span> <span class="o">*</span><span class="n">pa</span><span class="p">,</span> <span class="n">uint32_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">uint32_t</span> <span class="n">offset</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">readseg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">pa</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">offset</span><span class="p">);</span>
 
 <span class="kt">void</span> <span class="nf">bootmain</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">struct</span> <span class="n">elfhdr</span> <span class="o">*</span><span class="n">elf</span><span class="p">;</span>
   <span class="k">struct</span> <span class="n">proghdr</span> <span class="o">*</span><span class="n">ph</span><span class="p">,</span> <span class="o">*</span><span class="n">eph</span><span class="p">;</span>
   <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">entry</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span>
-  <span class="n">uint8_t</span> <span class="o">*</span><span class="n">pa</span><span class="p">;</span>
+  <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">pa</span><span class="p">;</span>
 
   <span class="n">elf</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">elfhdr</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x10000</span><span class="p">;</span>
 
-  <span class="n">readseg</span><span class="p">((</span><span class="n">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">elf</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">readseg</span><span class="p">((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">elf</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
   <span class="k">if</span> <span class="p">(</span><span class="n">elf</span><span class="o">-&gt;</span><span class="n">magic</span> <span class="o">!=</span> <span class="n">ELF_MAGIC</span><span class="p">)</span>
     <span class="k">return</span><span class="p">;</span>
 
-  <span class="n">ph</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">proghdr</span> <span class="o">*</span><span class="p">)((</span><span class="n">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">elf</span> <span class="o">+</span> <span class="n">elf</span><span class="o">-&gt;</span><span class="n">phoff</span><span class="p">);</span>
+  <span class="n">ph</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">proghdr</span> <span class="o">*</span><span class="p">)((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">elf</span> <span class="o">+</span> <span class="n">elf</span><span class="o">-&gt;</span><span class="n">phoff</span><span class="p">);</span>
   <span class="n">eph</span> <span class="o">=</span> <span class="n">ph</span> <span class="o">+</span> <span class="n">elf</span><span class="o">-&gt;</span><span class="n">phnum</span><span class="p">;</span>
   <span class="k">for</span> <span class="p">(;</span> <span class="n">ph</span> <span class="o">&lt;</span> <span class="n">eph</span><span class="p">;</span> <span class="n">ph</span><span class="o">++</span><span class="p">)</span>
   <span class="p">{</span>
-    <span class="n">pa</span> <span class="o">=</span> <span class="p">(</span><span class="n">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">ph</span><span class="o">-&gt;</span><span class="n">paddr</span><span class="p">;</span>
+    <span class="n">pa</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">ph</span><span class="o">-&gt;</span><span class="n">paddr</span><span class="p">;</span>
     <span class="n">readseg</span><span class="p">(</span><span class="n">pa</span><span class="p">,</span> <span class="n">ph</span><span class="o">-&gt;</span><span class="n">filesz</span><span class="p">,</span> <span class="n">ph</span><span class="o">-&gt;</span><span class="n">off</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ph</span><span class="o">-&gt;</span><span class="n">memsz</span> <span class="o">-</span> <span class="n">ph</span><span class="o">-&gt;</span><span class="n">filesz</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
@@ -2052,7 +2052,7 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
     <span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">readsect</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">dst</span><span class="p">,</span> <span class="n">uint32_t</span> <span class="n">offset</span><span class="p">)</span>
+<span class="kt">void</span> <span class="nf">readsect</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">dst</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">offset</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="n">waitdisk</span><span class="p">();</span>
   <span class="n">outb</span><span class="p">(</span><span class="mh">0x1F2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
@@ -2066,9 +2066,9 @@ There are <span class="m">3</span> program headers, starting at offset <span cla
   <span class="n">insl</span><span class="p">(</span><span class="mh">0x1F0</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">SECTSIZE</span> <span class="o">/</span> <span class="mi">4</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">readseg</span><span class="p">(</span><span class="n">uint8_t</span> <span class="o">*</span><span class="n">pa</span><span class="p">,</span> <span class="n">uint32_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">uint32_t</span> <span class="n">offset</span><span class="p">)</span>
+<span class="kt">void</span> <span class="nf">readseg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">pa</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">offset</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">uint8_t</span> <span class="o">*</span><span class="n">epa</span><span class="p">;</span>
+  <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">epa</span><span class="p">;</span>
   <span class="n">epa</span> <span class="o">=</span> <span class="n">pa</span> <span class="o">+</span> <span class="n">count</span><span class="p">;</span>
 
   <span class="n">pa</span> <span class="o">-=</span> <span class="n">offset</span> <span class="o">%</span> <span class="n">SECTSIZE</span><span class="p">;</span>
