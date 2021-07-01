@@ -172,9 +172,9 @@ commento = false
 
 [copyrightOptions]
   enableCopyrightLink = true # if set, you can add copyright link
-  copyrightLink = "https://creativecommons.org/licenses/by-nc-nd/3.0/cn/"
+  copyrightLink = "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"
   copyrightLinkImage = ""
-  copyrightLinkText = "署名-非商业性使用-禁止演绎 3.0 中国大陆"
+  copyrightLinkText = "署名-非商业性使用-禁止演绎 4.0 国际 (CC BY-NC-ND 4.0)"
 
 # possible share name: "facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "whatsapp", "telegram"
 
