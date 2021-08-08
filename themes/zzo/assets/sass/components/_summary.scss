@@ -138,6 +138,10 @@
   &__text {
     margin-top: 1rem;
     line-height: 1.7rem;
+
+    &.p2 {
+      word-break: break-all;
+    }
   }
 
   &__image {
