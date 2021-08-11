@@ -47,16 +47,16 @@ $ wget https://storage.googleapis.com/syzkaller/wheezy.img
    - 从 Ubuntu 仓库下载（注意！端口转发将不可用）：
 
    ```bash
-   wget http://security.ubuntu.com/ubuntu/pool/main/l/linux-signed-azure/linux-image-4.15.0-1036-azure_4.15.0-1036.38~14.04.2_amd64.deb
-   ar x linux-image-4.15.0-1036-azure_4.15.0-1036.38~14.04.2_amd64.deb
-   tar xf data.tar.xz ./boot/vmlinuz-4.15.0-1036-azure
-   cp ./boot/vmlinuz-4.15.0-1036-azure ./vmlinuz
+   $ wget http://security.ubuntu.com/ubuntu/pool/main/l/linux-signed-azure/linux-image-4.15.0-1036-azure_4.15.0-1036.38~14.04.2_amd64.deb
+   $ ar x linux-image-4.15.0-1036-azure_4.15.0-1036.38~14.04.2_amd64.deb
+   $ tar xf data.tar.xz ./boot/vmlinuz-4.15.0-1036-azure
+   $ cp ./boot/vmlinuz-4.15.0-1036-azure ./vmlinuz
    ```
 
    - 你也可以使用你自己主机上的 Linux 内核（注意！端口转发和块设备可能会遇到问题）
 
    ```bash
-   sudo cp /boot/vmlinuz-$(uname -r) .
+   $ sudo cp /boot/vmlinuz-$(uname -r) .
    ```
 
 注意！Ubuntu's vmlinuz 不包含 QEMU emulated network card devices (NIC)的驱动。 Debian's vmlinuz 不包含从`/dev/sda`设备加载原始映像的预构建驱动。
