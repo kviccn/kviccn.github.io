@@ -12,13 +12,13 @@ categories:
   - spring boot
 ---
 
-# 第一步：获取 Spring Boot 项目模板
+# 获取 Spring Boot 项目模板
 
 在[https://start.spring.io/](https://start.spring.io/)上按下图指示生成项目：
 
 ![quick](/posts/series/spring-boot/images/quick-img-1-12bfde9c5c280b1940d85dee3d81772d.png)
 
-# 第二步：写点代码
+# 写点代码
 
 打开刚才生成的项目，在`src/main/java/com/example/demo`目录下找到`DemoApplication.java`文件，修改内容如下：
 
@@ -83,7 +83,7 @@ public String hello(String name) {
 http://www.example.com?search=ruby&results=10
 ```
 
-## 第三步：启动项目
+## 启动项目
 
 打开终端，进入项目根目录，执行如下命令：
 
