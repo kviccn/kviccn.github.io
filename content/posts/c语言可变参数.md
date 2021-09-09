@@ -300,8 +300,6 @@ arg4 = 4, argp4 = 0xffebc9f0
 1+2+3+4=10
 ```
 
-<img src="/posts/images/faces/不过如此这般罢了.jpg" alt="不过如此这般罢了" width="50%" />
-
 再来看一个稍微复杂一点的例子，该函数来自 [xv6](https://github.com/mit-pdos/xv6-public/blob/master/console.c#L55)：
 
 ```c
