@@ -1,5 +1,5 @@
 ---
-title: 'Shell不讲武德'
+title: 'Shell 不讲武德'
 date: 2021-06-20T17:28:39+08:00
 draft: false
 description:
